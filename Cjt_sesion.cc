@@ -8,6 +8,7 @@
 using namespace std;
 
 Cjt_sesion::Cjt_sesion() { }
+Cjt_sesion::~Cjt_sesion() { }
 
 void Cjt_sesion::leer_sesiones(int n) {
     while (n > 0) {
@@ -16,7 +17,55 @@ void Cjt_sesion::leer_sesiones(int n) {
         Sesion s(id);
         s.construir_arbol();
         this->sesiones.insert(pair<string, Sesion>(id, s));
-    
+        --n;
     }
 
+}
+
+bool Cjt_sesion::existe_sesion(string id) {
+    bool existe_sesion = false;
+    map<string,Sesion>::iterator it;
+    it = sesiones.find(id);
+    if (it != sesiones.end()) existe_sesion = true;
+
+    return existe_sesion;
+}
+
+int Cjt_sesion::num_sesiones() {
+    return sesiones.size();
+}
+
+void Cjt_sesion::anadir_sesion(string id) {
+  Sesion s(id);
+  s.construir_arbol();
+  if (not existe_sesion(id)) {
+    this->sesiones.insert(pair<string, Sesion>(id, s));
+  }
+  else {
+    throw "la sesion ya existe";
+  }
+}
+
+void Cjt_sesion::listar_primer_problema(vector<string>& v) {
+  int size = v.size();
+  for (int i = 0; i < size; ++i){
+    v[i] = sesiones.find(v[i])->second.leer_primer_problema();
+  }
+}
+
+list<string> Cjt_sesion::consultar_problemas(string sesion) {
+  return sesiones.find(sesion)->second.consultar_problemas();
+}
+
+void Cjt_sesion::listar_sesiones() {
+  for( auto it = sesiones.begin(); it != sesiones.end(); ++it ) {
+    it->second.escribir_sesion();
+  }
+}
+
+void Cjt_sesion::listar_sesion(string id) {
+    if (existe_sesion(id)) {
+      sesiones.find(id)->second.escribir_sesion();
+    }
+    else throw "la sesion no existe";
 }

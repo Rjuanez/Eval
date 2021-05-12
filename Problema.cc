@@ -12,6 +12,12 @@ Problema::Problema() {
     identificador = "";
 }
 
+Problema::~Problema(){}
+
+int Problema::consultar_envios(){
+  return envios;
+}
+
 Problema::Problema(string identificador) {
     envios = 0;
     envios_exitosos = 0;
@@ -19,4 +25,6 @@ Problema::Problema(string identificador) {
     this->identificador = identificador;
 }
 
-
+void Problema::escribir_problema() {
+  cout << identificador << '(' << envios << ',' << envios_exitosos << ',' << ratio << ')' << endl;
+}
