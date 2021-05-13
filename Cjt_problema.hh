@@ -59,6 +59,8 @@ public:
 
     void listar_problemas();
     void listar_problema(std::string id);
+    void sumar_envio(std::string problema, int r );
+    int envios_problema(std::string problema);
 
 };
 #endif

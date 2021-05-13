@@ -51,7 +51,9 @@ public:
 
     int consultar_envios();
 
-    void escribir_problema();
+    void escribir_problema();void sumar_envios(int r);
+
+    void sumar_envio(int r);
 
 
 };

@@ -15,11 +15,17 @@ void Sesion::leer_arbol(BinTree<string>& a) {
   string x;
   cin >> x;
   if (x!="0"){
+  problemas.push_back(x);
 	BinTree<string> l;
 	leer_arbol(l);
 	BinTree<string> r;
 	leer_arbol(r);
 	a = BinTree<string>(x,l,r);
+
+  if (r.empty() and l.empty()) problemas_ordenados.insert(make_pair(x, make_pair("0", "0")));
+  else if (r.empty()) problemas_ordenados.insert(make_pair(x, make_pair("0", l.value())));
+  else if (l.empty()) problemas_ordenados.insert(make_pair(x, make_pair(r.value(), "0")));
+  else problemas_ordenados.insert(make_pair(x, make_pair(r.value(), l.value())));
   }
 }
 list<string> Sesion::recorrer_arbol(const BinTree<string>& a) {
@@ -54,8 +60,7 @@ void Sesion::escribir_arbol(const BinTree<string>& a) {
 }
 
 void Sesion::escribir_sesion() {
-  list<string> l = consultar_problemas();
-  cout << identificador << ' ' << l.size() << ' ';
+  cout << identificador << ' ' << problemas.size() << ' ';
   escribir_arbol(prerequisitos);
   cout << endl;
 

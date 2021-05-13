@@ -72,3 +72,12 @@ void Cjt_problema::listar_problema(string id) {
     }
     else throw "el problema no existe";
 }
+
+void Cjt_problema::sumar_envio(string problema, int r) {
+  problemas.find(problema)->second.sumar_envio(r);
+
+}
+
+int Cjt_problema::envios_problema(string problema) {
+  return problemas.find(problema)->second.consultar_envios();
+}

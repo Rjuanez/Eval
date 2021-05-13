@@ -8,6 +8,8 @@
 #ifndef NO_DIAGRAM
 #include <string>
 #include <list>
+#include <vector>
+#include <map>
 #endif
 
 #include "BinTree.hh"
@@ -23,6 +25,8 @@ private:
 
     string identificador;
     BinTree<string> prerequisitos;
+    std::vector<string> problemas;
+    std::map <string, std::pair<string, string> > problemas_ordenados;
 
     /** @brief Lectura de un arbol binario de strings.  Los elementos
  se introducen en preordren: primero la raiz, despues el subarbol
@@ -87,7 +91,7 @@ public:
 
     void escribir_sesion();
 
-    
+
 
 };
 #endif

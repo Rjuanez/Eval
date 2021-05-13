@@ -28,3 +28,9 @@ Problema::Problema(string identificador) {
 void Problema::escribir_problema() {
   cout << identificador << '(' << envios << ',' << envios_exitosos << ',' << ratio << ')' << endl;
 }
+
+void Problema::sumar_envio(int r) {
+  ++envios;
+  if(r == 1) ++envios_exitosos;
+  //actualizar ratio
+}

@@ -66,6 +66,6 @@ public:
     void f_problemas_resueltos();
 
     void escribir_usuario();
-
+    void envio(string p, int r, Cjt_problema problemas);
 };
 #endif
