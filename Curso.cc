@@ -33,10 +33,10 @@ void Curso::leer_sesiones(Cjt_sesion& ses) {
   }
   for (int i = 0; i < nuevas_sesiones.size(); ++i) {
     //añadimos la sesion al vector de sesiones
-    sesiones.push_back(s);
+    sesiones.push_back(nuevas_sesiones[i]);
     list<string> l;
     //devuelve la lista de todos los probelmas de la sesion
-    l = ses.consultar_problemas(s);
+    l = ses.consultar_problemas(nuevas_sesiones[i]);
     //recorrer la lista de todos los problemas de cada sesion
     for( auto it = l.begin(); it != l.end(); ++it ) {
       //comprobar si el probelma existe
