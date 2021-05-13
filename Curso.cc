@@ -23,9 +23,15 @@ Curso::~Curso() {}
 void Curso::leer_sesiones(Cjt_sesion& ses) {
   int n;
   cin >> n;
+  //legir identificadors en un vector
+  vector<string> nuevas_sesiones;
   while (n > 0){
     string s;
     cin >> s;
+    nuevas_sesiones.push_back(s);
+     --n;
+  }
+  for (int i = 0; i < nuevas_sesiones.size(); ++i) {
     //añadimos la sesion al vector de sesiones
     sesiones.push_back(s);
     list<string> l;
@@ -39,7 +45,6 @@ void Curso::leer_sesiones(Cjt_sesion& ses) {
       }
       else throw "curso mal formado";
     }
-    --n;
   }
 
 }
