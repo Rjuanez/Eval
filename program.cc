@@ -6,6 +6,7 @@ using namespace std;
 #include "Cjt_sesion.hh"
 #include "Cjt_curso.hh"
 #include "Cjt_usuario.hh"
+#include "Curso.hh"
 
 
 int main() {
@@ -52,6 +53,20 @@ int main() {
           try {
               lista_sesiones.anadir_sesion(s);
               cout << lista_sesiones.num_sesiones() << endl;
+          } catch (const char* msg) {
+              cout << "error: " << msg << endl;
+          }
+      }
+      if (comando == "nuevo_curso" or comando == "nc") {
+          cout << '#' << comando << endl;
+          try {
+              Curso c;
+              //leer sesiones del curso comporbando que no se solapen
+              c.leer_sesiones(lista_sesiones);
+              //se añade el curso a lista_cursos (crear funcion para añadir objetos)
+              lista_cursos.anadir_curso(c);
+              //se imprime el idetificador
+              cout << lista_cursos.num_cursos() << endl;
           } catch (const char* msg) {
               cout << "error: " << msg << endl;
           }

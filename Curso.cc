@@ -26,12 +26,18 @@ void Curso::leer_sesiones(Cjt_sesion& ses) {
   while (n > 0){
     string s;
     cin >> s;
+    //añadimos la sesion al vector de sesiones
     sesiones.push_back(s);
     list<string> l;
+    //devuelve la lista de todos los probelmas de la sesion
     l = ses.consultar_problemas(s);
-    //recorrer la lista mirando la sesion
+    //recorrer la lista de todos los problemas de cada sesion
     for( auto it = l.begin(); it != l.end(); ++it ) {
-      lista_problemas_sesiones.insert(make_pair(*it, s));
+      //comprobar si el probelma existe
+      if (not existe_problema(*it)) {
+        lista_problemas_sesiones.insert(make_pair(*it, s));
+      }
+      else throw "curso mal formado";
     }
     --n;
   }
@@ -81,4 +87,8 @@ void Curso::escribir_curso() {
   }
 
   cout << ')' << endl;
+}
+
+void Curso::identificar(int i) {
+  identificador = i;
 }

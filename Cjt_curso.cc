@@ -85,3 +85,12 @@ void Cjt_curso::listar_curso(int id) {
     }
     else throw "el curso no existe";
 }
+
+void Cjt_curso::anadir_curso(Curso c) {
+  c.identificar(cursos.size());
+  cursos.push_back(c);
+}
+
+int Cjt_curso::num_cursos() {
+  return cursos.size() - 1;
+}

@@ -68,6 +68,8 @@ public:
 
     void escribir_curso();
 
+    void identificar(int i);
+
 
 };
 #endif

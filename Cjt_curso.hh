@@ -57,6 +57,10 @@ public:
     void listar_cursos();
     void listar_curso(int id);
 
+    void anadir_curso(Curso c);
+
+    int num_cursos();
+
 
 };
 #endif
