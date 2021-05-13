@@ -52,6 +52,7 @@ public:
     */
     void leer_problemas(int n);
 
+    //mierda
     std::vector<Problema> listar_problemas(const std::vector<std::string>& v);
 
     void listar_enviables();

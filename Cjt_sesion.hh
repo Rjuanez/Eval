@@ -45,6 +45,7 @@ public:
 
     void listar_primer_problema(std::vector<std::string>& v);
 
+    //mierda
     std::list<std::string> consultar_problemas(string sesion);
 
     //Lectura y escritura

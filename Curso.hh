@@ -57,6 +57,8 @@ public:
 
     void leer_sesiones(Cjt_sesion& ses);
 
+
+    //mierda
     std::vector<std::string> listar_sesiones();
 
     void inscribir_usuario();

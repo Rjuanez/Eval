@@ -37,6 +37,8 @@ private:
 
     std::list<std::string> recorrer_arbol(const BinTree<string>& a);
 
+    void escribir_arbol(const BinTree<string>& a);
+
 
 
 public:
@@ -80,11 +82,12 @@ public:
 
     string leer_primer_problema();
 
+
     std::list<std::string> consultar_problemas();
 
     void escribir_sesion();
 
-    void escribir_arbol(const BinTree<string>& a);
+    
 
 };
 #endif
