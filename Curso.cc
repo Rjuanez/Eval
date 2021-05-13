@@ -41,7 +41,7 @@ void Curso::leer_sesiones(Cjt_sesion& ses) {
     for( auto it = l.begin(); it != l.end(); ++it ) {
       //comprobar si el probelma existe
       if (not existe_problema(*it)) {
-        lista_problemas_sesiones.insert(make_pair(*it, s));
+        lista_problemas_sesiones.insert(make_pair(*it, nuevas_sesiones[i]));
       }
       else throw "curso mal formado";
     }
