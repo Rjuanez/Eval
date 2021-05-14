@@ -72,6 +72,8 @@ public:
 
     void identificar(int i);
 
+    void completado();
+
 
 };
 #endif

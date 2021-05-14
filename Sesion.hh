@@ -91,6 +91,8 @@ public:
 
     void escribir_sesion();
 
+    std::string nuevo_problema(std::string p, int lado);
+
 
 
 };

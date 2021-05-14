@@ -69,3 +69,7 @@ void Cjt_sesion::listar_sesion(string id) {
     }
     else throw "la sesion no existe";
 }
+
+string Cjt_sesion::buscar_nuevo_problema(string p, string sesion, int lado) {
+  return sesiones.find(sesion)->second.nuevo_problema(p, lado);
+}

@@ -58,6 +58,7 @@ public:
 
     void listar_sesiones();
     void listar_sesion(std::string id);
+    std::string buscar_nuevo_problema(std::string p, std::string sesion, int lado);
 
 };
 #endif

@@ -22,7 +22,6 @@ class Cjt_usuario {
 private:
     std::map <std::string, Usuario> usuarios;
 
-    
 
 public:
 
@@ -60,5 +59,6 @@ public:
     void listar_usuarios();
     void listar_usuario(std::string id);
     bool existe_usuario (std::string id);
+    void envio_user (std::string user, std::string p, int r, Cjt_problema& problemas, Cjt_curso& cursos, Cjt_sesion& sesiones);
 };
 #endif

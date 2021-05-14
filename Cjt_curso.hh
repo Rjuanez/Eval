@@ -60,6 +60,7 @@ public:
     void anadir_curso(Curso c);
 
     int num_cursos();
+    void curso_completo(int curso);
 
 
 };

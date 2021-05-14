@@ -81,3 +81,16 @@ void Cjt_problema::sumar_envio(string problema, int r) {
 int Cjt_problema::envios_problema(string problema) {
   return problemas.find(problema)->second.consultar_envios();
 }
+
+
+Problema Cjt_problema::eliminar_problema(string problema) {
+  map<string,Problema>::iterator it;
+  it = problemas.find(problema);
+  Problema p = it->second;
+  problemas.erase(it);
+  return p;
+}
+
+void Cjt_problema::anadir_problema_objeto(Problema& p, string problema) {
+  this->problemas.insert(make_pair(problema, p));
+}

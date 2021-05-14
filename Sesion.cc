@@ -22,6 +22,8 @@ void Sesion::leer_arbol(BinTree<string>& a) {
 	leer_arbol(r);
 	a = BinTree<string>(x,l,r);
 
+
+  //first = 1 = right, second = 0 = left
   if (r.empty() and l.empty()) problemas_ordenados.insert(make_pair(x, make_pair("0", "0")));
   else if (r.empty()) problemas_ordenados.insert(make_pair(x, make_pair("0", l.value())));
   else if (l.empty()) problemas_ordenados.insert(make_pair(x, make_pair(r.value(), "0")));
@@ -64,4 +66,13 @@ void Sesion::escribir_sesion() {
   escribir_arbol(prerequisitos);
   cout << endl;
 
+}
+
+string Sesion::nuevo_problema(string p, int lado) {
+  if (lado == 0) {
+    return problemas_ordenados.find(p)->second.second;
+  }
+  else {
+    return problemas_ordenados.find(p)->second.first;
+  }
 }

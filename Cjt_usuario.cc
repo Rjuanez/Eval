@@ -120,3 +120,7 @@ void Cjt_usuario::listar_usuario(string id) {
     }
     else throw "el usuario no existe";
 }
+
+void Cjt_usuario::envio_user(string user, string p, int r, Cjt_problema& problemas, Cjt_curso& cursos, Cjt_sesion& sesiones) {
+  usuarios.find(user)->second.envio( p,  r, problemas, cursos, sesiones);
+}

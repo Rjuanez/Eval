@@ -66,6 +66,7 @@ public:
     void f_problemas_resueltos();
 
     void escribir_usuario();
-    void envio(string p, int r, Cjt_problema problemas);
+    void envio(std::string p, int r, Cjt_problema& problemas, Cjt_curso& cursos, Cjt_sesion& sesiones);
+    void actualizar_enviables(std::string p, std::string sesion, Cjt_sesion& sesiones);
 };
 #endif

@@ -94,3 +94,7 @@ void Cjt_curso::anadir_curso(Curso c) {
 int Cjt_curso::num_cursos() {
   return cursos.size() - 1;
 }
+
+void Cjt_curso::curso_completo(int curso) {
+  cursos[curso].completado();
+}

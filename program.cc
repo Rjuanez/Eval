@@ -143,6 +143,15 @@ int main() {
               cout << "error: " << msg << endl;
           }
       }
+      if (comando == "envio" or comando == "e") {
+          string u, p; int r; cin >> u >> p >> r;
+          cout << '#' << comando << ' ' << u << ' ' << p << ' ' << r << endl;
+          try {
+            lista_usuarios.envio_user(u, p, r, lista_problemas, lista_cursos, lista_sesiones);
+          } catch (const char* msg) {
+              cout << "error: " << msg << endl;
+          }
+      }
       if (comando == "listar_problemas" or comando == "lp") {
         cout << '#' << comando << endl;
           try {

@@ -61,6 +61,7 @@ public:
     void listar_problema(std::string id);
     void sumar_envio(std::string problema, int r );
     int envios_problema(std::string problema);
-
+    Problema eliminar_problema(std::string problema);
+    void anadir_problema_objeto(Problema& p, std::string problema);
 };
 #endif
