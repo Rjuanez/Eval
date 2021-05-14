@@ -20,7 +20,7 @@ Curso::Curso(int id) {
 
 Curso::~Curso() {}
 //posible problema de rendimiento
-void Curso::leer_sesiones(Cjt_sesion& ses) {
+void Curso::leer_sesiones(Cjt_sesion& ses, bool incial) {
   int n;
   cin >> n;
   //legir identificadors en un vector
@@ -39,8 +39,8 @@ void Curso::leer_sesiones(Cjt_sesion& ses) {
     l = ses.consultar_problemas(nuevas_sesiones[i]);
     //recorrer la lista de todos los problemas de cada sesion
     for( auto it = l.begin(); it != l.end(); ++it ) {
-      //comprobar si el probelma existe
-      if (not existe_problema(*it)) {
+      //comprobar si el probelma existe VA A DAR FALLO DE EFICICIENCIA
+      if (incial and not existe_problema(*it)) {
         lista_problemas_sesiones.insert(make_pair(*it, nuevas_sesiones[i]));
       }
       else throw "curso mal formado";

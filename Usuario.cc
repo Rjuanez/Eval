@@ -73,13 +73,13 @@ void Usuario::escribir_usuario() {
 }
 
 void Usuario::envio(string p, int r, Cjt_problema problemas){
+    //actualizar probelmas intentados
+  if (problemas_enviables.envios_problema(p) ==  0 ) ++problemas_intentados;
+
   problemas.sumar_envio(p, r);
   problemas_enviables.sumar_envio(p, r);
-  problemas_resueltos.sumar_envio(p, r);
-  //actualizar probelmas intentados
-  if (problemas_enviables.envios_problema(p) ==  0 ) ++problemas_intentados;
   if (r == 1) {
-
+      
 
 
 
