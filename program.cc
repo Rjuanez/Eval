@@ -95,11 +95,7 @@ int main() {
           string u; int c; cin >> u >> c;
           cout << '#' << comando << ' ' << u << ' ' << c << endl;
           try {
-               vector<string> s;
-               if (not lista_usuarios.existe_usuario(u)) throw "el usuario no existe";
-               s = lista_cursos.listar_sesiones(c);
-               lista_sesiones.listar_primer_problema(s);
-               lista_usuarios.inscribir_curso(u, c, s);
+               lista_usuarios.inscribir_curso(u, c, lista_cursos, lista_sesiones);
                lista_cursos.inscribir_usuario(c);
                cout << lista_cursos.num_inscritos(c) << endl;
 

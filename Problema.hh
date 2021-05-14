@@ -21,7 +21,7 @@ private:
     string identificador;
     int envios;
     int envios_exitosos;
-    int ratio;
+    double ratio;
 
 public:
 
@@ -54,6 +54,8 @@ public:
     void escribir_problema();void sumar_envios(int r);
 
     void sumar_envio(int r);
+
+    double leer_ratio();
 
 
 };

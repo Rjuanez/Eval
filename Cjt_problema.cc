@@ -61,7 +61,11 @@ void Cjt_problema::listar_enviables() {
 
 void Cjt_problema::listar_problemas() {
   //esto esta mal, como todos los ratios son 1 pq no se puede hacer envios, recorro el map normal por id y ya (CAMBIAR)
+  map< pair<double, string> , Problema> p_ordenados_ratio;
   for( auto it = problemas.begin(); it != problemas.end(); ++it ) {
+    p_ordenados_ratio.insert(make_pair(make_pair(it->second.leer_ratio(), it->first),it->second));
+  }
+  for( auto it = p_ordenados_ratio.begin(); it != p_ordenados_ratio.end(); ++it ) {
     it->second.escribir_problema();
   }
 }

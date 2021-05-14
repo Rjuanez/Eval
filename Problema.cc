@@ -32,5 +32,9 @@ void Problema::escribir_problema() {
 void Problema::sumar_envio(int r) {
   ++envios;
   if(r == 1) ++envios_exitosos;
-  //actualizar ratio
+  ratio = double(envios + 1.0)/(envios_exitosos + 1.0);
+}
+
+double Problema::leer_ratio(){
+  return ratio;
 }

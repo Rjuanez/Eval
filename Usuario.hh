@@ -28,7 +28,7 @@ private:
     std::string identificador;
     int curso;
 
-    void iniciar_enviables(std::vector<std::string> vec_p);
+    void iniciar_enviables(int c, int num_sesiones, Cjt_curso& lista_cursos, Cjt_sesion& lista_sesiones);
 
 public:
 
@@ -58,7 +58,7 @@ public:
     */
     ~Usuario();
 
-    void inscribir_curso(int c, std::vector<std::string> vec_p);
+    void inscribir_curso(int c, Cjt_curso& lista_cursos, Cjt_sesion& lista_sesiones);
 
     int curso_actual();
 

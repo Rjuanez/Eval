@@ -23,16 +23,22 @@ Usuario::Usuario(string id) {
 
 Usuario::~Usuario() {}
 
-void Usuario::inscribir_curso(int c, vector<std::string> vec_p) {
+void Usuario::inscribir_curso(int c, Cjt_curso& lista_cursos, Cjt_sesion& lista_sesiones) {
+  int num_sesiones;
+  try {
+   num_sesiones = lista_cursos.num_sesiones(c); //tirar error
+  } catch (const char* msg) {
+      throw msg;
+  }
   if (this->curso == 0) {
     this->curso = c;
-    iniciar_enviables(vec_p);
+    iniciar_enviables(c, num_sesiones, lista_cursos, lista_sesiones);
 
   }
   else {
     if (problemas_enviables.num_problemas() == 0) { //soluciona
       this->curso = c;
-      iniciar_enviables(vec_p);
+      iniciar_enviables(c, num_sesiones, lista_cursos, lista_sesiones);
     }
     else {
       throw "usuario inscrito en otro curso";
@@ -40,10 +46,15 @@ void Usuario::inscribir_curso(int c, vector<std::string> vec_p) {
   }
 }
 
-void Usuario::iniciar_enviables(vector<std::string> vec_p) {
-  int size = vec_p.size();
-  for (int i = 0; i < size; ++i) {
-    problemas_enviables.anadir_problema(vec_p[i]);
+void Usuario::iniciar_enviables(int c, int num_sesiones, Cjt_curso& lista_cursos, Cjt_sesion& lista_sesiones) {
+  for (int i = 0; i < num_sesiones; ++i) {
+      string sesion = lista_cursos.leer_sesion_curso(i, c);
+      string problema = lista_sesiones.listar_primer_problema(sesion);
+      if (problemas_resueltos.existe_problema(problema)) {
+        actualizar_enviables(problema, sesion, lista_sesiones);
+      }
+      else problemas_enviables.anadir_problema(problema);
+
   }
 
 }
@@ -60,8 +71,8 @@ void Usuario::f_problemas_enviables() {
 
 }
 void Usuario::f_problemas_resueltos() {
-  if(curso > 0) {
-
+  if(curso > 0 or problemas_resueltos.num_problemas() > 0) {
+    problemas_resueltos.listar_enviables();
   }
   else throw "usuario no inscrito en ningun curso";
 

@@ -43,7 +43,7 @@ public:
 
     int num_sesiones();
 
-    void listar_primer_problema(std::vector<std::string>& v);
+    std::string listar_primer_problema(std::string sesion);
 
     //mierda
     std::list<std::string> consultar_problemas(string sesion);

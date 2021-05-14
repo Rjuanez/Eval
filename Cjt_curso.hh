@@ -62,6 +62,10 @@ public:
     int num_cursos();
     void curso_completo(int curso);
 
+    int num_sesiones(int c);
+
+    std::string leer_sesion_curso(int i, int c);
+
 
 };
 #endif

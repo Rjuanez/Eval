@@ -65,6 +65,7 @@ public:
     void baja_usuario();
 
     int num_inscritos();
+    int num_sesiones();
 
     std::string consultar_sesion_problema(std::string problema);
 
@@ -73,6 +74,8 @@ public:
     void identificar(int i);
 
     void completado();
+
+    std::string leer_sesion(int i);
 
 
 };

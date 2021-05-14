@@ -46,11 +46,8 @@ void Cjt_sesion::anadir_sesion(string id) {
   }
 }
 
-void Cjt_sesion::listar_primer_problema(vector<string>& v) {
-  int size = v.size();
-  for (int i = 0; i < size; ++i){
-    v[i] = sesiones.find(v[i])->second.leer_primer_problema();
-  }
+string Cjt_sesion::listar_primer_problema(string sesion) {
+    return sesiones.find(sesion)->second.leer_primer_problema();
 }
 
 list<string> Cjt_sesion::consultar_problemas(string sesion) {

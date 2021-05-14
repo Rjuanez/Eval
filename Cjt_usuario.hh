@@ -49,7 +49,7 @@ public:
     */
     void leer_usuarios (int n);
 
-    void inscribir_curso(std::string id, int c, std::vector<std::string> vec_p);
+    void inscribir_curso(std::string id, int c, Cjt_curso& lista_cursos, Cjt_sesion& lista_sesiones);
 
     int curso_actual(std::string id);
 

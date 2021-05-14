@@ -65,6 +65,10 @@ int Curso::num_inscritos() {
   return usuarios_inscritos;
 }
 
+int Curso::num_sesiones() {
+  return sesiones.size();
+}
+
 string Curso::consultar_sesion_problema(string problema) {
   if (existe_problema(problema)) {
     return lista_problemas_sesiones.find(problema)->second;
@@ -101,4 +105,8 @@ void Curso::identificar(int i) {
 void Curso::completado(){
   --usuarios_inscritos;
   ++usuarios_completados;
+}
+
+string Curso::leer_sesion(int i) {
+  return sesiones[i];
 }

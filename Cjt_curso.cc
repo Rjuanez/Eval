@@ -98,3 +98,13 @@ int Cjt_curso::num_cursos() {
 void Cjt_curso::curso_completo(int curso) {
   cursos[curso].completado();
 }
+int Cjt_curso::num_sesiones(int c) {
+  if (c != 0 and c < cursos.size()) {
+    return cursos[c].num_sesiones();
+  }
+  else throw "el curso no existe";
+}
+
+string Cjt_curso::leer_sesion_curso(int i, int c) {
+  return cursos[c].leer_sesion(i);
+}

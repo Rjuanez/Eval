@@ -59,10 +59,10 @@ void Cjt_usuario::eliminar_usuario(string id, Cjt_curso& curs) {
   }
 }
 
-void Cjt_usuario::inscribir_curso(string id, int c, vector<std::string> vec_p) {
+void Cjt_usuario::inscribir_curso(string id, int c, Cjt_curso& lista_cursos, Cjt_sesion& lista_sesiones) {
   if (existe_usuario(id)) {
     try {
-      usuarios[id].inscribir_curso(c, vec_p);
+      usuarios[id].inscribir_curso(c, lista_cursos, lista_sesiones);
     } catch (const char* msg) {
       throw msg;
     }
