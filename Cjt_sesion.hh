@@ -8,7 +8,6 @@
 #ifndef NO_DIAGRAM
 #include <map>
 #include <vector>
-#include <list>
 #endif
 
 #include "Sesion.hh"
@@ -45,8 +44,8 @@ public:
 
     std::string listar_primer_problema(std::string sesion);
 
-    //mierda
-    std::list<std::string> consultar_problemas(string sesion);
+    int num_problemas_sesion(std::string sesion);
+    std::string consultar_problema_sesion(string sesion, int i);
 
     //Lectura y escritura
 

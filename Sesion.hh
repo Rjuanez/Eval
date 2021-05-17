@@ -7,7 +7,6 @@
 
 #ifndef NO_DIAGRAM
 #include <string>
-#include <list>
 #include <vector>
 #include <map>
 #endif
@@ -39,7 +38,6 @@ private:
     */
     void leer_arbol(BinTree<string>& a);
 
-    std::list<std::string> recorrer_arbol(const BinTree<string>& a);
 
     void escribir_arbol(const BinTree<string>& a);
 
@@ -87,12 +85,14 @@ public:
     string leer_primer_problema();
 
 
-    std::list<std::string> consultar_problemas();
 
     void escribir_sesion();
 
     std::string nuevo_problema(std::string p, int lado);
 
+    int num_problemas();
+
+    std::string consultar_problema(int i);
 
 
 };

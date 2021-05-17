@@ -34,14 +34,14 @@ void Curso::leer_sesiones(Cjt_sesion& ses) {
   for (int i = 0; i < nuevas_sesiones.size(); ++i) {
     //añadimos la sesion al vector de sesiones
     sesiones.push_back(nuevas_sesiones[i]);
-    list<string> l;
-    //devuelve la lista de todos los probelmas de la sesion
-    l = ses.consultar_problemas(nuevas_sesiones[i]);
+    //pedir numero de probelmas en la lista
+    int num_problemas = ses.num_problemas_sesion(nuevas_sesiones[i]);
     //recorrer la lista de todos los problemas de cada sesion
-    for( auto it = l.begin(); it != l.end(); ++it ) {
+    for(int j = 0; j < num_problemas; ++j ) {
       //comprobar si el probelma existe VA A DAR FALLO DE EFICICIENCIA
-      if (not existe_problema(*it)) {
-        lista_problemas_sesiones.insert(make_pair(*it, nuevas_sesiones[i]));
+      string nuevo_problema = ses.consultar_problema_sesion(nuevas_sesiones[i], j);
+      if (not existe_problema(nuevo_problema)) {
+        lista_problemas_sesiones.insert(make_pair(nuevo_problema, nuevas_sesiones[i]));
       }
       else throw "curso mal formado";
     }

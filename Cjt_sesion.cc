@@ -50,8 +50,13 @@ string Cjt_sesion::listar_primer_problema(string sesion) {
     return sesiones.find(sesion)->second.leer_primer_problema();
 }
 
-list<string> Cjt_sesion::consultar_problemas(string sesion) {
-  return sesiones.find(sesion)->second.consultar_problemas();
+
+int Cjt_sesion::num_problemas_sesion(string sesion) {
+  return sesiones.find(sesion)->second.num_problemas();
+}
+
+string Cjt_sesion::consultar_problema_sesion(string sesion, int i) {
+  return sesiones.find(sesion)->second.consultar_problema(i);
 }
 
 void Cjt_sesion::listar_sesiones() {

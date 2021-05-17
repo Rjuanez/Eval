@@ -30,15 +30,6 @@ void Sesion::leer_arbol(BinTree<string>& a) {
   else problemas_ordenados.insert(make_pair(x, make_pair(r.value(), l.value())));
   }
 }
-list<string> Sesion::recorrer_arbol(const BinTree<string>& a) {
-  list<string> l;
-  if (not a.empty()) {
-    l.splice(l.end(), recorrer_arbol(a.left()));
-    l.splice(l.end(), recorrer_arbol(a.right()));
-    l.push_back(a.value());
-  }
-  return l;
-}
 
 void Sesion::construir_arbol() {
     leer_arbol(prerequisitos);
@@ -46,10 +37,6 @@ void Sesion::construir_arbol() {
 
 string Sesion::leer_primer_problema() {
   return this->prerequisitos.value();
-}
-
-list<string> Sesion::consultar_problemas() {
-  return recorrer_arbol(prerequisitos);
 }
 
 void Sesion::escribir_arbol(const BinTree<string>& a) {
@@ -75,4 +62,12 @@ string Sesion::nuevo_problema(string p, int lado) {
   else {
     return problemas_ordenados.find(p)->second.first;
   }
+}
+
+int Sesion::num_problemas() {
+  return problemas.size();
+}
+
+string Sesion::consultar_problema(int i) {
+  return problemas[i];
 }
