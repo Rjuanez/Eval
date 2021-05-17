@@ -19,6 +19,20 @@ Curso::Curso(int id) {
 }
 
 Curso::~Curso() {}
+
+void Curso::inscribir_usuario() {
+  ++usuarios_inscritos;
+}
+void Curso::baja_usuario() {
+  --usuarios_inscritos;
+}
+
+void Curso::completado(){
+  --usuarios_inscritos;
+  ++usuarios_completados;
+}
+
+
 //posible problema de rendimiento
 void Curso::leer_sesiones(Cjt_sesion& ses) {
   int n;
@@ -49,17 +63,10 @@ void Curso::leer_sesiones(Cjt_sesion& ses) {
 
 }
 
-vector<string> Curso::listar_sesiones() {
-  return sesiones;
-}
 
-void Curso::inscribir_usuario() {
-  ++usuarios_inscritos;
-}
 
-void Curso::baja_usuario() {
-  --usuarios_inscritos;
-}
+
+
 
 int Curso::num_inscritos() {
   return usuarios_inscritos;
@@ -102,10 +109,7 @@ void Curso::identificar(int i) {
   identificador = i;
 }
 
-void Curso::completado(){
-  --usuarios_inscritos;
-  ++usuarios_completados;
-}
+
 
 string Curso::leer_sesion(int i) {
   return sesiones[i];

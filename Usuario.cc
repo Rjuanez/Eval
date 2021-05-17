@@ -82,7 +82,8 @@ void Usuario::escribir_usuario() {
   cout << identificador << '(' << envios << ',' << problemas_resueltos.num_problemas()
   << ',' << problemas_intentados << ',' << curso << ')' << endl;
 }
-//pasar a constantes
+
+
 void Usuario::envio(string p, int r, Cjt_problema& problemas, Cjt_curso& cursos, Cjt_sesion& sesiones){
     //actualizar problemas intentados
   if (problemas_enviables.envios_problema(p) ==  0 ) ++problemas_intentados;

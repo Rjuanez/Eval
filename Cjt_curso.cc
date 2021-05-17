@@ -24,14 +24,6 @@ void Cjt_curso::leer_cursos(int n, Cjt_sesion& sesiones) {
  }
 }
 
-vector<string> Cjt_curso::listar_sesiones(int curso) {
-  if (curso < cursos.size()) {
-    return cursos[curso].listar_sesiones();
-  }
-  else {
-    throw "el curso no existe";
-  }
-}
 
 void Cjt_curso::inscribir_usuario(int c) {
   if (c < cursos.size()) {
