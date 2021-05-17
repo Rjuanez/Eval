@@ -1,6 +1,8 @@
+#ifndef NO_DIAGRAM
 #include <iostream>
 #include <string>
 #include <set>
+#endif
 
 #include "Usuario.hh"
 #include "Cjt_problema.hh"

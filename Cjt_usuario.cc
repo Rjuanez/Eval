@@ -1,5 +1,7 @@
+#ifndef NO_DIAGRAM
 #include <iostream>
 #include <string>
+#endif
 
 #include "Usuario.hh"
 #include "Cjt_usuario.hh"

@@ -1,6 +1,9 @@
+
+#ifndef NO_DIAGRAM
 #include <iostream>
 #include <string>
 #include <map>
+#endif
 
 #include "Problema.hh"
 #include "Cjt_problema.hh"

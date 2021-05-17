@@ -1,7 +1,7 @@
+#ifndef NO_DIAGRAM
 #include <iostream>
 #include <string>
-#include <set>
-#include <list>
+#endif
 
 #include "Curso.hh"
 

@@ -1,5 +1,9 @@
+
+#ifndef NO_DIAGRAM
 #include <iostream>
+#include <string>
 #include <vector>
+#endif
 using namespace std;
 
 #include "Cjt_problema.hh"

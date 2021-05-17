@@ -1,6 +1,8 @@
+#ifndef NO_DIAGRAM
 #include <iostream>
 #include <string>
 #include <vector>
+#endif
 
 #include "Curso.hh"
 #include "Cjt_curso.hh"
