@@ -1,0 +1,527 @@
+\hypertarget{class_curso}{}\section{Referencia de la Clase Curso}
+\label{class_curso}\index{Curso@{Curso}}
+
+
+Representa un curso en la plataforma con un numero de sesiones y sus estadisticas de cuantos usuarios estan escritos y cuantos han completado el curso y un identificador unico.  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_curso_add3bcc7fd065fa02b8fad76cedcc3a8a}{Curso}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. Se ejecuta automáticamente al declarar un curso. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_curso_a88bafa52e2ad615cedc04918453ff59c}{Curso}} (int id)
+\begin{DoxyCompactList}\small\item\em Creadora con identificador Se ejecuta automáticamente al declarar un curso. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_curso_af81ae2c50caea1382d28441859ca1eb5}{$\sim$\+Curso}} ()
+\begin{DoxyCompactList}\small\item\em Destructora por defecto. Se ejecuta automáticamente en los objetos locales al salir. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curso_a7b4f00ccb63ad80befcd77500e15c939}{inscribir\+\_\+usuario}} ()
+\begin{DoxyCompactList}\small\item\em Da de alta a un usuario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curso_a6c279cf46fc2df8e8f1c8ae93cdffec9}{baja\+\_\+usuario}} ()
+\begin{DoxyCompactList}\small\item\em Da de baja a un usuario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curso_a88963d0571e8633bf77f7508e02a031b}{identificar}} (int i)
+\begin{DoxyCompactList}\small\item\em Añade indentificador al curso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curso_a832e6ccf726c8534162079e9a041aac9}{completado}} ()
+\begin{DoxyCompactList}\small\item\em Actualiza las estadisticas despues que un usuario complete el curso. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_curso_aca56beb776cf49d4c330e446032cd572}{num\+\_\+inscritos}} ()
+\begin{DoxyCompactList}\small\item\em Consultora del numero de inscritos al curso. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_curso_a39e86aa0e422cbabb906fcb4878a1a86}{num\+\_\+sesiones}} ()
+\begin{DoxyCompactList}\small\item\em Consultora del numero de sesiones al curso. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_curso_a85eb71e4b4a6013526f8afbb1466c2e2}{leer\+\_\+sesion}} (int i)
+\begin{DoxyCompactList}\small\item\em Consultora de la sesion \char`\"{}i\char`\"{} del curso. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_curso_a84e25406614d5e938909385cf860d3f8}{consultar\+\_\+sesion\+\_\+problema}} (std\+::string problema)
+\begin{DoxyCompactList}\small\item\em Consultora en que sesion se encuentra un problema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curso_ad60de4c73f3ce9195c0f681f508f83c8}{leer\+\_\+sesiones}} (\mbox{\hyperlink{class_cjt__sesion}{Cjt\+\_\+sesion}} \&ses)
+\begin{DoxyCompactList}\small\item\em Operación de lecutra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curso_ac196f3a5a5d30d41d2c0a0c295f052d3}{escribir\+\_\+curso}} ()
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_curso_ac697ad831382b4e3ccd85365e835344f}{existe\+\_\+problema}} (string id)
+\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_curso_aa719041069be2a3f1a093a881ae7a105}{identificador}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_curso_a53e0e57eb6d683a83752082d633a03bc}{sesiones}}
+\item 
+int \mbox{\hyperlink{class_curso_a63f5480299c87c260ba262831ba7a86f}{usuarios\+\_\+completados}}
+\item 
+int \mbox{\hyperlink{class_curso_a94c41191b9cd9dc8af95e7d2560a2381}{usuarios\+\_\+inscritos}}
+\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{class_curso_a99375622457c06d91cdeede8686f6da5}{lista\+\_\+problemas\+\_\+sesiones}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa un curso en la plataforma con un numero de sesiones y sus estadisticas de cuantos usuarios estan escritos y cuantos han completado el curso y un identificador unico. 
+
+Definición en la línea 21 del archivo Curso.\+hh.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_curso_add3bcc7fd065fa02b8fad76cedcc3a8a}\label{class_curso_add3bcc7fd065fa02b8fad76cedcc3a8a}} 
+\index{Curso@{Curso}!Curso@{Curso}}
+\index{Curso@{Curso}!Curso@{Curso}}
+\subsubsection{\texorpdfstring{Curso()}{Curso()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Curso\+::\+Curso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. Se ejecuta automáticamente al declarar un curso. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un curso sin sesiones ni usuarios 
+\end{DoxyPostcond}
+
+
+Definición en la línea 10 del archivo Curso.\+cc.
+
+
+\begin{DoxyCode}
+10              \{
+11   \mbox{\hyperlink{class_curso_a63f5480299c87c260ba262831ba7a86f}{usuarios\_completados}} = 0;
+12   \mbox{\hyperlink{class_curso_a94c41191b9cd9dc8af95e7d2560a2381}{usuarios\_inscritos}} = 0;
+13 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_curso_a88bafa52e2ad615cedc04918453ff59c}\label{class_curso_a88bafa52e2ad615cedc04918453ff59c}} 
+\index{Curso@{Curso}!Curso@{Curso}}
+\index{Curso@{Curso}!Curso@{Curso}}
+\subsubsection{\texorpdfstring{Curso()}{Curso()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Curso\+::\+Curso (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Creadora con identificador Se ejecuta automáticamente al declarar un curso. 
+
+\begin{DoxyPrecond}{Precondición}
+id $>$ 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un curso sin sesiones ni usuarios con el id = id 
+\end{DoxyPostcond}
+
+
+Definición en la línea 15 del archivo Curso.\+cc.
+
+
+\begin{DoxyCode}
+15                    \{
+16   \mbox{\hyperlink{class_curso_a63f5480299c87c260ba262831ba7a86f}{usuarios\_completados}} = 0;
+17   \mbox{\hyperlink{class_curso_a94c41191b9cd9dc8af95e7d2560a2381}{usuarios\_inscritos}} = 0;
+18   \mbox{\hyperlink{class_curso_aa719041069be2a3f1a093a881ae7a105}{identificador}} = id;
+19 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_curso_af81ae2c50caea1382d28441859ca1eb5}\label{class_curso_af81ae2c50caea1382d28441859ca1eb5}} 
+\index{Curso@{Curso}!````~Curso@{$\sim$\+Curso}}
+\index{````~Curso@{$\sim$\+Curso}!Curso@{Curso}}
+\subsubsection{\texorpdfstring{$\sim$\+Curso()}{~Curso()}}
+{\footnotesize\ttfamily Curso\+::$\sim$\+Curso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructora por defecto. Se ejecuta automáticamente en los objetos locales al salir. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es que se elimina el objeto curso 
+\end{DoxyPostcond}
+
+
+Definición en la línea 21 del archivo Curso.\+cc.
+
+
+\begin{DoxyCode}
+21 \{\}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_curso_ac697ad831382b4e3ccd85365e835344f}\label{class_curso_ac697ad831382b4e3ccd85365e835344f}} 
+\index{Curso@{Curso}!existe\+\_\+problema@{existe\+\_\+problema}}
+\index{existe\+\_\+problema@{existe\+\_\+problema}!Curso@{Curso}}
+\subsubsection{\texorpdfstring{existe\+\_\+problema()}{existe\_problema()}}
+{\footnotesize\ttfamily bool Curso\+::existe\+\_\+problema (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 88 del archivo Curso.\+cc.
+
+
+\begin{DoxyCode}
+88                                      \{
+89     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_curso_ac697ad831382b4e3ccd85365e835344f}{existe\_problema}} = \textcolor{keyword}{false};
+90     map<string,string>::iterator it;
+91     it = \mbox{\hyperlink{class_curso_a99375622457c06d91cdeede8686f6da5}{lista\_problemas\_sesiones}}.find(\textcolor{keywordtype}{id});
+92     \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_curso_a99375622457c06d91cdeede8686f6da5}{lista\_problemas\_sesiones}}.end()) 
+      \mbox{\hyperlink{class_curso_ac697ad831382b4e3ccd85365e835344f}{existe\_problema}} = \textcolor{keyword}{true};
+93     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_curso_ac697ad831382b4e3ccd85365e835344f}{existe\_problema}};
+94 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_curso_a7b4f00ccb63ad80befcd77500e15c939}\label{class_curso_a7b4f00ccb63ad80befcd77500e15c939}} 
+\index{Curso@{Curso}!inscribir\+\_\+usuario@{inscribir\+\_\+usuario}}
+\index{inscribir\+\_\+usuario@{inscribir\+\_\+usuario}!Curso@{Curso}}
+\subsubsection{\texorpdfstring{inscribir\+\_\+usuario()}{inscribir\_usuario()}}
+{\footnotesize\ttfamily void Curso\+::inscribir\+\_\+usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Da de alta a un usuario. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es que se le suma 1 al atributo implicito usuarios\+\_\+inscritos 
+\end{DoxyPostcond}
+
+
+Definición en la línea 23 del archivo Curso.\+cc.
+
+
+\begin{DoxyCode}
+23                               \{
+24   ++\mbox{\hyperlink{class_curso_a94c41191b9cd9dc8af95e7d2560a2381}{usuarios\_inscritos}};
+25 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_curso_a6c279cf46fc2df8e8f1c8ae93cdffec9}\label{class_curso_a6c279cf46fc2df8e8f1c8ae93cdffec9}} 
+\index{Curso@{Curso}!baja\+\_\+usuario@{baja\+\_\+usuario}}
+\index{baja\+\_\+usuario@{baja\+\_\+usuario}!Curso@{Curso}}
+\subsubsection{\texorpdfstring{baja\+\_\+usuario()}{baja\_usuario()}}
+{\footnotesize\ttfamily void Curso\+::baja\+\_\+usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Da de baja a un usuario. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es que se le resta 1 al atributo implicito usuarios\+\_\+inscritos 
+\end{DoxyPostcond}
+
+
+Definición en la línea 26 del archivo Curso.\+cc.
+
+
+\begin{DoxyCode}
+26                          \{
+27   --\mbox{\hyperlink{class_curso_a94c41191b9cd9dc8af95e7d2560a2381}{usuarios\_inscritos}};
+28 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_curso_a88963d0571e8633bf77f7508e02a031b}\label{class_curso_a88963d0571e8633bf77f7508e02a031b}} 
+\index{Curso@{Curso}!identificar@{identificar}}
+\index{identificar@{identificar}!Curso@{Curso}}
+\subsubsection{\texorpdfstring{identificar()}{identificar()}}
+{\footnotesize\ttfamily void Curso\+::identificar (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Añade indentificador al curso. 
+
+\begin{DoxyPrecond}{Precondición}
+el parametro implicito no tiene identificador, 0 = \char`\"{}identificador\char`\"{} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El identificador del parametro implicito pasa a ser \char`\"{}i\char`\"{} 
+\end{DoxyPostcond}
+
+
+Definición en la línea 108 del archivo Curso.\+cc.
+
+
+\begin{DoxyCode}
+108                              \{
+109   \mbox{\hyperlink{class_curso_aa719041069be2a3f1a093a881ae7a105}{identificador}} = i;
+110 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_curso_a832e6ccf726c8534162079e9a041aac9}\label{class_curso_a832e6ccf726c8534162079e9a041aac9}} 
+\index{Curso@{Curso}!completado@{completado}}
+\index{completado@{completado}!Curso@{Curso}}
+\subsubsection{\texorpdfstring{completado()}{completado()}}
+{\footnotesize\ttfamily void Curso\+::completado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Actualiza las estadisticas despues que un usuario complete el curso. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El identificador del parametro implicito pasa a ser \char`\"{}i\char`\"{} 
+\end{DoxyPostcond}
+
+
+Definición en la línea 30 del archivo Curso.\+cc.
+
+
+\begin{DoxyCode}
+30                       \{
+31   --\mbox{\hyperlink{class_curso_a94c41191b9cd9dc8af95e7d2560a2381}{usuarios\_inscritos}};
+32   ++\mbox{\hyperlink{class_curso_a63f5480299c87c260ba262831ba7a86f}{usuarios\_completados}};
+33 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_curso_aca56beb776cf49d4c330e446032cd572}\label{class_curso_aca56beb776cf49d4c330e446032cd572}} 
+\index{Curso@{Curso}!num\+\_\+inscritos@{num\+\_\+inscritos}}
+\index{num\+\_\+inscritos@{num\+\_\+inscritos}!Curso@{Curso}}
+\subsubsection{\texorpdfstring{num\+\_\+inscritos()}{num\_inscritos()}}
+{\footnotesize\ttfamily int Curso\+::num\+\_\+inscritos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Consultora del numero de inscritos al curso. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el numero de inscritos del parámetro implícito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 71 del archivo Curso.\+cc.
+
+
+\begin{DoxyCode}
+71                          \{
+72   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_curso_a94c41191b9cd9dc8af95e7d2560a2381}{usuarios\_inscritos}};
+73 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_curso_a39e86aa0e422cbabb906fcb4878a1a86}\label{class_curso_a39e86aa0e422cbabb906fcb4878a1a86}} 
+\index{Curso@{Curso}!num\+\_\+sesiones@{num\+\_\+sesiones}}
+\index{num\+\_\+sesiones@{num\+\_\+sesiones}!Curso@{Curso}}
+\subsubsection{\texorpdfstring{num\+\_\+sesiones()}{num\_sesiones()}}
+{\footnotesize\ttfamily int Curso\+::num\+\_\+sesiones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Consultora del numero de sesiones al curso. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el numero de sesiones que tiene parámetro implícito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 75 del archivo Curso.\+cc.
+
+
+\begin{DoxyCode}
+75                         \{
+76   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_curso_a53e0e57eb6d683a83752082d633a03bc}{sesiones}}.size();
+77 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_curso_a85eb71e4b4a6013526f8afbb1466c2e2}\label{class_curso_a85eb71e4b4a6013526f8afbb1466c2e2}} 
+\index{Curso@{Curso}!leer\+\_\+sesion@{leer\+\_\+sesion}}
+\index{leer\+\_\+sesion@{leer\+\_\+sesion}!Curso@{Curso}}
+\subsubsection{\texorpdfstring{leer\+\_\+sesion()}{leer\_sesion()}}
+{\footnotesize\ttfamily string Curso\+::leer\+\_\+sesion (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Consultora de la sesion \char`\"{}i\char`\"{} del curso. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado y i $>$= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es la sesion i-\/essima de las sesiones que pertenecen al parametro implicito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 114 del archivo Curso.\+cc.
+
+
+\begin{DoxyCode}
+114                                \{
+115   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_curso_a53e0e57eb6d683a83752082d633a03bc}{sesiones}}[i];
+116 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_curso_a84e25406614d5e938909385cf860d3f8}\label{class_curso_a84e25406614d5e938909385cf860d3f8}} 
+\index{Curso@{Curso}!consultar\+\_\+sesion\+\_\+problema@{consultar\+\_\+sesion\+\_\+problema}}
+\index{consultar\+\_\+sesion\+\_\+problema@{consultar\+\_\+sesion\+\_\+problema}!Curso@{Curso}}
+\subsubsection{\texorpdfstring{consultar\+\_\+sesion\+\_\+problema()}{consultar\_sesion\_problema()}}
+{\footnotesize\ttfamily string Curso\+::consultar\+\_\+sesion\+\_\+problema (\begin{DoxyParamCaption}\item[{std\+::string}]{problema }\end{DoxyParamCaption})}
+
+
+
+Consultora en que sesion se encuentra un problema. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el nombre de la sesion que contiene el problema \char`\"{}problema\char`\"{}, en caso de que no exista dicho problema, se devuelve un error indicandolo 
+\end{DoxyPostcond}
+
+
+Definición en la línea 79 del archivo Curso.\+cc.
+
+
+\begin{DoxyCode}
+79                                                        \{
+80   \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_curso_ac697ad831382b4e3ccd85365e835344f}{existe\_problema}}(problema)) \{
+81     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_curso_a99375622457c06d91cdeede8686f6da5}{lista\_problemas\_sesiones}}.find(problema)->second;
+82   \}
+83   \textcolor{keywordflow}{else} \{
+84     \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"el problema no pertenece al curso"};
+85   \}
+86 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_curso_ad60de4c73f3ce9195c0f681f508f83c8}\label{class_curso_ad60de4c73f3ce9195c0f681f508f83c8}} 
+\index{Curso@{Curso}!leer\+\_\+sesiones@{leer\+\_\+sesiones}}
+\index{leer\+\_\+sesiones@{leer\+\_\+sesiones}!Curso@{Curso}}
+\subsubsection{\texorpdfstring{leer\+\_\+sesiones()}{leer\_sesiones()}}
+{\footnotesize\ttfamily void Curso\+::leer\+\_\+sesiones (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cjt__sesion}{Cjt\+\_\+sesion}} \&}]{ses }\end{DoxyParamCaption})}
+
+
+
+Operación de lecutra. 
+
+\begin{DoxyPrecond}{Precondición}
+Estan preparados en el canal estandar un int n con el numero de sesiones y tantos nombre de sesiones como n 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parametro implicito pasa a tener los atributos leidos por el canar estandard de entrada, si hay problemas repetidos no se leen los cursos y se devuelve un error 
+\end{DoxyPostcond}
+
+
+Definición en la línea 37 del archivo Curso.\+cc.
+
+
+\begin{DoxyCode}
+37                                          \{
+38   \textcolor{keywordtype}{int} n;
+39   cin >> n;
+40   \textcolor{comment}{//legir identificadors en un vector}
+41   vector<string> nuevas\_sesiones;
+42   \textcolor{keywordflow}{while} (n > 0)\{
+43     \textcolor{keywordtype}{string} s;
+44     cin >> s;
+45     nuevas\_sesiones.push\_back(s);
+46      --n;
+47   \}
+48   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < nuevas\_sesiones.size(); ++i) \{
+49     \textcolor{comment}{//añadimos la sesion al vector de sesiones}
+50     \mbox{\hyperlink{class_curso_a53e0e57eb6d683a83752082d633a03bc}{sesiones}}.push\_back(nuevas\_sesiones[i]);
+51     \textcolor{comment}{//pedir numero de probelmas en la lista}
+52     \textcolor{keywordtype}{int} num\_problemas = ses.\mbox{\hyperlink{class_cjt__sesion_ac761936095af984ee9a39fdcdf25219c}{num\_problemas\_sesion}}(nuevas\_sesiones[i]);
+53     \textcolor{comment}{//recorrer la lista de todos los problemas de cada sesion}
+54     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < num\_problemas; ++j ) \{
+55       \textcolor{comment}{//comprobar si el probelma existe VA A DAR FALLO DE EFICICIENCIA}
+56       \textcolor{keywordtype}{string} nuevo\_problema = ses.\mbox{\hyperlink{class_cjt__sesion_a7bc8395d0f4702cd383b11efab65feb1}{consultar\_problema\_sesion}}(nuevas\_sesiones[i], j)
+      ;
+57       \textcolor{keywordflow}{if} (not \mbox{\hyperlink{class_curso_ac697ad831382b4e3ccd85365e835344f}{existe\_problema}}(nuevo\_problema)) \{
+58         \mbox{\hyperlink{class_curso_a99375622457c06d91cdeede8686f6da5}{lista\_problemas\_sesiones}}.insert(make\_pair(nuevo\_problema, nuevas\_sesiones[i
+      ]));
+59       \}
+60       \textcolor{keywordflow}{else} \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"curso mal formado"};
+61     \}
+62   \}
+63 
+64 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_curso_ac196f3a5a5d30d41d2c0a0c295f052d3}\label{class_curso_ac196f3a5a5d30d41d2c0a0c295f052d3}} 
+\index{Curso@{Curso}!escribir\+\_\+curso@{escribir\+\_\+curso}}
+\index{escribir\+\_\+curso@{escribir\+\_\+curso}!Curso@{Curso}}
+\subsubsection{\texorpdfstring{escribir\+\_\+curso()}{escribir\_curso()}}
+{\footnotesize\ttfamily void Curso\+::escribir\+\_\+curso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Escribe las propiedades y el contenido del parámetro implícito por el canal estándar de salida 
+\end{DoxyPostcond}
+
+
+Definición en la línea 96 del archivo Curso.\+cc.
+
+
+\begin{DoxyCode}
+96                            \{
+97   \textcolor{keywordtype}{int} size = \mbox{\hyperlink{class_curso_a53e0e57eb6d683a83752082d633a03bc}{sesiones}}.size();
+98   cout << \mbox{\hyperlink{class_curso_aa719041069be2a3f1a093a881ae7a105}{identificador}} << \textcolor{charliteral}{' '} << \mbox{\hyperlink{class_curso_a63f5480299c87c260ba262831ba7a86f}{usuarios\_completados}} << \textcolor{charliteral}{' '}
+99   << \mbox{\hyperlink{class_curso_a94c41191b9cd9dc8af95e7d2560a2381}{usuarios\_inscritos}} << \textcolor{charliteral}{' '} << size << \textcolor{stringliteral}{" ("};
+100   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; ++i) \{
+101     cout << \mbox{\hyperlink{class_curso_a53e0e57eb6d683a83752082d633a03bc}{sesiones}}[i];
+102     \textcolor{keywordflow}{if} (i < size - 1) cout << \textcolor{charliteral}{' '};
+103   \}
+104 
+105   cout << \textcolor{charliteral}{')'} << endl;
+106 \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_curso_aa719041069be2a3f1a093a881ae7a105}\label{class_curso_aa719041069be2a3f1a093a881ae7a105}} 
+\index{Curso@{Curso}!identificador@{identificador}}
+\index{identificador@{identificador}!Curso@{Curso}}
+\subsubsection{\texorpdfstring{identificador}{identificador}}
+{\footnotesize\ttfamily int Curso\+::identificador\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 24 del archivo Curso.\+hh.
+
+\mbox{\Hypertarget{class_curso_a53e0e57eb6d683a83752082d633a03bc}\label{class_curso_a53e0e57eb6d683a83752082d633a03bc}} 
+\index{Curso@{Curso}!sesiones@{sesiones}}
+\index{sesiones@{sesiones}!Curso@{Curso}}
+\subsubsection{\texorpdfstring{sesiones}{sesiones}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Curso\+::sesiones\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 25 del archivo Curso.\+hh.
+
+\mbox{\Hypertarget{class_curso_a63f5480299c87c260ba262831ba7a86f}\label{class_curso_a63f5480299c87c260ba262831ba7a86f}} 
+\index{Curso@{Curso}!usuarios\+\_\+completados@{usuarios\+\_\+completados}}
+\index{usuarios\+\_\+completados@{usuarios\+\_\+completados}!Curso@{Curso}}
+\subsubsection{\texorpdfstring{usuarios\+\_\+completados}{usuarios\_completados}}
+{\footnotesize\ttfamily int Curso\+::usuarios\+\_\+completados\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 26 del archivo Curso.\+hh.
+
+\mbox{\Hypertarget{class_curso_a94c41191b9cd9dc8af95e7d2560a2381}\label{class_curso_a94c41191b9cd9dc8af95e7d2560a2381}} 
+\index{Curso@{Curso}!usuarios\+\_\+inscritos@{usuarios\+\_\+inscritos}}
+\index{usuarios\+\_\+inscritos@{usuarios\+\_\+inscritos}!Curso@{Curso}}
+\subsubsection{\texorpdfstring{usuarios\+\_\+inscritos}{usuarios\_inscritos}}
+{\footnotesize\ttfamily int Curso\+::usuarios\+\_\+inscritos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 27 del archivo Curso.\+hh.
+
+\mbox{\Hypertarget{class_curso_a99375622457c06d91cdeede8686f6da5}\label{class_curso_a99375622457c06d91cdeede8686f6da5}} 
+\index{Curso@{Curso}!lista\+\_\+problemas\+\_\+sesiones@{lista\+\_\+problemas\+\_\+sesiones}}
+\index{lista\+\_\+problemas\+\_\+sesiones@{lista\+\_\+problemas\+\_\+sesiones}!Curso@{Curso}}
+\subsubsection{\texorpdfstring{lista\+\_\+problemas\+\_\+sesiones}{lista\_problemas\_sesiones}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, std\+::string$>$ Curso\+::lista\+\_\+problemas\+\_\+sesiones\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 28 del archivo Curso.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_curso_8hh}{Curso.\+hh}}\item 
+\mbox{\hyperlink{_curso_8cc}{Curso.\+cc}}\end{DoxyCompactItemize}

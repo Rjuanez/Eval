@@ -1,0 +1,486 @@
+\hypertarget{class_usuario}{}\section{Referencia de la Clase Usuario}
+\label{class_usuario}\index{Usuario@{Usuario}}
+
+
+Representa un usuario en la plataforma con sus estadisticas de cuantos envios se han hecho, cuantos problemas se han intenado hacer, ademas del curso al que esta inscrito dicho usuario, un identificador unico y dos conjuntos con los problemas que puede enviar y los que ya ha resuelto.  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_usuario_aa85a5371a098dfba5449140d9b8a472f}{Usuario}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. Se ejecuta automáticamente al declarar un problema. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_usuario_adbc2bd125ed21ba9e091e3593e31f4cd}{Usuario}} (std\+::string id)
+\begin{DoxyCompactList}\small\item\em Creadora con identificador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_usuario_ab4096b0b8300ecb47b10c555fb09c997}{$\sim$\+Usuario}} ()
+\begin{DoxyCompactList}\small\item\em Destructora por defecto. Se ejecuta automáticamente en los objetos locales al salir. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuario_a2baa098a110a9041c66bf76635d4153b}{envio}} (std\+::string p, int r, \mbox{\hyperlink{class_cjt__problema}{Cjt\+\_\+problema}} \&problemas, \mbox{\hyperlink{class_cjt__curso}{Cjt\+\_\+curso}} \&cursos, \mbox{\hyperlink{class_cjt__sesion}{Cjt\+\_\+sesion}} \&sesiones)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_usuario}{Usuario}} hace envio a un problema de un curso especifico. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuario_ae2ebc16b4ed5e80451ca8ae12f0c8209}{inscribir\+\_\+curso}} (int c, \mbox{\hyperlink{class_cjt__curso}{Cjt\+\_\+curso}} \&lista\+\_\+cursos, \mbox{\hyperlink{class_cjt__sesion}{Cjt\+\_\+sesion}} \&lista\+\_\+sesiones)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_usuario}{Usuario}} se inscribe en un curso. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_usuario_ad4813c66cba2cb678522cefd3491e6c0}{curso\+\_\+actual}} ()
+\begin{DoxyCompactList}\small\item\em Consultora del curso del usuario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuario_a11ee6d52132455ed32f3df6824c7b9c5}{f\+\_\+problemas\+\_\+enviables}} ()
+\begin{DoxyCompactList}\small\item\em Operación de escritura de los problemas a los que se puede hacer envio. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuario_a6f504aa9a6cb6467e02a01b40951b31c}{f\+\_\+problemas\+\_\+resueltos}} ()
+\begin{DoxyCompactList}\small\item\em Operación de escritura de los problemas que ya se han resuelto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuario_a501a484852ba4eca86c0e78f246c87e9}{escribir\+\_\+usuario}} ()
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_usuario_a0b4c3ba568ee299aed56005ce6e6a72f}{iniciar\+\_\+enviables}} (int c, int num\+\_\+sesiones, \mbox{\hyperlink{class_cjt__curso}{Cjt\+\_\+curso}} \&lista\+\_\+cursos, \mbox{\hyperlink{class_cjt__sesion}{Cjt\+\_\+sesion}} \&lista\+\_\+sesiones)
+\begin{DoxyCompactList}\small\item\em Inicia los problemas enviables al inscribirse en un curso Se ejecuta automáticamente al declarar un problema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuario_a4dbe4aafe7c5308293ef5f6094f35bb1}{actualizar\+\_\+enviables}} (std\+::string p, std\+::string sesion, \mbox{\hyperlink{class_cjt__sesion}{Cjt\+\_\+sesion}} \&sesiones)
+\begin{DoxyCompactList}\small\item\em Inicia los problemas enviables al hacer un envio Se ejecuta automáticamente al declarar un problema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cjt__problema}{Cjt\+\_\+problema}} \mbox{\hyperlink{class_usuario_a553cef1aad192b30d010cd524f261c1b}{problemas\+\_\+enviables}}
+\item 
+\mbox{\hyperlink{class_cjt__problema}{Cjt\+\_\+problema}} \mbox{\hyperlink{class_usuario_a53fa260ffc780dd5c3a4805d683e5ee7}{problemas\+\_\+resueltos}}
+\item 
+int \mbox{\hyperlink{class_usuario_a485a741c0646e6414bd6cf669a77fc9c}{envios}}
+\item 
+int \mbox{\hyperlink{class_usuario_a5484a08ce9aeabef98074c738f58b00a}{problemas\+\_\+intentados}}
+\item 
+std\+::string \mbox{\hyperlink{class_usuario_a95926ccb5e92ec5f2acab98830a3725e}{identificador}}
+\item 
+int \mbox{\hyperlink{class_usuario_aa767fe2d1198f2c97791073bc55803e7}{curso}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa un usuario en la plataforma con sus estadisticas de cuantos envios se han hecho, cuantos problemas se han intenado hacer, ademas del curso al que esta inscrito dicho usuario, un identificador unico y dos conjuntos con los problemas que puede enviar y los que ya ha resuelto. 
+
+Definición en la línea 23 del archivo Usuario.\+hh.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_usuario_aa85a5371a098dfba5449140d9b8a472f}\label{class_usuario_aa85a5371a098dfba5449140d9b8a472f}} 
+\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{Usuario()}{Usuario()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Usuario\+::\+Usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. Se ejecuta automáticamente al declarar un problema. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un usuario no inicializado, con todos los atributos a 0 y los conjuntos vacios 
+\end{DoxyPostcond}
+
+
+Definición en la línea 13 del archivo Usuario.\+cc.
+
+
+\begin{DoxyCode}
+13                  \{
+14   \mbox{\hyperlink{class_usuario_aa767fe2d1198f2c97791073bc55803e7}{curso}} = 0;
+15   \mbox{\hyperlink{class_usuario_a485a741c0646e6414bd6cf669a77fc9c}{envios}} = 0;
+16   \mbox{\hyperlink{class_usuario_a5484a08ce9aeabef98074c738f58b00a}{problemas\_intentados}} = 0;
+17 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_usuario_adbc2bd125ed21ba9e091e3593e31f4cd}\label{class_usuario_adbc2bd125ed21ba9e091e3593e31f4cd}} 
+\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{Usuario()}{Usuario()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Usuario\+::\+Usuario (\begin{DoxyParamCaption}\item[{std\+::string}]{id }\end{DoxyParamCaption})}
+
+
+
+Creadora con identificador. 
+
+\begin{DoxyPrecond}{Precondición}
+id $>$ 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un usuario con con todos los atributos a 0 y con identificador = \char`\"{}id\char`\"{} 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_usuario_ab4096b0b8300ecb47b10c555fb09c997}\label{class_usuario_ab4096b0b8300ecb47b10c555fb09c997}} 
+\index{Usuario@{Usuario}!````~Usuario@{$\sim$\+Usuario}}
+\index{````~Usuario@{$\sim$\+Usuario}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{$\sim$\+Usuario()}{~Usuario()}}
+{\footnotesize\ttfamily Usuario\+::$\sim$\+Usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructora por defecto. Se ejecuta automáticamente en los objetos locales al salir. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es que se elimina el objeto usuario 
+\end{DoxyPostcond}
+
+
+Definición en la línea 26 del archivo Usuario.\+cc.
+
+
+\begin{DoxyCode}
+26 \{\}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_usuario_a0b4c3ba568ee299aed56005ce6e6a72f}\label{class_usuario_a0b4c3ba568ee299aed56005ce6e6a72f}} 
+\index{Usuario@{Usuario}!iniciar\+\_\+enviables@{iniciar\+\_\+enviables}}
+\index{iniciar\+\_\+enviables@{iniciar\+\_\+enviables}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{iniciar\+\_\+enviables()}{iniciar\_enviables()}}
+{\footnotesize\ttfamily void Usuario\+::iniciar\+\_\+enviables (\begin{DoxyParamCaption}\item[{int}]{c,  }\item[{int}]{num\+\_\+sesiones,  }\item[{\mbox{\hyperlink{class_cjt__curso}{Cjt\+\_\+curso}} \&}]{lista\+\_\+cursos,  }\item[{\mbox{\hyperlink{class_cjt__sesion}{Cjt\+\_\+sesion}} \&}]{lista\+\_\+sesiones }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Inicia los problemas enviables al inscribirse en un curso Se ejecuta automáticamente al declarar un problema. 
+
+\begin{DoxyPrecond}{Precondición}
+c $>$ 0, num\+\_\+sesiones $>$ 0 y los conjuntos de cursos y sesiones estan inicializados 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un usuario con los conjuntos de problemas enviables inicializados con los problemas, del nuevo curso 
+\end{DoxyPostcond}
+
+
+Definición en la línea 51 del archivo Usuario.\+cc.
+
+
+\begin{DoxyCode}
+51                                                                                                            
+       \{
+52   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < num\_sesiones; ++i) \{
+53       \textcolor{keywordtype}{string} sesion = lista\_cursos.\mbox{\hyperlink{class_cjt__curso_a62fcf92bed669fed99ef01f495570877}{leer\_sesion\_curso}}(i, c);
+54       \textcolor{keywordtype}{string} problema = lista\_sesiones.\mbox{\hyperlink{class_cjt__sesion_aade2be6a90f0135b38342f877cc26ae6}{listar\_primer\_problema}}(sesion);
+55       \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_usuario_a53fa260ffc780dd5c3a4805d683e5ee7}{problemas\_resueltos}}.\mbox{\hyperlink{class_cjt__problema_a831be5b51e252520ee981b58d9ec00e9}{existe\_problema}}(problema)) \{
+56         \mbox{\hyperlink{class_usuario_a4dbe4aafe7c5308293ef5f6094f35bb1}{actualizar\_enviables}}(problema, sesion, lista\_sesiones);
+57       \}
+58       \textcolor{keywordflow}{else} \mbox{\hyperlink{class_usuario_a553cef1aad192b30d010cd524f261c1b}{problemas\_enviables}}.\mbox{\hyperlink{class_cjt__problema_a6086147f5615c1cf42d6d563682b080d}{anadir\_problema}}(problema);
+59 
+60   \}
+61 
+62 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_usuario_a4dbe4aafe7c5308293ef5f6094f35bb1}\label{class_usuario_a4dbe4aafe7c5308293ef5f6094f35bb1}} 
+\index{Usuario@{Usuario}!actualizar\+\_\+enviables@{actualizar\+\_\+enviables}}
+\index{actualizar\+\_\+enviables@{actualizar\+\_\+enviables}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{actualizar\+\_\+enviables()}{actualizar\_enviables()}}
+{\footnotesize\ttfamily void Usuario\+::actualizar\+\_\+enviables (\begin{DoxyParamCaption}\item[{std\+::string}]{p,  }\item[{std\+::string}]{sesion,  }\item[{\mbox{\hyperlink{class_cjt__sesion}{Cjt\+\_\+sesion}} \&}]{sesiones }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Inicia los problemas enviables al hacer un envio Se ejecuta automáticamente al declarar un problema. 
+
+\begin{DoxyPrecond}{Precondición}
+p y sesion no son nulos, y el conjutno de sesiones esta inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un usuario con los conjuntos de problemas enviables actualizados despues del envio 
+\end{DoxyPostcond}
+
+
+Definición en la línea 112 del archivo Usuario.\+cc.
+
+
+\begin{DoxyCode}
+112                                                                                 \{
+113   \textcolor{comment}{// 1 = right, 0 = left}
+114   \textcolor{keywordtype}{string} nuevo\_problema = sesiones.\mbox{\hyperlink{class_cjt__sesion_a4aef15fb48b0465b864eaebeb3808cd0}{buscar\_nuevo\_problema}}(p, sesion, 0);
+115   \textcolor{keywordflow}{if} (nuevo\_problema != \textcolor{stringliteral}{"0"}) \{
+116     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_usuario_a53fa260ffc780dd5c3a4805d683e5ee7}{problemas\_resueltos}}.\mbox{\hyperlink{class_cjt__problema_a831be5b51e252520ee981b58d9ec00e9}{existe\_problema}}(nuevo\_problema)) \{
+117       \mbox{\hyperlink{class_usuario_a4dbe4aafe7c5308293ef5f6094f35bb1}{actualizar\_enviables}}(nuevo\_problema, sesion, sesiones);
+118     \}
+119     \textcolor{keywordflow}{else} \{
+120       \mbox{\hyperlink{class_usuario_a553cef1aad192b30d010cd524f261c1b}{problemas\_enviables}}.\mbox{\hyperlink{class_cjt__problema_a6086147f5615c1cf42d6d563682b080d}{anadir\_problema}}(nuevo\_problema);
+121     \}
+122   \}
+123   nuevo\_problema = sesiones.\mbox{\hyperlink{class_cjt__sesion_a4aef15fb48b0465b864eaebeb3808cd0}{buscar\_nuevo\_problema}}(p, sesion, 1);
+124   \textcolor{keywordflow}{if} (nuevo\_problema != \textcolor{stringliteral}{"0"}) \{
+125     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_usuario_a53fa260ffc780dd5c3a4805d683e5ee7}{problemas\_resueltos}}.\mbox{\hyperlink{class_cjt__problema_a831be5b51e252520ee981b58d9ec00e9}{existe\_problema}}(nuevo\_problema)) \{
+126       \mbox{\hyperlink{class_usuario_a4dbe4aafe7c5308293ef5f6094f35bb1}{actualizar\_enviables}}(nuevo\_problema, sesion, sesiones);
+127     \}
+128     \textcolor{keywordflow}{else} \{
+129       \mbox{\hyperlink{class_usuario_a553cef1aad192b30d010cd524f261c1b}{problemas\_enviables}}.\mbox{\hyperlink{class_cjt__problema_a6086147f5615c1cf42d6d563682b080d}{anadir\_problema}}(nuevo\_problema);
+130     \}
+131   \}
+132 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_usuario_a2baa098a110a9041c66bf76635d4153b}\label{class_usuario_a2baa098a110a9041c66bf76635d4153b}} 
+\index{Usuario@{Usuario}!envio@{envio}}
+\index{envio@{envio}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{envio()}{envio()}}
+{\footnotesize\ttfamily void Usuario\+::envio (\begin{DoxyParamCaption}\item[{std\+::string}]{p,  }\item[{int}]{r,  }\item[{\mbox{\hyperlink{class_cjt__problema}{Cjt\+\_\+problema}} \&}]{problemas,  }\item[{\mbox{\hyperlink{class_cjt__curso}{Cjt\+\_\+curso}} \&}]{cursos,  }\item[{\mbox{\hyperlink{class_cjt__sesion}{Cjt\+\_\+sesion}} \&}]{sesiones }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_usuario}{Usuario}} hace envio a un problema de un curso especifico. 
+
+\begin{DoxyPrecond}{Precondición}
+p no es nulo, 0 $>$= r $<$= 1 y los conjuntos de problemas, cursos y sesiones estan inicializaods 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El usuario hace un envio de un problema a un curso especifico actualizando todas sus estadisticas y actualizando los conjuntos de problemas tanto resueltos como enviables del parametro implicito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 89 del archivo Usuario.\+cc.
+
+
+\begin{DoxyCode}
+89                                                                                                     \{
+90     \textcolor{comment}{//actualizar problemas intentados}
+91   \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_usuario_a553cef1aad192b30d010cd524f261c1b}{problemas\_enviables}}.\mbox{\hyperlink{class_cjt__problema_a8d153df869b2918083eb9451d3a0ab6a}{envios\_problema}}(p) ==  0 ) ++
+      \mbox{\hyperlink{class_usuario_a5484a08ce9aeabef98074c738f58b00a}{problemas\_intentados}};
+92   ++\mbox{\hyperlink{class_usuario_a485a741c0646e6414bd6cf669a77fc9c}{envios}};
+93   problemas.\mbox{\hyperlink{class_cjt__problema_a5450799b75298f2b267f3ecce7ba5fb0}{sumar\_envio}}(p, r);
+94   \mbox{\hyperlink{class_usuario_a553cef1aad192b30d010cd524f261c1b}{problemas\_enviables}}.\mbox{\hyperlink{class_cjt__problema_a5450799b75298f2b267f3ecce7ba5fb0}{sumar\_envio}}(p, r);
+95   \textcolor{keywordflow}{if} (r == 1) \{
+96       \textcolor{comment}{//pasar de enviables a resueltos}
+97       \mbox{\hyperlink{class_problema}{Problema}} problema;
+98       problema = \mbox{\hyperlink{class_usuario_a553cef1aad192b30d010cd524f261c1b}{problemas\_enviables}}.\mbox{\hyperlink{class_cjt__problema_afa2668b9e1a1bc710c29f19512399c58}{eliminar\_problema}}(p);
+99       \mbox{\hyperlink{class_usuario_a53fa260ffc780dd5c3a4805d683e5ee7}{problemas\_resueltos}}.\mbox{\hyperlink{class_cjt__problema_ada9dc37cd22fd8065c89ef3f180beac5}{anadir\_problema\_objeto}}(problema, p);
+100       \textcolor{comment}{//actualizar enviables}
+101       \textcolor{keywordtype}{string} sesion = cursos.\mbox{\hyperlink{class_cjt__curso_a6d9976b271bd773bdff14e79991231e4}{consultar\_sesion\_problema}}(p, 
+      \mbox{\hyperlink{class_usuario_aa767fe2d1198f2c97791073bc55803e7}{curso}}, problemas);
+102       \mbox{\hyperlink{class_usuario_a4dbe4aafe7c5308293ef5f6094f35bb1}{actualizar\_enviables}}(p, sesion, sesiones);
+103 
+104     \textcolor{comment}{//si numero de problemas enviables == 0 limpiar curso y sus estats}
+105       \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_usuario_a553cef1aad192b30d010cd524f261c1b}{problemas\_enviables}}.\mbox{\hyperlink{class_cjt__problema_acf0fca6955f991a9debb4ef50ece8905}{num\_problemas}}() == 0) \{
+106         cursos.\mbox{\hyperlink{class_cjt__curso_a7e15ba1bdb4d1de93862a8c56dde53e5}{curso\_completo}}(this->\mbox{\hyperlink{class_usuario_aa767fe2d1198f2c97791073bc55803e7}{curso}});
+107         this->\mbox{\hyperlink{class_usuario_aa767fe2d1198f2c97791073bc55803e7}{curso}} = 0;
+108       \}
+109   \}
+110 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_usuario_ae2ebc16b4ed5e80451ca8ae12f0c8209}\label{class_usuario_ae2ebc16b4ed5e80451ca8ae12f0c8209}} 
+\index{Usuario@{Usuario}!inscribir\+\_\+curso@{inscribir\+\_\+curso}}
+\index{inscribir\+\_\+curso@{inscribir\+\_\+curso}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{inscribir\+\_\+curso()}{inscribir\_curso()}}
+{\footnotesize\ttfamily void Usuario\+::inscribir\+\_\+curso (\begin{DoxyParamCaption}\item[{int}]{c,  }\item[{\mbox{\hyperlink{class_cjt__curso}{Cjt\+\_\+curso}} \&}]{lista\+\_\+cursos,  }\item[{\mbox{\hyperlink{class_cjt__sesion}{Cjt\+\_\+sesion}} \&}]{lista\+\_\+sesiones }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_usuario}{Usuario}} se inscribe en un curso. 
+
+\begin{DoxyPrecond}{Precondición}
+c $>$ 0 y los conjuntos de cursos y sesiones estan inicializaods 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El usuario se inscribe a un curso actualizando la lista de problemas a los que puede hacer envio, en caso de que el usuario ya este escrito en un curso se devuelve un error 
+\end{DoxyPostcond}
+
+
+Definición en la línea 28 del archivo Usuario.\+cc.
+
+
+\begin{DoxyCode}
+28                                                                                         \{
+29   \textcolor{keywordtype}{int} num\_sesiones;
+30   \textcolor{keywordflow}{try} \{
+31    num\_sesiones = lista\_cursos.\mbox{\hyperlink{class_cjt__curso_ad20fa025853fba4451e60e9b0cdb4011}{num\_sesiones}}(c); \textcolor{comment}{//tirar error}
+32   \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+33       \textcolor{keywordflow}{throw} msg;
+34   \}
+35   \textcolor{keywordflow}{if} (this->\mbox{\hyperlink{class_usuario_aa767fe2d1198f2c97791073bc55803e7}{curso}} == 0) \{
+36     this->\mbox{\hyperlink{class_usuario_aa767fe2d1198f2c97791073bc55803e7}{curso}} = c;
+37     \mbox{\hyperlink{class_usuario_a0b4c3ba568ee299aed56005ce6e6a72f}{iniciar\_enviables}}(c, num\_sesiones, lista\_cursos, lista\_sesiones);
+38 
+39   \}
+40   \textcolor{keywordflow}{else} \{
+41     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_usuario_a553cef1aad192b30d010cd524f261c1b}{problemas\_enviables}}.\mbox{\hyperlink{class_cjt__problema_acf0fca6955f991a9debb4ef50ece8905}{num\_problemas}}() == 0) \{ \textcolor{comment}{//soluciona}
+42       this->\mbox{\hyperlink{class_usuario_aa767fe2d1198f2c97791073bc55803e7}{curso}} = c;
+43       \mbox{\hyperlink{class_usuario_a0b4c3ba568ee299aed56005ce6e6a72f}{iniciar\_enviables}}(c, num\_sesiones, lista\_cursos, lista\_sesiones);
+44     \}
+45     \textcolor{keywordflow}{else} \{
+46       \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"usuario inscrito en otro curso"};
+47     \}
+48   \}
+49 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_usuario_ad4813c66cba2cb678522cefd3491e6c0}\label{class_usuario_ad4813c66cba2cb678522cefd3491e6c0}} 
+\index{Usuario@{Usuario}!curso\+\_\+actual@{curso\+\_\+actual}}
+\index{curso\+\_\+actual@{curso\+\_\+actual}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{curso\+\_\+actual()}{curso\_actual()}}
+{\footnotesize\ttfamily int Usuario\+::curso\+\_\+actual (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Consultora del curso del usuario. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el curso al que esta inscrito del parámetro implícito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 64 del archivo Usuario.\+cc.
+
+
+\begin{DoxyCode}
+64                          \{
+65   \textcolor{keywordflow}{return} this->\mbox{\hyperlink{class_usuario_aa767fe2d1198f2c97791073bc55803e7}{curso}};
+66 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_usuario_a11ee6d52132455ed32f3df6824c7b9c5}\label{class_usuario_a11ee6d52132455ed32f3df6824c7b9c5}} 
+\index{Usuario@{Usuario}!f\+\_\+problemas\+\_\+enviables@{f\+\_\+problemas\+\_\+enviables}}
+\index{f\+\_\+problemas\+\_\+enviables@{f\+\_\+problemas\+\_\+enviables}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{f\+\_\+problemas\+\_\+enviables()}{f\_problemas\_enviables()}}
+{\footnotesize\ttfamily void Usuario\+::f\+\_\+problemas\+\_\+enviables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura de los problemas a los que se puede hacer envio. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Escribe los problemas enviables por el canal estandard de salida, en caso de que el usuario no ese inscrito en ningun curso devuevle error 
+\end{DoxyPostcond}
+
+
+Definición en la línea 68 del archivo Usuario.\+cc.
+
+
+\begin{DoxyCode}
+68                                     \{
+69   \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_usuario_aa767fe2d1198f2c97791073bc55803e7}{curso}} > 0) \{
+70     \mbox{\hyperlink{class_usuario_a553cef1aad192b30d010cd524f261c1b}{problemas\_enviables}}.\mbox{\hyperlink{class_cjt__problema_a9f5508bb9d73918c4c99c6218315f168}{listar\_enviables}}();
+71   \}
+72   \textcolor{keywordflow}{else} \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"usuario no inscrito en ningun curso"};
+73 
+74 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_usuario_a6f504aa9a6cb6467e02a01b40951b31c}\label{class_usuario_a6f504aa9a6cb6467e02a01b40951b31c}} 
+\index{Usuario@{Usuario}!f\+\_\+problemas\+\_\+resueltos@{f\+\_\+problemas\+\_\+resueltos}}
+\index{f\+\_\+problemas\+\_\+resueltos@{f\+\_\+problemas\+\_\+resueltos}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{f\+\_\+problemas\+\_\+resueltos()}{f\_problemas\_resueltos()}}
+{\footnotesize\ttfamily void Usuario\+::f\+\_\+problemas\+\_\+resueltos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura de los problemas que ya se han resuelto. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Escribe los problemas resueltos por el canal estandard de salida, en caso de que el usuario no ese inscrito en ningun curso devuevle error 
+\end{DoxyPostcond}
+
+
+Definición en la línea 75 del archivo Usuario.\+cc.
+
+
+\begin{DoxyCode}
+75                                     \{
+76   \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_usuario_aa767fe2d1198f2c97791073bc55803e7}{curso}} > 0 or \mbox{\hyperlink{class_usuario_a53fa260ffc780dd5c3a4805d683e5ee7}{problemas\_resueltos}}.\mbox{\hyperlink{class_cjt__problema_acf0fca6955f991a9debb4ef50ece8905}{num\_problemas}}() > 0) \{
+77     \mbox{\hyperlink{class_usuario_a53fa260ffc780dd5c3a4805d683e5ee7}{problemas\_resueltos}}.\mbox{\hyperlink{class_cjt__problema_a9f5508bb9d73918c4c99c6218315f168}{listar\_enviables}}();
+78   \}
+79   \textcolor{keywordflow}{else} \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"usuario no inscrito en ningun curso"};
+80 
+81 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_usuario_a501a484852ba4eca86c0e78f246c87e9}\label{class_usuario_a501a484852ba4eca86c0e78f246c87e9}} 
+\index{Usuario@{Usuario}!escribir\+\_\+usuario@{escribir\+\_\+usuario}}
+\index{escribir\+\_\+usuario@{escribir\+\_\+usuario}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{escribir\+\_\+usuario()}{escribir\_usuario()}}
+{\footnotesize\ttfamily void Usuario\+::escribir\+\_\+usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Escribe las propiedades y el contenido del parámetro implícito por el canal estándar de salida 
+\end{DoxyPostcond}
+
+
+Definición en la línea 83 del archivo Usuario.\+cc.
+
+
+\begin{DoxyCode}
+83                                \{
+84   cout << \mbox{\hyperlink{class_usuario_a95926ccb5e92ec5f2acab98830a3725e}{identificador}} << \textcolor{charliteral}{'('} << \mbox{\hyperlink{class_usuario_a485a741c0646e6414bd6cf669a77fc9c}{envios}} << \textcolor{charliteral}{','} << 
+      \mbox{\hyperlink{class_usuario_a53fa260ffc780dd5c3a4805d683e5ee7}{problemas\_resueltos}}.\mbox{\hyperlink{class_cjt__problema_acf0fca6955f991a9debb4ef50ece8905}{num\_problemas}}()
+85   << \textcolor{charliteral}{','} << \mbox{\hyperlink{class_usuario_a5484a08ce9aeabef98074c738f58b00a}{problemas\_intentados}} << \textcolor{charliteral}{','} << \mbox{\hyperlink{class_usuario_aa767fe2d1198f2c97791073bc55803e7}{curso}} << \textcolor{charliteral}{')'} << endl;
+86 \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_usuario_a553cef1aad192b30d010cd524f261c1b}\label{class_usuario_a553cef1aad192b30d010cd524f261c1b}} 
+\index{Usuario@{Usuario}!problemas\+\_\+enviables@{problemas\+\_\+enviables}}
+\index{problemas\+\_\+enviables@{problemas\+\_\+enviables}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{problemas\+\_\+enviables}{problemas\_enviables}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_cjt__problema}{Cjt\+\_\+problema}} Usuario\+::problemas\+\_\+enviables\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 26 del archivo Usuario.\+hh.
+
+\mbox{\Hypertarget{class_usuario_a53fa260ffc780dd5c3a4805d683e5ee7}\label{class_usuario_a53fa260ffc780dd5c3a4805d683e5ee7}} 
+\index{Usuario@{Usuario}!problemas\+\_\+resueltos@{problemas\+\_\+resueltos}}
+\index{problemas\+\_\+resueltos@{problemas\+\_\+resueltos}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{problemas\+\_\+resueltos}{problemas\_resueltos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_cjt__problema}{Cjt\+\_\+problema}} Usuario\+::problemas\+\_\+resueltos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 27 del archivo Usuario.\+hh.
+
+\mbox{\Hypertarget{class_usuario_a485a741c0646e6414bd6cf669a77fc9c}\label{class_usuario_a485a741c0646e6414bd6cf669a77fc9c}} 
+\index{Usuario@{Usuario}!envios@{envios}}
+\index{envios@{envios}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{envios}{envios}}
+{\footnotesize\ttfamily int Usuario\+::envios\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 28 del archivo Usuario.\+hh.
+
+\mbox{\Hypertarget{class_usuario_a5484a08ce9aeabef98074c738f58b00a}\label{class_usuario_a5484a08ce9aeabef98074c738f58b00a}} 
+\index{Usuario@{Usuario}!problemas\+\_\+intentados@{problemas\+\_\+intentados}}
+\index{problemas\+\_\+intentados@{problemas\+\_\+intentados}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{problemas\+\_\+intentados}{problemas\_intentados}}
+{\footnotesize\ttfamily int Usuario\+::problemas\+\_\+intentados\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 29 del archivo Usuario.\+hh.
+
+\mbox{\Hypertarget{class_usuario_a95926ccb5e92ec5f2acab98830a3725e}\label{class_usuario_a95926ccb5e92ec5f2acab98830a3725e}} 
+\index{Usuario@{Usuario}!identificador@{identificador}}
+\index{identificador@{identificador}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{identificador}{identificador}}
+{\footnotesize\ttfamily std\+::string Usuario\+::identificador\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 30 del archivo Usuario.\+hh.
+
+\mbox{\Hypertarget{class_usuario_aa767fe2d1198f2c97791073bc55803e7}\label{class_usuario_aa767fe2d1198f2c97791073bc55803e7}} 
+\index{Usuario@{Usuario}!curso@{curso}}
+\index{curso@{curso}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{curso}{curso}}
+{\footnotesize\ttfamily int Usuario\+::curso\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 31 del archivo Usuario.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_usuario_8hh}{Usuario.\+hh}}\item 
+\mbox{\hyperlink{_usuario_8cc}{Usuario.\+cc}}\end{DoxyCompactItemize}

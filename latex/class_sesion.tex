@@ -1,0 +1,414 @@
+\hypertarget{class_sesion}{}\section{Referencia de la Clase Sesion}
+\label{class_sesion}\index{Sesion@{Sesion}}
+
+
+Representa una sesion de la plataforma con un arbol binario indicando los pre requisitos para poder realizar un envio a un problema, un mapa con todos los problemas y un identificador unico.  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sesion_adf5a84efa8e2629b30ad89df74cfc0a2}{Sesion}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. Se ejecuta automáticamente al declarar un problema. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sesion_a1b7a01575ed1e5a4d05765195dcfc189}{Sesion}} (string id)
+\begin{DoxyCompactList}\small\item\em Creadora con identificador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sesion_acc4bd3e753a45d6b7a01aa27fb8f171f}{$\sim$\+Sesion}} ()
+\begin{DoxyCompactList}\small\item\em Destructora por defecto. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_sesion_a77b0408b1dba7df9a090e84ae9d56cba}{leer\+\_\+primer\+\_\+problema}} ()
+\begin{DoxyCompactList}\small\item\em Consultora del primer problema de la sesion. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_sesion_aee7122e6303e811527e894a0f2d08fea}{nuevo\+\_\+problema}} (std\+::string p, int lado)
+\begin{DoxyCompactList}\small\item\em Consultora del problema hijo de un problema. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_sesion_a035f4d3118ed20daedf95307128a1fbb}{consultar\+\_\+problema}} (int i)
+\begin{DoxyCompactList}\small\item\em Consultora del problema i de la sesion. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sesion_a7778f2d0cfff81138221fe661ab69e2c}{num\+\_\+problemas}} ()
+\begin{DoxyCompactList}\small\item\em Consultora del numero de problemas de la sesion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sesion_a3ba86990204dd799378a62b90cfbb58a}{construir\+\_\+arbol}} ()
+\begin{DoxyCompactList}\small\item\em Lectura de un arbol binario de enteros. Los elementos se introducen en preordren\+: primero la raiz, despues el subarbol izquierdo i por ultimo el derecho. Los arbres vacios se representan con un 0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sesion_a0243a367d0e9787328c3a956bd8846ef}{escribir\+\_\+sesion}} ()
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_sesion_adea0f5f335e3eab364dfc59c28d790f3}{leer\+\_\+arbol}} (Bin\+Tree$<$ string $>$ \&a)
+\begin{DoxyCompactList}\small\item\em Lectura de un arbol binario de enteros. Los elementos se introducen en preordren\+: primero la raiz, despues el subarbol izquierdo i por ultimo el derecho. Los arbres vacios se representan con un 0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sesion_a05641874607ce3a3b3c495437938bf02}{escribir\+\_\+arbol}} (const Bin\+Tree$<$ string $>$ \&a)
+\begin{DoxyCompactList}\small\item\em Escritura de un arbol binario de enteros. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_sesion_a1b9a6519f3476c8c733792dee9b9c842}{identificador}}
+\item 
+Bin\+Tree$<$ string $>$ \mbox{\hyperlink{class_sesion_abdfe53bdef12bfa9ab510cad99b0de27}{prerequisitos}}
+\item 
+std\+::vector$<$ string $>$ \mbox{\hyperlink{class_sesion_af3929f5b3478c9ab1334b4c62566d69e}{problemas}}
+\item 
+std\+::map$<$ string, std\+::pair$<$ string, string $>$ $>$ \mbox{\hyperlink{class_sesion_a4f770d029f7be9368a3abec6af7e8de7}{problemas\+\_\+ordenados}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa una sesion de la plataforma con un arbol binario indicando los pre requisitos para poder realizar un envio a un problema, un mapa con todos los problemas y un identificador unico. 
+
+Definición en la línea 22 del archivo Sesion.\+hh.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_sesion_adf5a84efa8e2629b30ad89df74cfc0a2}\label{class_sesion_adf5a84efa8e2629b30ad89df74cfc0a2}} 
+\index{Sesion@{Sesion}!Sesion@{Sesion}}
+\index{Sesion@{Sesion}!Sesion@{Sesion}}
+\subsubsection{\texorpdfstring{Sesion()}{Sesion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sesion\+::\+Sesion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. Se ejecuta automáticamente al declarar un problema. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es una sesion no inicializada, con todos los atributos a 0 y los conjuntos vacios 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_a1b7a01575ed1e5a4d05765195dcfc189}\label{class_sesion_a1b7a01575ed1e5a4d05765195dcfc189}} 
+\index{Sesion@{Sesion}!Sesion@{Sesion}}
+\index{Sesion@{Sesion}!Sesion@{Sesion}}
+\subsubsection{\texorpdfstring{Sesion()}{Sesion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sesion\+::\+Sesion (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
+
+
+
+Creadora con identificador. 
+
+\begin{DoxyPrecond}{Precondición}
+id $>$ 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es una sesion con con identificador = \char`\"{}id\char`\"{} 
+\end{DoxyPostcond}
+
+
+Definición en la línea 10 del archivo Sesion.\+cc.
+
+
+\begin{DoxyCode}
+10                                    \{
+11     this->\mbox{\hyperlink{class_sesion_a1b9a6519f3476c8c733792dee9b9c842}{identificador}} = \mbox{\hyperlink{class_sesion_a1b9a6519f3476c8c733792dee9b9c842}{identificador}};
+12 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sesion_acc4bd3e753a45d6b7a01aa27fb8f171f}\label{class_sesion_acc4bd3e753a45d6b7a01aa27fb8f171f}} 
+\index{Sesion@{Sesion}!````~Sesion@{$\sim$\+Sesion}}
+\index{````~Sesion@{$\sim$\+Sesion}!Sesion@{Sesion}}
+\subsubsection{\texorpdfstring{$\sim$\+Sesion()}{~Sesion()}}
+{\footnotesize\ttfamily Sesion\+::$\sim$\+Sesion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructora por defecto. 
+
+Se ejecuta automáticamente al destruir un problema. \begin{DoxyPrecond}{Precondición}
+id $>$ 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El problema ya no existe 
+\end{DoxyPostcond}
+
+
+Definición en la línea 13 del archivo Sesion.\+cc.
+
+
+\begin{DoxyCode}
+13 \{\}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_sesion_adea0f5f335e3eab364dfc59c28d790f3}\label{class_sesion_adea0f5f335e3eab364dfc59c28d790f3}} 
+\index{Sesion@{Sesion}!leer\+\_\+arbol@{leer\+\_\+arbol}}
+\index{leer\+\_\+arbol@{leer\+\_\+arbol}!Sesion@{Sesion}}
+\subsubsection{\texorpdfstring{leer\+\_\+arbol()}{leer\_arbol()}}
+{\footnotesize\ttfamily void Sesion\+::leer\+\_\+arbol (\begin{DoxyParamCaption}\item[{Bin\+Tree$<$ string $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lectura de un arbol binario de enteros. Los elementos se introducen en preordren\+: primero la raiz, despues el subarbol izquierdo i por ultimo el derecho. Los arbres vacios se representan con un 0. 
+
+\begin{DoxyPrecond}{Precondición}
+a esta vacio; el canal estandard de entrada contiene el recorrido en preordren de un arbol binario A de enteros 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+a = A 
+\end{DoxyPostcond}
+
+
+Definición en la línea 15 del archivo Sesion.\+cc.
+
+
+\begin{DoxyCode}
+15                                           \{
+16   \textcolor{keywordtype}{string} x;
+17   cin >> x;
+18   \textcolor{keywordflow}{if} (x!=\textcolor{stringliteral}{"0"})\{
+19   \mbox{\hyperlink{class_sesion_af3929f5b3478c9ab1334b4c62566d69e}{problemas}}.push\_back(x);
+20   BinTree<string> l;
+21   \mbox{\hyperlink{class_sesion_adea0f5f335e3eab364dfc59c28d790f3}{leer\_arbol}}(l);
+22   BinTree<string> r;
+23   \mbox{\hyperlink{class_sesion_adea0f5f335e3eab364dfc59c28d790f3}{leer\_arbol}}(r);
+24   a = BinTree<string>(x,l,r);
+25 
+26 
+27   \textcolor{comment}{//first = 1 = right, second = 0 = left}
+28   \textcolor{keywordflow}{if} (r.empty() and l.empty()) \mbox{\hyperlink{class_sesion_a4f770d029f7be9368a3abec6af7e8de7}{problemas\_ordenados}}.insert(make\_pair(x, make\_pair(\textcolor{stringliteral}{"0"}, \textcolor{stringliteral}{"0
+      "})));
+29   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (r.empty()) \mbox{\hyperlink{class_sesion_a4f770d029f7be9368a3abec6af7e8de7}{problemas\_ordenados}}.insert(make\_pair(x, make\_pair(\textcolor{stringliteral}{"0"}, l.value()))
+      );
+30   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (l.empty()) \mbox{\hyperlink{class_sesion_a4f770d029f7be9368a3abec6af7e8de7}{problemas\_ordenados}}.insert(make\_pair(x, make\_pair(r.value(), \textcolor{stringliteral}{"0"}))
+      );
+31   \textcolor{keywordflow}{else} \mbox{\hyperlink{class_sesion_a4f770d029f7be9368a3abec6af7e8de7}{problemas\_ordenados}}.insert(make\_pair(x, make\_pair(r.value(), l.value())));
+32   \}
+33 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sesion_a05641874607ce3a3b3c495437938bf02}\label{class_sesion_a05641874607ce3a3b3c495437938bf02}} 
+\index{Sesion@{Sesion}!escribir\+\_\+arbol@{escribir\+\_\+arbol}}
+\index{escribir\+\_\+arbol@{escribir\+\_\+arbol}!Sesion@{Sesion}}
+\subsubsection{\texorpdfstring{escribir\+\_\+arbol()}{escribir\_arbol()}}
+{\footnotesize\ttfamily void Sesion\+::escribir\+\_\+arbol (\begin{DoxyParamCaption}\item[{const Bin\+Tree$<$ string $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Escritura de un arbol binario de enteros. 
+
+\begin{DoxyPrecond}{Precondición}
+el parametro implicito esta inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Escribe los problemas del arbol de enteros en post-\/orden 
+\end{DoxyPostcond}
+
+
+Definición en la línea 43 del archivo Sesion.\+cc.
+
+
+\begin{DoxyCode}
+43                                                     \{
+44   \textcolor{keywordflow}{if} (not a.empty()) \{
+45     cout << \textcolor{charliteral}{'('};
+46     \mbox{\hyperlink{class_sesion_a05641874607ce3a3b3c495437938bf02}{escribir\_arbol}}(a.left());
+47     \mbox{\hyperlink{class_sesion_a05641874607ce3a3b3c495437938bf02}{escribir\_arbol}}(a.right());
+48     cout << a.value() << \textcolor{charliteral}{')'};
+49   \}
+50 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sesion_a77b0408b1dba7df9a090e84ae9d56cba}\label{class_sesion_a77b0408b1dba7df9a090e84ae9d56cba}} 
+\index{Sesion@{Sesion}!leer\+\_\+primer\+\_\+problema@{leer\+\_\+primer\+\_\+problema}}
+\index{leer\+\_\+primer\+\_\+problema@{leer\+\_\+primer\+\_\+problema}!Sesion@{Sesion}}
+\subsubsection{\texorpdfstring{leer\+\_\+primer\+\_\+problema()}{leer\_primer\_problema()}}
+{\footnotesize\ttfamily string Sesion\+::leer\+\_\+primer\+\_\+problema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Consultora del primer problema de la sesion. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el primer problema de la sesion del parámetro implícito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 39 del archivo Sesion.\+cc.
+
+
+\begin{DoxyCode}
+39                                     \{
+40   \textcolor{keywordflow}{return} this->\mbox{\hyperlink{class_sesion_abdfe53bdef12bfa9ab510cad99b0de27}{prerequisitos}}.value();
+41 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sesion_aee7122e6303e811527e894a0f2d08fea}\label{class_sesion_aee7122e6303e811527e894a0f2d08fea}} 
+\index{Sesion@{Sesion}!nuevo\+\_\+problema@{nuevo\+\_\+problema}}
+\index{nuevo\+\_\+problema@{nuevo\+\_\+problema}!Sesion@{Sesion}}
+\subsubsection{\texorpdfstring{nuevo\+\_\+problema()}{nuevo\_problema()}}
+{\footnotesize\ttfamily string Sesion\+::nuevo\+\_\+problema (\begin{DoxyParamCaption}\item[{std\+::string}]{p,  }\item[{int}]{lado }\end{DoxyParamCaption})}
+
+
+
+Consultora del problema hijo de un problema. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado, p no es nulo y 0 $>$= lado $<$= 1 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el hijo izquierdo del problema \char`\"{}p\char`\"{} en caso que \char`\"{}lado\char`\"{} = 0 y el hijo derecho del problema \char`\"{}p\char`\"{} en caso que \char`\"{}lado\char`\"{} = 1 
+\end{DoxyPostcond}
+
+
+Definición en la línea 59 del archivo Sesion.\+cc.
+
+
+\begin{DoxyCode}
+59                                                 \{
+60   \textcolor{keywordflow}{if} (lado == 0) \{
+61     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_sesion_a4f770d029f7be9368a3abec6af7e8de7}{problemas\_ordenados}}.find(p)->second.second;
+62   \}
+63   \textcolor{keywordflow}{else} \{
+64     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_sesion_a4f770d029f7be9368a3abec6af7e8de7}{problemas\_ordenados}}.find(p)->second.first;
+65   \}
+66 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sesion_a035f4d3118ed20daedf95307128a1fbb}\label{class_sesion_a035f4d3118ed20daedf95307128a1fbb}} 
+\index{Sesion@{Sesion}!consultar\+\_\+problema@{consultar\+\_\+problema}}
+\index{consultar\+\_\+problema@{consultar\+\_\+problema}!Sesion@{Sesion}}
+\subsubsection{\texorpdfstring{consultar\+\_\+problema()}{consultar\_problema()}}
+{\footnotesize\ttfamily string Sesion\+::consultar\+\_\+problema (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Consultora del problema i de la sesion. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado y i $>$= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el problema i-\/essimo del vector de problemas del parametro implicito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 72 del archivo Sesion.\+cc.
+
+
+\begin{DoxyCode}
+72                                        \{
+73   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_sesion_af3929f5b3478c9ab1334b4c62566d69e}{problemas}}[i];
+74 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sesion_a7778f2d0cfff81138221fe661ab69e2c}\label{class_sesion_a7778f2d0cfff81138221fe661ab69e2c}} 
+\index{Sesion@{Sesion}!num\+\_\+problemas@{num\+\_\+problemas}}
+\index{num\+\_\+problemas@{num\+\_\+problemas}!Sesion@{Sesion}}
+\subsubsection{\texorpdfstring{num\+\_\+problemas()}{num\_problemas()}}
+{\footnotesize\ttfamily int Sesion\+::num\+\_\+problemas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Consultora del numero de problemas de la sesion. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el numero de problemas del parámetro implícito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 68 del archivo Sesion.\+cc.
+
+
+\begin{DoxyCode}
+68                           \{
+69   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_sesion_af3929f5b3478c9ab1334b4c62566d69e}{problemas}}.size();
+70 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sesion_a3ba86990204dd799378a62b90cfbb58a}\label{class_sesion_a3ba86990204dd799378a62b90cfbb58a}} 
+\index{Sesion@{Sesion}!construir\+\_\+arbol@{construir\+\_\+arbol}}
+\index{construir\+\_\+arbol@{construir\+\_\+arbol}!Sesion@{Sesion}}
+\subsubsection{\texorpdfstring{construir\+\_\+arbol()}{construir\_arbol()}}
+{\footnotesize\ttfamily void Sesion\+::construir\+\_\+arbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Lectura de un arbol binario de enteros. Los elementos se introducen en preordren\+: primero la raiz, despues el subarbol izquierdo i por ultimo el derecho. Los arbres vacios se representan con un 0. 
+
+\begin{DoxyPrecond}{Precondición}
+a esta vacio; el canal estandard de entrada contiene el recorrido en preordren de un arbol binario A de enteros 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+el parametro implicito es igual a c 
+\end{DoxyPostcond}
+
+
+Definición en la línea 35 del archivo Sesion.\+cc.
+
+
+\begin{DoxyCode}
+35                              \{
+36     \mbox{\hyperlink{class_sesion_adea0f5f335e3eab364dfc59c28d790f3}{leer\_arbol}}(\mbox{\hyperlink{class_sesion_abdfe53bdef12bfa9ab510cad99b0de27}{prerequisitos}});
+37 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sesion_a0243a367d0e9787328c3a956bd8846ef}\label{class_sesion_a0243a367d0e9787328c3a956bd8846ef}} 
+\index{Sesion@{Sesion}!escribir\+\_\+sesion@{escribir\+\_\+sesion}}
+\index{escribir\+\_\+sesion@{escribir\+\_\+sesion}!Sesion@{Sesion}}
+\subsubsection{\texorpdfstring{escribir\+\_\+sesion()}{escribir\_sesion()}}
+{\footnotesize\ttfamily void Sesion\+::escribir\+\_\+sesion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Escribe las propiedades y el contenido del parámetro implícito por el canal estándar de salida 
+\end{DoxyPostcond}
+
+
+Definición en la línea 52 del archivo Sesion.\+cc.
+
+
+\begin{DoxyCode}
+52                              \{
+53   cout << \mbox{\hyperlink{class_sesion_a1b9a6519f3476c8c733792dee9b9c842}{identificador}} << \textcolor{charliteral}{' '} << \mbox{\hyperlink{class_sesion_af3929f5b3478c9ab1334b4c62566d69e}{problemas}}.size() << \textcolor{charliteral}{' '};
+54   \mbox{\hyperlink{class_sesion_a05641874607ce3a3b3c495437938bf02}{escribir\_arbol}}(\mbox{\hyperlink{class_sesion_abdfe53bdef12bfa9ab510cad99b0de27}{prerequisitos}});
+55   cout << endl;
+56 
+57 \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_sesion_a1b9a6519f3476c8c733792dee9b9c842}\label{class_sesion_a1b9a6519f3476c8c733792dee9b9c842}} 
+\index{Sesion@{Sesion}!identificador@{identificador}}
+\index{identificador@{identificador}!Sesion@{Sesion}}
+\subsubsection{\texorpdfstring{identificador}{identificador}}
+{\footnotesize\ttfamily string Sesion\+::identificador\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 26 del archivo Sesion.\+hh.
+
+\mbox{\Hypertarget{class_sesion_abdfe53bdef12bfa9ab510cad99b0de27}\label{class_sesion_abdfe53bdef12bfa9ab510cad99b0de27}} 
+\index{Sesion@{Sesion}!prerequisitos@{prerequisitos}}
+\index{prerequisitos@{prerequisitos}!Sesion@{Sesion}}
+\subsubsection{\texorpdfstring{prerequisitos}{prerequisitos}}
+{\footnotesize\ttfamily Bin\+Tree$<$string$>$ Sesion\+::prerequisitos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 27 del archivo Sesion.\+hh.
+
+\mbox{\Hypertarget{class_sesion_af3929f5b3478c9ab1334b4c62566d69e}\label{class_sesion_af3929f5b3478c9ab1334b4c62566d69e}} 
+\index{Sesion@{Sesion}!problemas@{problemas}}
+\index{problemas@{problemas}!Sesion@{Sesion}}
+\subsubsection{\texorpdfstring{problemas}{problemas}}
+{\footnotesize\ttfamily std\+::vector$<$string$>$ Sesion\+::problemas\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 28 del archivo Sesion.\+hh.
+
+\mbox{\Hypertarget{class_sesion_a4f770d029f7be9368a3abec6af7e8de7}\label{class_sesion_a4f770d029f7be9368a3abec6af7e8de7}} 
+\index{Sesion@{Sesion}!problemas\+\_\+ordenados@{problemas\+\_\+ordenados}}
+\index{problemas\+\_\+ordenados@{problemas\+\_\+ordenados}!Sesion@{Sesion}}
+\subsubsection{\texorpdfstring{problemas\+\_\+ordenados}{problemas\_ordenados}}
+{\footnotesize\ttfamily std\+::map$<$string, std\+::pair$<$string, string$>$ $>$ Sesion\+::problemas\+\_\+ordenados\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 29 del archivo Sesion.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_sesion_8hh}{Sesion.\+hh}}\item 
+\mbox{\hyperlink{_sesion_8cc}{Sesion.\+cc}}\end{DoxyCompactItemize}

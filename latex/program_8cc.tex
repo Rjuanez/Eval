@@ -1,0 +1,242 @@
+\hypertarget{program_8cc}{}\section{Referencia del Archivo program.\+cc}
+\label{program_8cc}\index{program.\+cc@{program.\+cc}}
+Dependencia gráfica adjunta para program.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{program_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentación de las funciones}
+\mbox{\Hypertarget{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{program.\+cc@{program.\+cc}!main@{main}}
+\index{main@{main}!program.\+cc@{program.\+cc}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 16 del archivo program.\+cc.
+
+
+\begin{DoxyCode}
+16            \{
+17     \mbox{\hyperlink{class_cjt__problema}{Cjt\_problema}} lista\_problemas;
+18     \textcolor{comment}{//leemos y guardamos todos los problemas}
+19     \textcolor{keywordtype}{int} n;
+20     \textcolor{comment}{//leemos y añadimos la cantidad de problemas a añadir a lista\_problemas}
+21     cin >> n;
+22     lista\_problemas.\mbox{\hyperlink{class_cjt__problema_afaff62599264105423f37fd1503cfb19}{leer\_problemas}}(n);
+23 
+24     \mbox{\hyperlink{class_cjt__sesion}{Cjt\_sesion}} lista\_sesiones;
+25     \textcolor{comment}{//leemos y añadimos la cantidad de sesiones a añadir a lista\_sesones}
+26     cin >> n;
+27     lista\_sesiones.\mbox{\hyperlink{class_cjt__sesion_ad64b0e5339bd3a04de4fba88d6eb98c7}{leer\_sesiones}}(n);
+28 
+29     \mbox{\hyperlink{class_cjt__curso}{Cjt\_curso}} lista\_cursos;
+30     \textcolor{comment}{//leemos y añadimos la cantidad de cursos a añadir a lista\_cursos}
+31     cin >> n;
+32     lista\_cursos.\mbox{\hyperlink{class_cjt__curso_a16e2b8c5304b5cb0562f95089f020a97}{leer\_cursos}}(n, lista\_sesiones);
+33 
+34 
+35     \mbox{\hyperlink{class_cjt__usuario}{Cjt\_usuario}} lista\_usuarios;
+36     \textcolor{comment}{//leemos y añadimos la cantidad de cursos a añadir a lista\_usuarios}
+37     cin >> n;
+38     lista\_usuarios.\mbox{\hyperlink{class_cjt__usuario_a75a98423be866287a841a77849ea3e6f}{leer\_usuarios}}(n);
+39 
+40     \textcolor{keywordtype}{string} comando;
+41     \textcolor{comment}{//leemos el primer comando}
+42     cin >> comando;
+43     \textcolor{keywordflow}{while} (comando != \textcolor{stringliteral}{"fin"}) \{
+44       \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"nuevo\_problema"} or comando == \textcolor{stringliteral}{"np"}) \{
+45           \textcolor{keywordtype}{string} p; cin >> p;
+46           cout << \textcolor{charliteral}{'#'} << comando << \textcolor{charliteral}{' '} << p << endl;
+47           \textcolor{keywordflow}{try} \{
+48               lista\_problemas.\mbox{\hyperlink{class_cjt__problema_a6086147f5615c1cf42d6d563682b080d}{anadir\_problema}}(p);
+49               cout << lista\_problemas.\mbox{\hyperlink{class_cjt__problema_acf0fca6955f991a9debb4ef50ece8905}{num\_problemas}}() << endl;
+50           \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+51               cout << \textcolor{stringliteral}{"error: "} << msg << endl;
+52           \}
+53       \}
+54       \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"nueva\_sesion"} or comando == \textcolor{stringliteral}{"ns"}) \{
+55           \textcolor{keywordtype}{string} s; cin >> s;
+56           cout << \textcolor{charliteral}{'#'} << comando << \textcolor{charliteral}{' '} << s << endl;
+57           \textcolor{keywordflow}{try} \{
+58               lista\_sesiones.\mbox{\hyperlink{class_cjt__sesion_ace504b799e2c370749ccb16f9312fa5f}{anadir\_sesion}}(s);
+59               cout << lista\_sesiones.\mbox{\hyperlink{class_cjt__sesion_aa885f9672e699d82dcd22aaa26d1ada8}{num\_sesiones}}() << endl;
+60           \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+61               cout << \textcolor{stringliteral}{"error: "} << msg << endl;
+62           \}
+63       \}
+64       \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"nuevo\_curso"} or comando == \textcolor{stringliteral}{"nc"}) \{
+65           cout << \textcolor{charliteral}{'#'} << comando << endl;
+66           \textcolor{keywordflow}{try} \{
+67               \mbox{\hyperlink{class_curso}{Curso}} c;
+68               \textcolor{comment}{//leer sesiones del curso comporbando que no se solapen}
+69               c.\mbox{\hyperlink{class_curso_ad60de4c73f3ce9195c0f681f508f83c8}{leer\_sesiones}}(lista\_sesiones);
+70               \textcolor{comment}{//se añade el curso a lista\_cursos (crear funcion para añadir objetos)}
+71               lista\_cursos.\mbox{\hyperlink{class_cjt__curso_a8b79841cba9bb04c08a23e9dc376dd24}{anadir\_curso}}(c);
+72               \textcolor{comment}{//se imprime el idetificador}
+73               cout << lista\_cursos.\mbox{\hyperlink{class_cjt__curso_a1ad84838189a13e86741d96cf2107d9c}{num\_cursos}}() << endl;
+74           \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+75               cout << \textcolor{stringliteral}{"error: "} << msg << endl;
+76           \}
+77       \}
+78       \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"alta\_usuario"} or comando == \textcolor{stringliteral}{"a"}) \{
+79           \textcolor{keywordtype}{string} u; cin >> u;
+80           cout << \textcolor{charliteral}{'#'} << comando << \textcolor{charliteral}{' '} << u << endl;
+81           \textcolor{keywordflow}{try} \{
+82               lista\_usuarios.\mbox{\hyperlink{class_cjt__usuario_a1a587cd6e8e3f261f27981134d0216e5}{anadir\_usuario}}(u);
+83               cout << lista\_usuarios.\mbox{\hyperlink{class_cjt__usuario_a92ec4442d4a6e8d50f4eb36413ade07e}{num\_usuarios}}() << endl;
+84           \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+85               cout << \textcolor{stringliteral}{"error: "} << msg << endl;
+86           \}
+87       \}
+88       \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"baja\_usuario"} or comando == \textcolor{stringliteral}{"b"}) \{
+89           \textcolor{keywordtype}{string} u; cin >> u;
+90             cout << \textcolor{charliteral}{'#'} << comando << \textcolor{charliteral}{' '} << u << endl;
+91           \textcolor{keywordflow}{try} \{
+92               lista\_usuarios.\mbox{\hyperlink{class_cjt__usuario_a4be0bd7bbca32d299b152730d6de41ba}{eliminar\_usuario}}(u, lista\_cursos);
+93               cout << lista\_usuarios.\mbox{\hyperlink{class_cjt__usuario_a92ec4442d4a6e8d50f4eb36413ade07e}{num\_usuarios}}() << endl;
+94           \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+95               cout << \textcolor{stringliteral}{"error: "} << msg << endl;
+96           \}
+97       \}
+98       \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"inscribir\_curso"} or comando == \textcolor{stringliteral}{"i"}) \{
+99           \textcolor{keywordtype}{string} u; \textcolor{keywordtype}{int} c; cin >> u >> c;
+100           cout << \textcolor{charliteral}{'#'} << comando << \textcolor{charliteral}{' '} << u << \textcolor{charliteral}{' '} << c << endl;
+101           \textcolor{keywordflow}{try} \{
+102                lista\_usuarios.\mbox{\hyperlink{class_cjt__usuario_a3f4be6c8f5568ef3767bf343418e6f5d}{inscribir\_curso}}(u, c, lista\_cursos, lista\_sesiones);
+103                lista\_cursos.\mbox{\hyperlink{class_cjt__curso_ae5cf07c6e8883a244c7557e446490254}{inscribir\_usuario}}(c);
+104                cout << lista\_cursos.\mbox{\hyperlink{class_cjt__curso_ac160a24d24ca6a57b7e8bf6925b10343}{num\_inscritos}}(c) << endl;
+105 
+106           \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+107               cout << \textcolor{stringliteral}{"error: "} << msg << endl;
+108           \}
+109       \}
+110       \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"curso\_usuario"} or comando == \textcolor{stringliteral}{"cu"}) \{
+111           \textcolor{keywordtype}{string} u; cin >> u;
+112           cout << \textcolor{charliteral}{'#'} << comando << \textcolor{charliteral}{' '} << u << endl;
+113           \textcolor{keywordflow}{try} \{
+114                cout << lista\_usuarios.\mbox{\hyperlink{class_cjt__usuario_aa21aa736c5b2094fe5d21415f1761cfa}{curso\_actual}}(u) << endl;
+115           \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+116               cout << \textcolor{stringliteral}{"error: "} << msg << endl;
+117           \}
+118       \}
+119       \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"sesion\_problema"} or comando == \textcolor{stringliteral}{"sp"}) \{
+120           \textcolor{keywordtype}{string} p; \textcolor{keywordtype}{int} c; cin >> c >> p;
+121           cout << \textcolor{charliteral}{'#'} << comando << \textcolor{charliteral}{' '} << c << \textcolor{charliteral}{' '} << p << endl;
+122           \textcolor{keywordflow}{try} \{
+123                cout << lista\_cursos.\mbox{\hyperlink{class_cjt__curso_a6d9976b271bd773bdff14e79991231e4}{consultar\_sesion\_problema}}(p, c, 
+      lista\_problemas) << endl;
+124           \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+125               cout << \textcolor{stringliteral}{"error: "} << msg << endl;
+126           \}
+127       \}
+128       \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"problemas\_resueltos"} or comando == \textcolor{stringliteral}{"pr"}) \{
+129           \textcolor{keywordtype}{string} u; cin >> u;
+130           cout << \textcolor{charliteral}{'#'} << comando << \textcolor{charliteral}{' '} << u << endl;
+131           \textcolor{keywordflow}{try} \{
+132                lista\_usuarios.\mbox{\hyperlink{class_cjt__usuario_aa1cfea5c4294317758f260033f9fbd3f}{problemas\_resueltos}}(u);
+133           \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+134               cout << \textcolor{stringliteral}{"error: "} << msg << endl;
+135           \}
+136       \}
+137       \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"problemas\_enviables"} or comando == \textcolor{stringliteral}{"pe"}) \{
+138           \textcolor{keywordtype}{string} u; cin >> u;
+139           cout << \textcolor{charliteral}{'#'} << comando << \textcolor{charliteral}{' '} << u << endl;
+140           \textcolor{keywordflow}{try} \{
+141                lista\_usuarios.\mbox{\hyperlink{class_cjt__usuario_adf8f61c7eacd7328896c168adb3e63cd}{problemas\_enviables}}(u);
+142           \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+143               cout << \textcolor{stringliteral}{"error: "} << msg << endl;
+144           \}
+145       \}
+146       \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"envio"} or comando == \textcolor{stringliteral}{"e"}) \{
+147           \textcolor{keywordtype}{string} u, p; \textcolor{keywordtype}{int} r; cin >> u >> p >> r;
+148           cout << \textcolor{charliteral}{'#'} << comando << \textcolor{charliteral}{' '} << u << \textcolor{charliteral}{' '} << p << \textcolor{charliteral}{' '} << r << endl;
+149           \textcolor{keywordflow}{try} \{
+150             lista\_usuarios.\mbox{\hyperlink{class_cjt__usuario_a239dce70ba54f8a8f41fd180b703b7c9}{envio\_user}}(u, p, r, lista\_problemas, lista\_cursos, lista\_sesiones);
+151           \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+152               cout << \textcolor{stringliteral}{"error: "} << msg << endl;
+153           \}
+154       \}
+155       \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"listar\_problemas"} or comando == \textcolor{stringliteral}{"lp"}) \{
+156         cout << \textcolor{charliteral}{'#'} << comando << endl;
+157           \textcolor{keywordflow}{try} \{
+158             lista\_problemas.\mbox{\hyperlink{class_cjt__problema_a4966292b86b69ab0fef01154e79aeb54}{listar\_problemas}}();
+159           \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+160               cout << \textcolor{stringliteral}{"error: "} << msg << endl;
+161           \}
+162       \}
+163       \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"escribir\_problema"} or comando == \textcolor{stringliteral}{"ep"}) \{
+164           \textcolor{keywordtype}{string} p; cin >> p;
+165           cout << \textcolor{charliteral}{'#'} << comando << \textcolor{charliteral}{' '} << p << endl;
+166           \textcolor{keywordflow}{try} \{
+167             lista\_problemas.\mbox{\hyperlink{class_cjt__problema_a72e742fbaa5618065f2e478b59bf3036}{listar\_problema}}(p);
+168           \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+169               cout << \textcolor{stringliteral}{"error: "} << msg << endl;
+170           \}
+171       \}
+172       \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"listar\_sesiones"} or comando == \textcolor{stringliteral}{"ls"}) \{
+173         cout << \textcolor{charliteral}{'#'} << comando << endl;
+174           \textcolor{keywordflow}{try} \{
+175               lista\_sesiones.\mbox{\hyperlink{class_cjt__sesion_ab16589173601c81f80305cd9a49b2f7b}{listar\_sesiones}}();
+176           \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+177               cout << \textcolor{stringliteral}{"error: "} << msg << endl;
+178           \}
+179       \}
+180       \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"escribir\_sesion"} or comando == \textcolor{stringliteral}{"es"}) \{
+181           \textcolor{keywordtype}{string} s; cin >> s;
+182           cout << \textcolor{charliteral}{'#'} << comando << \textcolor{charliteral}{' '} << s << endl;
+183           \textcolor{keywordflow}{try} \{
+184             lista\_sesiones.\mbox{\hyperlink{class_cjt__sesion_a8d8d2ba30c0efeb90e21a9b41fa2c62e}{listar\_sesion}}(s);
+185           \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+186               cout << \textcolor{stringliteral}{"error: "} << msg << endl;
+187           \}
+188       \}
+189       \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"listar\_cursos"} or comando == \textcolor{stringliteral}{"lc"}) \{
+190         cout << \textcolor{charliteral}{'#'} << comando << endl;
+191           \textcolor{keywordflow}{try} \{
+192               lista\_cursos.\mbox{\hyperlink{class_cjt__curso_a2a1a2f9d0f54afaf5239b661f0d74164}{listar\_cursos}}();
+193           \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+194               cout << \textcolor{stringliteral}{"error: "} << msg << endl;
+195           \}
+196       \}
+197       \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"escribir\_curso"} or comando == \textcolor{stringliteral}{"ec"}) \{
+198           \textcolor{keywordtype}{int} c; cin >> c;
+199           cout << \textcolor{charliteral}{'#'} << comando << \textcolor{charliteral}{' '} << c << endl;
+200           \textcolor{keywordflow}{try} \{
+201             lista\_cursos.\mbox{\hyperlink{class_cjt__curso_a8757e2e3a01006da2a553e9fbf119fd9}{listar\_curso}}(c);
+202           \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+203               cout << \textcolor{stringliteral}{"error: "} << msg << endl;
+204           \}
+205       \}
+206       \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"listar\_usuarios"} or comando == \textcolor{stringliteral}{"lu"}) \{
+207         cout << \textcolor{charliteral}{'#'} << comando << endl;
+208           \textcolor{keywordflow}{try} \{
+209               lista\_usuarios.\mbox{\hyperlink{class_cjt__usuario_a4cd3e0812c3b3d7e9e83c0f8d0c2acb3}{listar\_usuarios}}();
+210           \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+211               cout << \textcolor{stringliteral}{"error: "} << msg << endl;
+212           \}
+213       \}
+214       \textcolor{keywordflow}{if} (comando == \textcolor{stringliteral}{"escribir\_usuario"} or comando == \textcolor{stringliteral}{"eu"}) \{
+215           \textcolor{keywordtype}{string} u; cin >> u;
+216           cout << \textcolor{charliteral}{'#'} << comando << \textcolor{charliteral}{' '} << u << endl;
+217           \textcolor{keywordflow}{try} \{
+218             lista\_usuarios.\mbox{\hyperlink{class_cjt__usuario_aa1b390ae2335eb486d2a0c8c32643d5c}{listar\_usuario}}(u);
+219           \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+220               cout << \textcolor{stringliteral}{"error: "} << msg << endl;
+221           \}
+222       \}
+223       cin >> comando;
+224     \}
+225 \}
+\end{DoxyCode}

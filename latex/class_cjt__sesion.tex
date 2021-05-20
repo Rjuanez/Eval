@@ -1,0 +1,407 @@
+\hypertarget{class_cjt__sesion}{}\section{Referencia de la Clase Cjt\+\_\+sesion}
+\label{class_cjt__sesion}\index{Cjt\+\_\+sesion@{Cjt\+\_\+sesion}}
+
+
+Representa un conjunto de sesiones.  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cjt__sesion_a706661671b7bc84b6537f4b074938551}{Cjt\+\_\+sesion}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. Se ejecuta automáticamente al declarar un conjunto de sesiones. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cjt__sesion_aa6e81cd2268224ee70b0bc22df14ed5e}{$\sim$\+Cjt\+\_\+sesion}} ()
+\begin{DoxyCompactList}\small\item\em Destructora por defecto. Se ejecuta automáticamente en los objetos locales al salir. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__sesion_ace504b799e2c370749ccb16f9312fa5f}{anadir\+\_\+sesion}} (std\+::string id)
+\begin{DoxyCompactList}\small\item\em Se añade una sesiones con identificador \char`\"{}id\char`\"{}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_cjt__sesion_aa885f9672e699d82dcd22aaa26d1ada8}{num\+\_\+sesiones}} ()
+\begin{DoxyCompactList}\small\item\em Consultora del numero de sesiones. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_cjt__sesion_aade2be6a90f0135b38342f877cc26ae6}{listar\+\_\+primer\+\_\+problema}} (std\+::string sesion)
+\begin{DoxyCompactList}\small\item\em Consultora del primer problema de la sesion \char`\"{}sesion\char`\"{}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_cjt__sesion_a4aef15fb48b0465b864eaebeb3808cd0}{buscar\+\_\+nuevo\+\_\+problema}} (std\+::string p, std\+::string sesion, int lado)
+\begin{DoxyCompactList}\small\item\em Consultora del problema hijo de un problema de la sesion \char`\"{}sesione\char`\"{}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_cjt__sesion_ac761936095af984ee9a39fdcdf25219c}{num\+\_\+problemas\+\_\+sesion}} (std\+::string sesion)
+\begin{DoxyCompactList}\small\item\em Consultora del numero de problemas de una sesion. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_cjt__sesion_a7bc8395d0f4702cd383b11efab65feb1}{consultar\+\_\+problema\+\_\+sesion}} (string sesion, int i)
+\begin{DoxyCompactList}\small\item\em Consultora del problema i de una sesion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__sesion_ad64b0e5339bd3a04de4fba88d6eb98c7}{leer\+\_\+sesiones}} (int n)
+\begin{DoxyCompactList}\small\item\em Añade n sesiones al parametro implicito. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__sesion_ab16589173601c81f80305cd9a49b2f7b}{listar\+\_\+sesiones}} ()
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__sesion_a8d8d2ba30c0efeb90e21a9b41fa2c62e}{listar\+\_\+sesion}} (std\+::string id)
+\begin{DoxyCompactList}\small\item\em Operación de escritura de una sesion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_cjt__sesion_a405ed3806e378d1a415588e640584bbd}{existe\+\_\+sesion}} (std\+::string id)
+\begin{DoxyCompactList}\small\item\em Consultora de si existe una sesiones. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ std\+::string, \mbox{\hyperlink{class_sesion}{Sesion}} $>$ \mbox{\hyperlink{class_cjt__sesion_abac1c2ee3cccc598a8274c7da869aa9b}{sesiones}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa un conjunto de sesiones. 
+
+Definición en la línea 19 del archivo Cjt\+\_\+sesion.\+hh.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_cjt__sesion_a706661671b7bc84b6537f4b074938551}\label{class_cjt__sesion_a706661671b7bc84b6537f4b074938551}} 
+\index{Cjt\+\_\+sesion@{Cjt\+\_\+sesion}!Cjt\+\_\+sesion@{Cjt\+\_\+sesion}}
+\index{Cjt\+\_\+sesion@{Cjt\+\_\+sesion}!Cjt\+\_\+sesion@{Cjt\+\_\+sesion}}
+\subsubsection{\texorpdfstring{Cjt\+\_\+sesion()}{Cjt\_sesion()}}
+{\footnotesize\ttfamily Cjt\+\_\+sesion\+::\+Cjt\+\_\+sesion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. Se ejecuta automáticamente al declarar un conjunto de sesiones. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un conjunto de sesiones vacio 
+\end{DoxyPostcond}
+
+
+Definición en la línea 12 del archivo Cjt\+\_\+sesion.\+cc.
+
+
+\begin{DoxyCode}
+12 \{ \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__sesion_aa6e81cd2268224ee70b0bc22df14ed5e}\label{class_cjt__sesion_aa6e81cd2268224ee70b0bc22df14ed5e}} 
+\index{Cjt\+\_\+sesion@{Cjt\+\_\+sesion}!````~Cjt\+\_\+sesion@{$\sim$\+Cjt\+\_\+sesion}}
+\index{````~Cjt\+\_\+sesion@{$\sim$\+Cjt\+\_\+sesion}!Cjt\+\_\+sesion@{Cjt\+\_\+sesion}}
+\subsubsection{\texorpdfstring{$\sim$\+Cjt\+\_\+sesion()}{~Cjt\_sesion()}}
+{\footnotesize\ttfamily Cjt\+\_\+sesion\+::$\sim$\+Cjt\+\_\+sesion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructora por defecto. Se ejecuta automáticamente en los objetos locales al salir. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es que se elimina el objeto conjunto de sesiones 
+\end{DoxyPostcond}
+
+
+Definición en la línea 13 del archivo Cjt\+\_\+sesion.\+cc.
+
+
+\begin{DoxyCode}
+13 \{ \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_cjt__sesion_a405ed3806e378d1a415588e640584bbd}\label{class_cjt__sesion_a405ed3806e378d1a415588e640584bbd}} 
+\index{Cjt\+\_\+sesion@{Cjt\+\_\+sesion}!existe\+\_\+sesion@{existe\+\_\+sesion}}
+\index{existe\+\_\+sesion@{existe\+\_\+sesion}!Cjt\+\_\+sesion@{Cjt\+\_\+sesion}}
+\subsubsection{\texorpdfstring{existe\+\_\+sesion()}{existe\_sesion()}}
+{\footnotesize\ttfamily bool Cjt\+\_\+sesion\+::existe\+\_\+sesion (\begin{DoxyParamCaption}\item[{std\+::string}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Consultora de si existe una sesiones. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es si existe el objeto \char`\"{}id\char`\"{} en el parametro implicito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 27 del archivo Cjt\+\_\+sesion.\+cc.
+
+
+\begin{DoxyCode}
+27                                         \{
+28     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_cjt__sesion_a405ed3806e378d1a415588e640584bbd}{existe\_sesion}} = \textcolor{keyword}{false};
+29     map<string,Sesion>::iterator it;
+30     it = \mbox{\hyperlink{class_cjt__sesion_abac1c2ee3cccc598a8274c7da869aa9b}{sesiones}}.find(\textcolor{keywordtype}{id});
+31     \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_cjt__sesion_abac1c2ee3cccc598a8274c7da869aa9b}{sesiones}}.end()) \mbox{\hyperlink{class_cjt__sesion_a405ed3806e378d1a415588e640584bbd}{existe\_sesion}} = \textcolor{keyword}{true};
+32 
+33     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_cjt__sesion_a405ed3806e378d1a415588e640584bbd}{existe\_sesion}};
+34 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__sesion_ace504b799e2c370749ccb16f9312fa5f}\label{class_cjt__sesion_ace504b799e2c370749ccb16f9312fa5f}} 
+\index{Cjt\+\_\+sesion@{Cjt\+\_\+sesion}!anadir\+\_\+sesion@{anadir\+\_\+sesion}}
+\index{anadir\+\_\+sesion@{anadir\+\_\+sesion}!Cjt\+\_\+sesion@{Cjt\+\_\+sesion}}
+\subsubsection{\texorpdfstring{anadir\+\_\+sesion()}{anadir\_sesion()}}
+{\footnotesize\ttfamily void Cjt\+\_\+sesion\+::anadir\+\_\+sesion (\begin{DoxyParamCaption}\item[{std\+::string}]{id }\end{DoxyParamCaption})}
+
+
+
+Se añade una sesiones con identificador \char`\"{}id\char`\"{}. 
+
+\begin{DoxyPrecond}{Precondición}
+id no es nuelo 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es que sse añade una sesion con identificador \char`\"{}id\char`\"{} al parametro implicito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 40 del archivo Cjt\+\_\+sesion.\+cc.
+
+
+\begin{DoxyCode}
+40                                         \{
+41   \mbox{\hyperlink{class_sesion}{Sesion}} s(\textcolor{keywordtype}{id});
+42   s.construir\_arbol();
+43   \textcolor{keywordflow}{if} (not \mbox{\hyperlink{class_cjt__sesion_a405ed3806e378d1a415588e640584bbd}{existe\_sesion}}(\textcolor{keywordtype}{id})) \{
+44     this->\mbox{\hyperlink{class_cjt__sesion_abac1c2ee3cccc598a8274c7da869aa9b}{sesiones}}.insert(pair<string, Sesion>(\textcolor{keywordtype}{id}, s));
+45   \}
+46   \textcolor{keywordflow}{else} \{
+47     \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"la sesion ya existe"};
+48   \}
+49 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__sesion_aa885f9672e699d82dcd22aaa26d1ada8}\label{class_cjt__sesion_aa885f9672e699d82dcd22aaa26d1ada8}} 
+\index{Cjt\+\_\+sesion@{Cjt\+\_\+sesion}!num\+\_\+sesiones@{num\+\_\+sesiones}}
+\index{num\+\_\+sesiones@{num\+\_\+sesiones}!Cjt\+\_\+sesion@{Cjt\+\_\+sesion}}
+\subsubsection{\texorpdfstring{num\+\_\+sesiones()}{num\_sesiones()}}
+{\footnotesize\ttfamily int Cjt\+\_\+sesion\+::num\+\_\+sesiones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Consultora del numero de sesiones. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el numero de sesiones que tiene parámetro implícito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 36 del archivo Cjt\+\_\+sesion.\+cc.
+
+
+\begin{DoxyCode}
+36                              \{
+37     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_cjt__sesion_abac1c2ee3cccc598a8274c7da869aa9b}{sesiones}}.size();
+38 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__sesion_aade2be6a90f0135b38342f877cc26ae6}\label{class_cjt__sesion_aade2be6a90f0135b38342f877cc26ae6}} 
+\index{Cjt\+\_\+sesion@{Cjt\+\_\+sesion}!listar\+\_\+primer\+\_\+problema@{listar\+\_\+primer\+\_\+problema}}
+\index{listar\+\_\+primer\+\_\+problema@{listar\+\_\+primer\+\_\+problema}!Cjt\+\_\+sesion@{Cjt\+\_\+sesion}}
+\subsubsection{\texorpdfstring{listar\+\_\+primer\+\_\+problema()}{listar\_primer\_problema()}}
+{\footnotesize\ttfamily string Cjt\+\_\+sesion\+::listar\+\_\+primer\+\_\+problema (\begin{DoxyParamCaption}\item[{std\+::string}]{sesion }\end{DoxyParamCaption})}
+
+
+
+Consultora del primer problema de la sesion \char`\"{}sesion\char`\"{}. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el primer problema de la sesion \char`\"{}sesion\char`\"{}, en caso de que \char`\"{}sesion\char`\"{} no exista, se devuelve error 
+\end{DoxyPostcond}
+
+
+Definición en la línea 51 del archivo Cjt\+\_\+sesion.\+cc.
+
+
+\begin{DoxyCode}
+51                                                        \{
+52     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_cjt__sesion_abac1c2ee3cccc598a8274c7da869aa9b}{sesiones}}.find(sesion)->second.leer\_primer\_problema();
+53 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__sesion_a4aef15fb48b0465b864eaebeb3808cd0}\label{class_cjt__sesion_a4aef15fb48b0465b864eaebeb3808cd0}} 
+\index{Cjt\+\_\+sesion@{Cjt\+\_\+sesion}!buscar\+\_\+nuevo\+\_\+problema@{buscar\+\_\+nuevo\+\_\+problema}}
+\index{buscar\+\_\+nuevo\+\_\+problema@{buscar\+\_\+nuevo\+\_\+problema}!Cjt\+\_\+sesion@{Cjt\+\_\+sesion}}
+\subsubsection{\texorpdfstring{buscar\+\_\+nuevo\+\_\+problema()}{buscar\_nuevo\_problema()}}
+{\footnotesize\ttfamily string Cjt\+\_\+sesion\+::buscar\+\_\+nuevo\+\_\+problema (\begin{DoxyParamCaption}\item[{std\+::string}]{p,  }\item[{std\+::string}]{sesion,  }\item[{int}]{lado }\end{DoxyParamCaption})}
+
+
+
+Consultora del problema hijo de un problema de la sesion \char`\"{}sesione\char`\"{}. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado, p y sesion no son nulos y 0 $>$= lado $<$= 1 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el hijo izquierdo del problema \char`\"{}p\char`\"{} de la sesion \char`\"{}sesion\char`\"{}, en caso que \char`\"{}lado\char`\"{} = 0 y el hijo derecho del problema \char`\"{}p\char`\"{} en caso que \char`\"{}lado\char`\"{} = 1 
+\end{DoxyPostcond}
+
+
+Definición en la línea 77 del archivo Cjt\+\_\+sesion.\+cc.
+
+
+\begin{DoxyCode}
+77                                                                           \{
+78   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_cjt__sesion_abac1c2ee3cccc598a8274c7da869aa9b}{sesiones}}.find(sesion)->second.nuevo\_problema(p, lado);
+79 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__sesion_ac761936095af984ee9a39fdcdf25219c}\label{class_cjt__sesion_ac761936095af984ee9a39fdcdf25219c}} 
+\index{Cjt\+\_\+sesion@{Cjt\+\_\+sesion}!num\+\_\+problemas\+\_\+sesion@{num\+\_\+problemas\+\_\+sesion}}
+\index{num\+\_\+problemas\+\_\+sesion@{num\+\_\+problemas\+\_\+sesion}!Cjt\+\_\+sesion@{Cjt\+\_\+sesion}}
+\subsubsection{\texorpdfstring{num\+\_\+problemas\+\_\+sesion()}{num\_problemas\_sesion()}}
+{\footnotesize\ttfamily int Cjt\+\_\+sesion\+::num\+\_\+problemas\+\_\+sesion (\begin{DoxyParamCaption}\item[{std\+::string}]{sesion }\end{DoxyParamCaption})}
+
+
+
+Consultora del numero de problemas de una sesion. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el numero de problemas de la sesion \char`\"{}sesion\char`\"{}, en caso de que \char`\"{}sesion\char`\"{} no exista, se devuelve error 
+\end{DoxyPostcond}
+
+
+Definición en la línea 56 del archivo Cjt\+\_\+sesion.\+cc.
+
+
+\begin{DoxyCode}
+56                                                   \{
+57   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_cjt__sesion_abac1c2ee3cccc598a8274c7da869aa9b}{sesiones}}.find(sesion)->second.num\_problemas();
+58 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__sesion_a7bc8395d0f4702cd383b11efab65feb1}\label{class_cjt__sesion_a7bc8395d0f4702cd383b11efab65feb1}} 
+\index{Cjt\+\_\+sesion@{Cjt\+\_\+sesion}!consultar\+\_\+problema\+\_\+sesion@{consultar\+\_\+problema\+\_\+sesion}}
+\index{consultar\+\_\+problema\+\_\+sesion@{consultar\+\_\+problema\+\_\+sesion}!Cjt\+\_\+sesion@{Cjt\+\_\+sesion}}
+\subsubsection{\texorpdfstring{consultar\+\_\+problema\+\_\+sesion()}{consultar\_problema\_sesion()}}
+{\footnotesize\ttfamily string Cjt\+\_\+sesion\+::consultar\+\_\+problema\+\_\+sesion (\begin{DoxyParamCaption}\item[{string}]{sesion,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Consultora del problema i de una sesion. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado, i $>$= 0 y sesion no es nuelo 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el problema i-\/essimo del vector de problemas de la sesion \char`\"{}sesion\char`\"{}, en caso de que \char`\"{}sesion\char`\"{} no exista, se devuelve error 
+\end{DoxyPostcond}
+
+
+Definición en la línea 60 del archivo Cjt\+\_\+sesion.\+cc.
+
+
+\begin{DoxyCode}
+60                                                                  \{
+61   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_cjt__sesion_abac1c2ee3cccc598a8274c7da869aa9b}{sesiones}}.find(sesion)->second.consultar\_problema(i);
+62 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__sesion_ad64b0e5339bd3a04de4fba88d6eb98c7}\label{class_cjt__sesion_ad64b0e5339bd3a04de4fba88d6eb98c7}} 
+\index{Cjt\+\_\+sesion@{Cjt\+\_\+sesion}!leer\+\_\+sesiones@{leer\+\_\+sesiones}}
+\index{leer\+\_\+sesiones@{leer\+\_\+sesiones}!Cjt\+\_\+sesion@{Cjt\+\_\+sesion}}
+\subsubsection{\texorpdfstring{leer\+\_\+sesiones()}{leer\_sesiones()}}
+{\footnotesize\ttfamily void Cjt\+\_\+sesion\+::leer\+\_\+sesiones (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Añade n sesiones al parametro implicito. 
+
+\begin{DoxyPrecond}{Precondición}
+n $>$ 0 y estan preparados en el canal estandard de entrada n sesiones para ser leidas 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+el parametro implicito pasa a tenr \char`\"{}n\char`\"{} sesiones 
+\end{DoxyPostcond}
+
+
+Definición en la línea 15 del archivo Cjt\+\_\+sesion.\+cc.
+
+
+\begin{DoxyCode}
+15                                     \{
+16     \textcolor{keywordflow}{while} (n > 0) \{
+17         \textcolor{keywordtype}{string} id;
+18         cin >> id;
+19         \mbox{\hyperlink{class_sesion}{Sesion}} s(\textcolor{keywordtype}{id});
+20         s.construir\_arbol();
+21         this->\mbox{\hyperlink{class_cjt__sesion_abac1c2ee3cccc598a8274c7da869aa9b}{sesiones}}.insert(pair<string, Sesion>(\textcolor{keywordtype}{id}, s));
+22         --n;
+23     \}
+24 
+25 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__sesion_ab16589173601c81f80305cd9a49b2f7b}\label{class_cjt__sesion_ab16589173601c81f80305cd9a49b2f7b}} 
+\index{Cjt\+\_\+sesion@{Cjt\+\_\+sesion}!listar\+\_\+sesiones@{listar\+\_\+sesiones}}
+\index{listar\+\_\+sesiones@{listar\+\_\+sesiones}!Cjt\+\_\+sesion@{Cjt\+\_\+sesion}}
+\subsubsection{\texorpdfstring{listar\+\_\+sesiones()}{listar\_sesiones()}}
+{\footnotesize\ttfamily void Cjt\+\_\+sesion\+::listar\+\_\+sesiones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Escribe las propiedades y el contenido del parámetro implícito por el canal estándar de salida 
+\end{DoxyPostcond}
+
+
+Definición en la línea 64 del archivo Cjt\+\_\+sesion.\+cc.
+
+
+\begin{DoxyCode}
+64                                  \{
+65   \textcolor{keywordflow}{for}( \textcolor{keyword}{auto} it = \mbox{\hyperlink{class_cjt__sesion_abac1c2ee3cccc598a8274c7da869aa9b}{sesiones}}.begin(); it != \mbox{\hyperlink{class_cjt__sesion_abac1c2ee3cccc598a8274c7da869aa9b}{sesiones}}.end(); ++it ) \{
+66     it->second.escribir\_sesion();
+67   \}
+68 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__sesion_a8d8d2ba30c0efeb90e21a9b41fa2c62e}\label{class_cjt__sesion_a8d8d2ba30c0efeb90e21a9b41fa2c62e}} 
+\index{Cjt\+\_\+sesion@{Cjt\+\_\+sesion}!listar\+\_\+sesion@{listar\+\_\+sesion}}
+\index{listar\+\_\+sesion@{listar\+\_\+sesion}!Cjt\+\_\+sesion@{Cjt\+\_\+sesion}}
+\subsubsection{\texorpdfstring{listar\+\_\+sesion()}{listar\_sesion()}}
+{\footnotesize\ttfamily void Cjt\+\_\+sesion\+::listar\+\_\+sesion (\begin{DoxyParamCaption}\item[{std\+::string}]{id }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura de una sesion. 
+
+\begin{DoxyPrecond}{Precondición}
+id no es nulo 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Escribe las propiedades y el contenido de la sesion \char`\"{}id\char`\"{} por el canal estándar de salida, si la sesion no existe de devuelve error 
+\end{DoxyPostcond}
+
+
+Definición en la línea 70 del archivo Cjt\+\_\+sesion.\+cc.
+
+
+\begin{DoxyCode}
+70                                         \{
+71     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_cjt__sesion_a405ed3806e378d1a415588e640584bbd}{existe\_sesion}}(\textcolor{keywordtype}{id})) \{
+72       \mbox{\hyperlink{class_cjt__sesion_abac1c2ee3cccc598a8274c7da869aa9b}{sesiones}}.find(\textcolor{keywordtype}{id})->second.escribir\_sesion();
+73     \}
+74     \textcolor{keywordflow}{else} \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"la sesion no existe"};
+75 \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_cjt__sesion_abac1c2ee3cccc598a8274c7da869aa9b}\label{class_cjt__sesion_abac1c2ee3cccc598a8274c7da869aa9b}} 
+\index{Cjt\+\_\+sesion@{Cjt\+\_\+sesion}!sesiones@{sesiones}}
+\index{sesiones@{sesiones}!Cjt\+\_\+sesion@{Cjt\+\_\+sesion}}
+\subsubsection{\texorpdfstring{sesiones}{sesiones}}
+{\footnotesize\ttfamily map$<$std\+::string, \mbox{\hyperlink{class_sesion}{Sesion}}$>$ Cjt\+\_\+sesion\+::sesiones\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 22 del archivo Cjt\+\_\+sesion.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_cjt__sesion_8hh}{Cjt\+\_\+sesion.\+hh}}\item 
+\mbox{\hyperlink{_cjt__sesion_8cc}{Cjt\+\_\+sesion.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,501 @@
+\hypertarget{class_cjt__usuario}{}\section{Referencia de la Clase Cjt\+\_\+usuario}
+\label{class_cjt__usuario}\index{Cjt\+\_\+usuario@{Cjt\+\_\+usuario}}
+
+
+Representa un conjunto de usuarios.  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cjt__usuario_aa14539b3419a33c42158996d16cdcf2f}{Cjt\+\_\+usuario}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. Se ejecuta automáticamente al declarar un conjunto de usuarios. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cjt__usuario_a5ce2decc4b973b8c687ef991b376bed2}{$\sim$\+Cjt\+\_\+usuario}} ()
+\begin{DoxyCompactList}\small\item\em Destructora por defecto. Se ejecuta automáticamente en los objetos locales al salir. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__usuario_a1a587cd6e8e3f261f27981134d0216e5}{anadir\+\_\+usuario}} (std\+::string id)
+\begin{DoxyCompactList}\small\item\em Se añade un usuario con identificador \char`\"{}id\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__usuario_a4be0bd7bbca32d299b152730d6de41ba}{eliminar\+\_\+usuario}} (std\+::string id, \mbox{\hyperlink{class_cjt__curso}{Cjt\+\_\+curso}} \&curs)
+\begin{DoxyCompactList}\small\item\em Se elimina un usuario con identificador \char`\"{}id\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__usuario_a3f4be6c8f5568ef3767bf343418e6f5d}{inscribir\+\_\+curso}} (std\+::string id, int c, \mbox{\hyperlink{class_cjt__curso}{Cjt\+\_\+curso}} \&lista\+\_\+cursos, \mbox{\hyperlink{class_cjt__sesion}{Cjt\+\_\+sesion}} \&lista\+\_\+sesiones)
+\begin{DoxyCompactList}\small\item\em Un usuario se inscribe en un curso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__usuario_a239dce70ba54f8a8f41fd180b703b7c9}{envio\+\_\+user}} (std\+::string user, std\+::string p, int r, \mbox{\hyperlink{class_cjt__problema}{Cjt\+\_\+problema}} \&problemas, \mbox{\hyperlink{class_cjt__curso}{Cjt\+\_\+curso}} \&cursos, \mbox{\hyperlink{class_cjt__sesion}{Cjt\+\_\+sesion}} \&sesiones)
+\begin{DoxyCompactList}\small\item\em Un usuario hace envio a un problema de un curso especifico. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_cjt__usuario_a92ec4442d4a6e8d50f4eb36413ade07e}{num\+\_\+usuarios}} ()
+\begin{DoxyCompactList}\small\item\em Consultora del numero de usuarios. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_cjt__usuario_aa21aa736c5b2094fe5d21415f1761cfa}{curso\+\_\+actual}} (std\+::string id)
+\begin{DoxyCompactList}\small\item\em Consultora del curso de un usuario. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cjt__usuario_a2d4478e6b967659040f5a0b86b665204}{existe\+\_\+usuario}} (std\+::string id)
+\begin{DoxyCompactList}\small\item\em Consultora de si existe un usuario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__usuario_a75a98423be866287a841a77849ea3e6f}{leer\+\_\+usuarios}} (int n)
+\begin{DoxyCompactList}\small\item\em Añade n usuarios al parametro implicito. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__usuario_adf8f61c7eacd7328896c168adb3e63cd}{problemas\+\_\+enviables}} (std\+::string id)
+\begin{DoxyCompactList}\small\item\em Operación de escritura de los problemas a los que el usuario \char`\"{}id\char`\"{} puede hacer envio. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__usuario_aa1cfea5c4294317758f260033f9fbd3f}{problemas\+\_\+resueltos}} (std\+::string id)
+\begin{DoxyCompactList}\small\item\em Operación de escritura de los problemas del usuario \char`\"{}id\char`\"{} que ya se han resuelto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__usuario_a4cd3e0812c3b3d7e9e83c0f8d0c2acb3}{listar\+\_\+usuarios}} ()
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__usuario_aa1b390ae2335eb486d2a0c8c32643d5c}{listar\+\_\+usuario}} (std\+::string id)
+\begin{DoxyCompactList}\small\item\em Operación de escritura de un usuario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{class_usuario}{Usuario}} $>$ \mbox{\hyperlink{class_cjt__usuario_af814d06f1c52bc2e744d253d20ce6e6b}{usuarios}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa un conjunto de usuarios. 
+
+Definición en la línea 20 del archivo Cjt\+\_\+usuario.\+hh.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_cjt__usuario_aa14539b3419a33c42158996d16cdcf2f}\label{class_cjt__usuario_aa14539b3419a33c42158996d16cdcf2f}} 
+\index{Cjt\+\_\+usuario@{Cjt\+\_\+usuario}!Cjt\+\_\+usuario@{Cjt\+\_\+usuario}}
+\index{Cjt\+\_\+usuario@{Cjt\+\_\+usuario}!Cjt\+\_\+usuario@{Cjt\+\_\+usuario}}
+\subsubsection{\texorpdfstring{Cjt\+\_\+usuario()}{Cjt\_usuario()}}
+{\footnotesize\ttfamily Cjt\+\_\+usuario\+::\+Cjt\+\_\+usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. Se ejecuta automáticamente al declarar un conjunto de usuarios. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un conjunto de usuarios vacio 
+\end{DoxyPostcond}
+
+
+Definición en la línea 13 del archivo Cjt\+\_\+usuario.\+cc.
+
+
+\begin{DoxyCode}
+13 \{\}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__usuario_a5ce2decc4b973b8c687ef991b376bed2}\label{class_cjt__usuario_a5ce2decc4b973b8c687ef991b376bed2}} 
+\index{Cjt\+\_\+usuario@{Cjt\+\_\+usuario}!````~Cjt\+\_\+usuario@{$\sim$\+Cjt\+\_\+usuario}}
+\index{````~Cjt\+\_\+usuario@{$\sim$\+Cjt\+\_\+usuario}!Cjt\+\_\+usuario@{Cjt\+\_\+usuario}}
+\subsubsection{\texorpdfstring{$\sim$\+Cjt\+\_\+usuario()}{~Cjt\_usuario()}}
+{\footnotesize\ttfamily Cjt\+\_\+usuario\+::$\sim$\+Cjt\+\_\+usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructora por defecto. Se ejecuta automáticamente en los objetos locales al salir. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es que se elimina el objeto conjunto de usuaiors 
+\end{DoxyPostcond}
+
+
+Definición en la línea 15 del archivo Cjt\+\_\+usuario.\+cc.
+
+
+\begin{DoxyCode}
+15 \{\}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_cjt__usuario_a1a587cd6e8e3f261f27981134d0216e5}\label{class_cjt__usuario_a1a587cd6e8e3f261f27981134d0216e5}} 
+\index{Cjt\+\_\+usuario@{Cjt\+\_\+usuario}!anadir\+\_\+usuario@{anadir\+\_\+usuario}}
+\index{anadir\+\_\+usuario@{anadir\+\_\+usuario}!Cjt\+\_\+usuario@{Cjt\+\_\+usuario}}
+\subsubsection{\texorpdfstring{anadir\+\_\+usuario()}{anadir\_usuario()}}
+{\footnotesize\ttfamily void Cjt\+\_\+usuario\+::anadir\+\_\+usuario (\begin{DoxyParamCaption}\item[{std\+::string}]{id }\end{DoxyParamCaption})}
+
+
+
+Se añade un usuario con identificador \char`\"{}id\char`\"{}. 
+
+\begin{DoxyPrecond}{Precondición}
+id no es nuelo 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es que sse añade un usuario con identificador \char`\"{}id\char`\"{} al parametro implicito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 42 del archivo Cjt\+\_\+usuario.\+cc.
+
+
+\begin{DoxyCode}
+42                                           \{
+43   \textcolor{keywordflow}{if} (not \mbox{\hyperlink{class_cjt__usuario_a2d4478e6b967659040f5a0b86b665204}{existe\_usuario}}(\textcolor{keywordtype}{id})) \{
+44     \mbox{\hyperlink{class_usuario}{Usuario}} u(\textcolor{keywordtype}{id});
+45     this->\mbox{\hyperlink{class_cjt__usuario_af814d06f1c52bc2e744d253d20ce6e6b}{usuarios}}.insert(pair<string, Usuario>(\textcolor{keywordtype}{id}, u));
+46   \}
+47   \textcolor{keywordflow}{else} \{
+48     \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"el usuario ya existe"};
+49   \}
+50 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__usuario_a4be0bd7bbca32d299b152730d6de41ba}\label{class_cjt__usuario_a4be0bd7bbca32d299b152730d6de41ba}} 
+\index{Cjt\+\_\+usuario@{Cjt\+\_\+usuario}!eliminar\+\_\+usuario@{eliminar\+\_\+usuario}}
+\index{eliminar\+\_\+usuario@{eliminar\+\_\+usuario}!Cjt\+\_\+usuario@{Cjt\+\_\+usuario}}
+\subsubsection{\texorpdfstring{eliminar\+\_\+usuario()}{eliminar\_usuario()}}
+{\footnotesize\ttfamily void Cjt\+\_\+usuario\+::eliminar\+\_\+usuario (\begin{DoxyParamCaption}\item[{std\+::string}]{id,  }\item[{\mbox{\hyperlink{class_cjt__curso}{Cjt\+\_\+curso}} \&}]{curs }\end{DoxyParamCaption})}
+
+
+
+Se elimina un usuario con identificador \char`\"{}id\char`\"{}. 
+
+\begin{DoxyPrecond}{Precondición}
+id no es nuelo y el conjunto de cursos esta inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es que se elimina un usuario con identificador \char`\"{}id\char`\"{} al parametro implicito y se resta de las estadisticas del curso al que esta inscrito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 52 del archivo Cjt\+\_\+usuario.\+cc.
+
+
+\begin{DoxyCode}
+52                                                              \{
+53   \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_cjt__usuario_a2d4478e6b967659040f5a0b86b665204}{existe\_usuario}}(\textcolor{keywordtype}{id})) \{
+54     map<string,Usuario>::iterator it;
+55     it = \mbox{\hyperlink{class_cjt__usuario_af814d06f1c52bc2e744d253d20ce6e6b}{usuarios}}.find(\textcolor{keywordtype}{id});
+56     \textcolor{keywordflow}{if} (it->second.curso\_actual() != 0) curs.\mbox{\hyperlink{class_cjt__curso_a7d41a4d58689e02f10093b56fce7947b}{baja\_usuario}}(it->second.curso\_actual());
+57     \mbox{\hyperlink{class_cjt__usuario_af814d06f1c52bc2e744d253d20ce6e6b}{usuarios}}.erase(it);
+58   \}
+59   \textcolor{keywordflow}{else} \{
+60     \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"el usuario no existe"};
+61   \}
+62 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__usuario_a3f4be6c8f5568ef3767bf343418e6f5d}\label{class_cjt__usuario_a3f4be6c8f5568ef3767bf343418e6f5d}} 
+\index{Cjt\+\_\+usuario@{Cjt\+\_\+usuario}!inscribir\+\_\+curso@{inscribir\+\_\+curso}}
+\index{inscribir\+\_\+curso@{inscribir\+\_\+curso}!Cjt\+\_\+usuario@{Cjt\+\_\+usuario}}
+\subsubsection{\texorpdfstring{inscribir\+\_\+curso()}{inscribir\_curso()}}
+{\footnotesize\ttfamily void Cjt\+\_\+usuario\+::inscribir\+\_\+curso (\begin{DoxyParamCaption}\item[{std\+::string}]{id,  }\item[{int}]{c,  }\item[{\mbox{\hyperlink{class_cjt__curso}{Cjt\+\_\+curso}} \&}]{lista\+\_\+cursos,  }\item[{\mbox{\hyperlink{class_cjt__sesion}{Cjt\+\_\+sesion}} \&}]{lista\+\_\+sesiones }\end{DoxyParamCaption})}
+
+
+
+Un usuario se inscribe en un curso. 
+
+\begin{DoxyPrecond}{Precondición}
+c $>$ 0, id no nulo y los conjuntos de cursos y sesiones estan inicializaods 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El usuario \char`\"{}id\char`\"{} se inscribe a un curso actualizando la lista de problemas a los que puede hacer envio, en caso de que el usuario ya este escrito en un curso se devuelve un error 
+\end{DoxyPostcond}
+
+
+Definición en la línea 64 del archivo Cjt\+\_\+usuario.\+cc.
+
+
+\begin{DoxyCode}
+64                                                                                                        \{
+65   \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_cjt__usuario_a2d4478e6b967659040f5a0b86b665204}{existe\_usuario}}(\textcolor{keywordtype}{id})) \{
+66     \textcolor{keywordflow}{try} \{
+67       \mbox{\hyperlink{class_cjt__usuario_af814d06f1c52bc2e744d253d20ce6e6b}{usuarios}}[id].inscribir\_curso(c, lista\_cursos, lista\_sesiones);
+68     \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+69       \textcolor{keywordflow}{throw} msg;
+70     \}
+71   \}
+72   \textcolor{keywordflow}{else} \{
+73     \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"el usuario no existe"};
+74   \}
+75 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__usuario_a239dce70ba54f8a8f41fd180b703b7c9}\label{class_cjt__usuario_a239dce70ba54f8a8f41fd180b703b7c9}} 
+\index{Cjt\+\_\+usuario@{Cjt\+\_\+usuario}!envio\+\_\+user@{envio\+\_\+user}}
+\index{envio\+\_\+user@{envio\+\_\+user}!Cjt\+\_\+usuario@{Cjt\+\_\+usuario}}
+\subsubsection{\texorpdfstring{envio\+\_\+user()}{envio\_user()}}
+{\footnotesize\ttfamily void Cjt\+\_\+usuario\+::envio\+\_\+user (\begin{DoxyParamCaption}\item[{std\+::string}]{user,  }\item[{std\+::string}]{p,  }\item[{int}]{r,  }\item[{\mbox{\hyperlink{class_cjt__problema}{Cjt\+\_\+problema}} \&}]{problemas,  }\item[{\mbox{\hyperlink{class_cjt__curso}{Cjt\+\_\+curso}} \&}]{cursos,  }\item[{\mbox{\hyperlink{class_cjt__sesion}{Cjt\+\_\+sesion}} \&}]{sesiones }\end{DoxyParamCaption})}
+
+
+
+Un usuario hace envio a un problema de un curso especifico. 
+
+\begin{DoxyPrecond}{Precondición}
+p y user no son nulos, 0 $>$= r $<$= 1 y los conjuntos de problemas, cursos y sesiones estan inicializaods 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Un usuario hace un envio de un problema a un curso especifico actualizando todas sus estadisticas y actualizando los conjuntos de problemas tanto resueltos como enviables del usuario 
+\end{DoxyPostcond}
+
+
+Definición en la línea 126 del archivo Cjt\+\_\+usuario.\+cc.
+
+
+\begin{DoxyCode}
+126                                                                                                            
+                      \{
+127   \mbox{\hyperlink{class_cjt__usuario_af814d06f1c52bc2e744d253d20ce6e6b}{usuarios}}.find(user)->second.envio( p,  r, problemas, cursos, sesiones);
+128 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__usuario_a92ec4442d4a6e8d50f4eb36413ade07e}\label{class_cjt__usuario_a92ec4442d4a6e8d50f4eb36413ade07e}} 
+\index{Cjt\+\_\+usuario@{Cjt\+\_\+usuario}!num\+\_\+usuarios@{num\+\_\+usuarios}}
+\index{num\+\_\+usuarios@{num\+\_\+usuarios}!Cjt\+\_\+usuario@{Cjt\+\_\+usuario}}
+\subsubsection{\texorpdfstring{num\+\_\+usuarios()}{num\_usuarios()}}
+{\footnotesize\ttfamily int Cjt\+\_\+usuario\+::num\+\_\+usuarios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Consultora del numero de usuarios. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el numero de usuarios que tiene parámetro implícito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 38 del archivo Cjt\+\_\+usuario.\+cc.
+
+
+\begin{DoxyCode}
+38                               \{
+39     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_cjt__usuario_af814d06f1c52bc2e744d253d20ce6e6b}{usuarios}}.size();
+40 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__usuario_aa21aa736c5b2094fe5d21415f1761cfa}\label{class_cjt__usuario_aa21aa736c5b2094fe5d21415f1761cfa}} 
+\index{Cjt\+\_\+usuario@{Cjt\+\_\+usuario}!curso\+\_\+actual@{curso\+\_\+actual}}
+\index{curso\+\_\+actual@{curso\+\_\+actual}!Cjt\+\_\+usuario@{Cjt\+\_\+usuario}}
+\subsubsection{\texorpdfstring{curso\+\_\+actual()}{curso\_actual()}}
+{\footnotesize\ttfamily int Cjt\+\_\+usuario\+::curso\+\_\+actual (\begin{DoxyParamCaption}\item[{std\+::string}]{id }\end{DoxyParamCaption})}
+
+
+
+Consultora del curso de un usuario. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el curso al que esta inscrito el usuario \char`\"{}id\char`\"{}, en caso que el usuario \char`\"{}id\char`\"{} no exista devuelve error 
+\end{DoxyPostcond}
+
+
+Definición en la línea 77 del archivo Cjt\+\_\+usuario.\+cc.
+
+
+\begin{DoxyCode}
+77                                        \{
+78   \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_cjt__usuario_a2d4478e6b967659040f5a0b86b665204}{existe\_usuario}}(\textcolor{keywordtype}{id})) \{
+79     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_cjt__usuario_af814d06f1c52bc2e744d253d20ce6e6b}{usuarios}}.find(\textcolor{keywordtype}{id})->second.curso\_actual();
+80 
+81   \}
+82   \textcolor{keywordflow}{else} \{
+83     \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"el usuario no existe"};
+84   \}
+85 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__usuario_a2d4478e6b967659040f5a0b86b665204}\label{class_cjt__usuario_a2d4478e6b967659040f5a0b86b665204}} 
+\index{Cjt\+\_\+usuario@{Cjt\+\_\+usuario}!existe\+\_\+usuario@{existe\+\_\+usuario}}
+\index{existe\+\_\+usuario@{existe\+\_\+usuario}!Cjt\+\_\+usuario@{Cjt\+\_\+usuario}}
+\subsubsection{\texorpdfstring{existe\+\_\+usuario()}{existe\_usuario()}}
+{\footnotesize\ttfamily bool Cjt\+\_\+usuario\+::existe\+\_\+usuario (\begin{DoxyParamCaption}\item[{std\+::string}]{id }\end{DoxyParamCaption})}
+
+
+
+Consultora de si existe un usuario. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es si existe el objeto \char`\"{}id\char`\"{} en el parametro implicito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 28 del archivo Cjt\+\_\+usuario.\+cc.
+
+
+\begin{DoxyCode}
+28                                           \{
+29     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_cjt__usuario_a2d4478e6b967659040f5a0b86b665204}{existe\_usuario}} = \textcolor{keyword}{false};
+30     map<string,Usuario>::iterator it;
+31     it = \mbox{\hyperlink{class_cjt__usuario_af814d06f1c52bc2e744d253d20ce6e6b}{usuarios}}.find(\textcolor{keywordtype}{id});
+32     \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_cjt__usuario_af814d06f1c52bc2e744d253d20ce6e6b}{usuarios}}.end())
+33         \mbox{\hyperlink{class_cjt__usuario_a2d4478e6b967659040f5a0b86b665204}{existe\_usuario}} = \textcolor{keyword}{true};
+34 
+35     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_cjt__usuario_a2d4478e6b967659040f5a0b86b665204}{existe\_usuario}};
+36 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__usuario_a75a98423be866287a841a77849ea3e6f}\label{class_cjt__usuario_a75a98423be866287a841a77849ea3e6f}} 
+\index{Cjt\+\_\+usuario@{Cjt\+\_\+usuario}!leer\+\_\+usuarios@{leer\+\_\+usuarios}}
+\index{leer\+\_\+usuarios@{leer\+\_\+usuarios}!Cjt\+\_\+usuario@{Cjt\+\_\+usuario}}
+\subsubsection{\texorpdfstring{leer\+\_\+usuarios()}{leer\_usuarios()}}
+{\footnotesize\ttfamily void Cjt\+\_\+usuario\+::leer\+\_\+usuarios (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Añade n usuarios al parametro implicito. 
+
+\begin{DoxyPrecond}{Precondición}
+n $>$ 0 y estan preparados en el canal estandard de entrada n usuarios para ser leidos 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+el parametro implicito pasa a tenr \char`\"{}n\char`\"{} usuarios 
+\end{DoxyPostcond}
+
+
+Definición en la línea 17 del archivo Cjt\+\_\+usuario.\+cc.
+
+
+\begin{DoxyCode}
+17                                      \{
+18     \textcolor{keywordflow}{while} (n > 0) \{
+19         \textcolor{keywordtype}{string} id;
+20         cin >> id;
+21         \mbox{\hyperlink{class_usuario}{Usuario}} u(\textcolor{keywordtype}{id});
+22         this->\mbox{\hyperlink{class_cjt__usuario_af814d06f1c52bc2e744d253d20ce6e6b}{usuarios}}.insert(pair<string, Usuario>(\textcolor{keywordtype}{id}, u));
+23         --n;
+24 
+25     \}
+26 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__usuario_adf8f61c7eacd7328896c168adb3e63cd}\label{class_cjt__usuario_adf8f61c7eacd7328896c168adb3e63cd}} 
+\index{Cjt\+\_\+usuario@{Cjt\+\_\+usuario}!problemas\+\_\+enviables@{problemas\+\_\+enviables}}
+\index{problemas\+\_\+enviables@{problemas\+\_\+enviables}!Cjt\+\_\+usuario@{Cjt\+\_\+usuario}}
+\subsubsection{\texorpdfstring{problemas\+\_\+enviables()}{problemas\_enviables()}}
+{\footnotesize\ttfamily void Cjt\+\_\+usuario\+::problemas\+\_\+enviables (\begin{DoxyParamCaption}\item[{std\+::string}]{id }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura de los problemas a los que el usuario \char`\"{}id\char`\"{} puede hacer envio. 
+
+\begin{DoxyPrecond}{Precondición}
+id no es nuelo 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Escribe los problemas enviables del usuario \char`\"{}id\char`\"{} por el canal estandard de salida, en caso de que el usuario no ese inscrito en ningun curso devuevle error 
+\end{DoxyPostcond}
+
+
+Definición en la línea 87 del archivo Cjt\+\_\+usuario.\+cc.
+
+
+\begin{DoxyCode}
+87                                                \{
+88   \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_cjt__usuario_a2d4478e6b967659040f5a0b86b665204}{existe\_usuario}}(\textcolor{keywordtype}{id})) \{
+89     \textcolor{keywordflow}{try} \{
+90     \mbox{\hyperlink{class_cjt__usuario_af814d06f1c52bc2e744d253d20ce6e6b}{usuarios}}.find(\textcolor{keywordtype}{id})->second.f\_problemas\_enviables();
+91   \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+92       \textcolor{keywordflow}{throw} msg;
+93   \}
+94   \}
+95   \textcolor{keywordflow}{else} \{
+96     \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"el usuario no existe"};
+97   \}
+98 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__usuario_aa1cfea5c4294317758f260033f9fbd3f}\label{class_cjt__usuario_aa1cfea5c4294317758f260033f9fbd3f}} 
+\index{Cjt\+\_\+usuario@{Cjt\+\_\+usuario}!problemas\+\_\+resueltos@{problemas\+\_\+resueltos}}
+\index{problemas\+\_\+resueltos@{problemas\+\_\+resueltos}!Cjt\+\_\+usuario@{Cjt\+\_\+usuario}}
+\subsubsection{\texorpdfstring{problemas\+\_\+resueltos()}{problemas\_resueltos()}}
+{\footnotesize\ttfamily void Cjt\+\_\+usuario\+::problemas\+\_\+resueltos (\begin{DoxyParamCaption}\item[{std\+::string}]{id }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura de los problemas del usuario \char`\"{}id\char`\"{} que ya se han resuelto. 
+
+\begin{DoxyPrecond}{Precondición}
+id no es nuelo 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Escribe los problemas resueltos del usuario \char`\"{}id\char`\"{} por el canal estandard de salida, en caso de que el usuario no ese inscrito en ningun curso devuevle error 
+\end{DoxyPostcond}
+
+
+Definición en la línea 100 del archivo Cjt\+\_\+usuario.\+cc.
+
+
+\begin{DoxyCode}
+100                                                \{
+101   \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_cjt__usuario_a2d4478e6b967659040f5a0b86b665204}{existe\_usuario}}(\textcolor{keywordtype}{id})) \{
+102     \textcolor{keywordflow}{try} \{
+103     \mbox{\hyperlink{class_cjt__usuario_af814d06f1c52bc2e744d253d20ce6e6b}{usuarios}}.find(\textcolor{keywordtype}{id})->second.f\_problemas\_resueltos();
+104   \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg) \{
+105       \textcolor{keywordflow}{throw} msg;
+106   \}
+107   \}
+108   \textcolor{keywordflow}{else} \{
+109     \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"el usuario no existe"};
+110   \}
+111 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__usuario_a4cd3e0812c3b3d7e9e83c0f8d0c2acb3}\label{class_cjt__usuario_a4cd3e0812c3b3d7e9e83c0f8d0c2acb3}} 
+\index{Cjt\+\_\+usuario@{Cjt\+\_\+usuario}!listar\+\_\+usuarios@{listar\+\_\+usuarios}}
+\index{listar\+\_\+usuarios@{listar\+\_\+usuarios}!Cjt\+\_\+usuario@{Cjt\+\_\+usuario}}
+\subsubsection{\texorpdfstring{listar\+\_\+usuarios()}{listar\_usuarios()}}
+{\footnotesize\ttfamily void Cjt\+\_\+usuario\+::listar\+\_\+usuarios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito está inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Escribe las propiedades y el contenido del parámetro implícito por el canal estándar de salida 
+\end{DoxyPostcond}
+
+
+Definición en la línea 113 del archivo Cjt\+\_\+usuario.\+cc.
+
+
+\begin{DoxyCode}
+113                                   \{
+114   \textcolor{keywordflow}{for}( \textcolor{keyword}{auto} it = \mbox{\hyperlink{class_cjt__usuario_af814d06f1c52bc2e744d253d20ce6e6b}{usuarios}}.begin(); it != \mbox{\hyperlink{class_cjt__usuario_af814d06f1c52bc2e744d253d20ce6e6b}{usuarios}}.end(); ++it ) \{
+115     it->second.escribir\_usuario();
+116   \}
+117 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__usuario_aa1b390ae2335eb486d2a0c8c32643d5c}\label{class_cjt__usuario_aa1b390ae2335eb486d2a0c8c32643d5c}} 
+\index{Cjt\+\_\+usuario@{Cjt\+\_\+usuario}!listar\+\_\+usuario@{listar\+\_\+usuario}}
+\index{listar\+\_\+usuario@{listar\+\_\+usuario}!Cjt\+\_\+usuario@{Cjt\+\_\+usuario}}
+\subsubsection{\texorpdfstring{listar\+\_\+usuario()}{listar\_usuario()}}
+{\footnotesize\ttfamily void Cjt\+\_\+usuario\+::listar\+\_\+usuario (\begin{DoxyParamCaption}\item[{std\+::string}]{id }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura de un usuario. 
+
+\begin{DoxyPrecond}{Precondición}
+id no es nulo 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Escribe las propiedades y el contenido del usuario \char`\"{}id\char`\"{} por el canal estándar de salida, si el usuario no existe de devuelve error 
+\end{DoxyPostcond}
+
+
+Definición en la línea 119 del archivo Cjt\+\_\+usuario.\+cc.
+
+
+\begin{DoxyCode}
+119                                           \{
+120     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_cjt__usuario_a2d4478e6b967659040f5a0b86b665204}{existe\_usuario}}(\textcolor{keywordtype}{id})) \{
+121       \mbox{\hyperlink{class_cjt__usuario_af814d06f1c52bc2e744d253d20ce6e6b}{usuarios}}.find(\textcolor{keywordtype}{id})->second.escribir\_usuario();
+122     \}
+123     \textcolor{keywordflow}{else} \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"el usuario no existe"};
+124 \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_cjt__usuario_af814d06f1c52bc2e744d253d20ce6e6b}\label{class_cjt__usuario_af814d06f1c52bc2e744d253d20ce6e6b}} 
+\index{Cjt\+\_\+usuario@{Cjt\+\_\+usuario}!usuarios@{usuarios}}
+\index{usuarios@{usuarios}!Cjt\+\_\+usuario@{Cjt\+\_\+usuario}}
+\subsubsection{\texorpdfstring{usuarios}{usuarios}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{class_usuario}{Usuario}}$>$ Cjt\+\_\+usuario\+::usuarios\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 23 del archivo Cjt\+\_\+usuario.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_cjt__usuario_8hh}{Cjt\+\_\+usuario.\+hh}}\item 
+\mbox{\hyperlink{_cjt__usuario_8cc}{Cjt\+\_\+usuario.\+cc}}\end{DoxyCompactItemize}

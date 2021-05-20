@@ -47,14 +47,6 @@ void Cjt_problema::anadir_problema(string id) {
   }
 }
 
-vector<Problema> Cjt_problema::listar_problemas(const vector<string>& v) {
-  int size = v.size();
-  vector<Problema> vec_p(size);
-  for (int i = 0; i < size; ++i){
-    vec_p[i] = problemas.find(v[i])->second;
-  }
-  return vec_p;
-}
 
 void Cjt_problema::listar_enviables() {
   for( auto it = problemas.begin(); it != problemas.end(); ++it ) {

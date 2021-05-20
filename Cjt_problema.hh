@@ -127,6 +127,8 @@ public:
     */
     void listar_problema(std::string id);
     
+    vector<Problema> listar_problemas(const vector<string>& v);
+    
     
     
     

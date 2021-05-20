@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto PRO2. Gestión de la plataforma EVALUATOR.: Fichero Fuente Cjt_sesion.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Proyecto PRO2. Gestión de la plataforma EVALUATOR.
+   &#160;<span id="projectnumber">v8.17 15-05-21</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Cjt_sesion.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_cjt__sesion_8hh.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef _CJT_SESION_HH</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define _CJT_SESION_HH</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_sesion_8hh.html">Sesion.hh</a>&quot;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_cjt__sesion.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cjt__sesion.html">Cjt_sesion</a> {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_cjt__sesion.html#abac1c2ee3cccc598a8274c7da869aa9b">   22</a></span>&#160;    map &lt;std::string, Sesion&gt; <a class="code" href="class_cjt__sesion.html#abac1c2ee3cccc598a8274c7da869aa9b">sesiones</a>;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    </div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_cjt__sesion.html#a405ed3806e378d1a415588e640584bbd">existe_sesion</a> (std::string <span class="keywordtype">id</span>);</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_cjt__sesion.html#a706661671b7bc84b6537f4b074938551">Cjt_sesion</a>();</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="class_cjt__sesion.html#aa6e81cd2268224ee70b0bc22df14ed5e">~Cjt_sesion</a>();</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">//Modificadoras</span></div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="class_cjt__sesion.html#ace504b799e2c370749ccb16f9312fa5f">anadir_sesion</a>(std::string <span class="keywordtype">id</span>);</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">//Consultoras</span></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_cjt__sesion.html#aa885f9672e699d82dcd22aaa26d1ada8">num_sesiones</a>();</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    std::string <a class="code" href="class_cjt__sesion.html#aade2be6a90f0135b38342f877cc26ae6">listar_primer_problema</a>(std::string sesion);</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    std::string <a class="code" href="class_cjt__sesion.html#a4aef15fb48b0465b864eaebeb3808cd0">buscar_nuevo_problema</a>(std::string p, std::string sesion, <span class="keywordtype">int</span> lado);</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_cjt__sesion.html#ac761936095af984ee9a39fdcdf25219c">num_problemas_sesion</a>(std::string sesion);</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    std::string <a class="code" href="class_cjt__sesion.html#a7bc8395d0f4702cd383b11efab65feb1">consultar_problema_sesion</a>(<span class="keywordtype">string</span> sesion, <span class="keywordtype">int</span> i);</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">//Lectura y escritura</span></div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cjt__sesion.html#ad64b0e5339bd3a04de4fba88d6eb98c7">leer_sesiones</a> (<span class="keywordtype">int</span> n);</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cjt__sesion.html#ab16589173601c81f80305cd9a49b2f7b">listar_sesiones</a>();</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cjt__sesion.html#a8d8d2ba30c0efeb90e21a9b41fa2c62e">listar_sesion</a>(std::string <span class="keywordtype">id</span>);</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    </div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;};</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_cjt__sesion_html_ac761936095af984ee9a39fdcdf25219c"><div class="ttname"><a href="class_cjt__sesion.html#ac761936095af984ee9a39fdcdf25219c">Cjt_sesion::num_problemas_sesion</a></div><div class="ttdeci">int num_problemas_sesion(std::string sesion)</div><div class="ttdoc">Consultora del numero de problemas de una sesion. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__sesion_8cc_source.html#l00056">Cjt_sesion.cc:56</a></div></div>
+<div class="ttc" id="class_cjt__sesion_html_a4aef15fb48b0465b864eaebeb3808cd0"><div class="ttname"><a href="class_cjt__sesion.html#a4aef15fb48b0465b864eaebeb3808cd0">Cjt_sesion::buscar_nuevo_problema</a></div><div class="ttdeci">std::string buscar_nuevo_problema(std::string p, std::string sesion, int lado)</div><div class="ttdoc">Consultora del problema hijo de un problema de la sesion &quot;sesione&quot;. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__sesion_8cc_source.html#l00077">Cjt_sesion.cc:77</a></div></div>
+<div class="ttc" id="class_cjt__sesion_html_a405ed3806e378d1a415588e640584bbd"><div class="ttname"><a href="class_cjt__sesion.html#a405ed3806e378d1a415588e640584bbd">Cjt_sesion::existe_sesion</a></div><div class="ttdeci">bool existe_sesion(std::string id)</div><div class="ttdoc">Consultora de si existe una sesiones. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__sesion_8cc_source.html#l00027">Cjt_sesion.cc:27</a></div></div>
+<div class="ttc" id="class_cjt__sesion_html"><div class="ttname"><a href="class_cjt__sesion.html">Cjt_sesion</a></div><div class="ttdoc">Representa un conjunto de sesiones. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__sesion_8hh_source.html#l00019">Cjt_sesion.hh:19</a></div></div>
+<div class="ttc" id="class_cjt__sesion_html_ad64b0e5339bd3a04de4fba88d6eb98c7"><div class="ttname"><a href="class_cjt__sesion.html#ad64b0e5339bd3a04de4fba88d6eb98c7">Cjt_sesion::leer_sesiones</a></div><div class="ttdeci">void leer_sesiones(int n)</div><div class="ttdoc">Añade n sesiones al parametro implicito. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__sesion_8cc_source.html#l00015">Cjt_sesion.cc:15</a></div></div>
+<div class="ttc" id="_sesion_8hh_html"><div class="ttname"><a href="_sesion_8hh.html">Sesion.hh</a></div><div class="ttdoc">Especificacion de sesion. </div></div>
+<div class="ttc" id="class_cjt__sesion_html_ace504b799e2c370749ccb16f9312fa5f"><div class="ttname"><a href="class_cjt__sesion.html#ace504b799e2c370749ccb16f9312fa5f">Cjt_sesion::anadir_sesion</a></div><div class="ttdeci">void anadir_sesion(std::string id)</div><div class="ttdoc">Se añade una sesiones con identificador &quot;id&quot;. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__sesion_8cc_source.html#l00040">Cjt_sesion.cc:40</a></div></div>
+<div class="ttc" id="class_cjt__sesion_html_a8d8d2ba30c0efeb90e21a9b41fa2c62e"><div class="ttname"><a href="class_cjt__sesion.html#a8d8d2ba30c0efeb90e21a9b41fa2c62e">Cjt_sesion::listar_sesion</a></div><div class="ttdeci">void listar_sesion(std::string id)</div><div class="ttdoc">Operación de escritura de una sesion. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__sesion_8cc_source.html#l00070">Cjt_sesion.cc:70</a></div></div>
+<div class="ttc" id="class_cjt__sesion_html_a7bc8395d0f4702cd383b11efab65feb1"><div class="ttname"><a href="class_cjt__sesion.html#a7bc8395d0f4702cd383b11efab65feb1">Cjt_sesion::consultar_problema_sesion</a></div><div class="ttdeci">std::string consultar_problema_sesion(string sesion, int i)</div><div class="ttdoc">Consultora del problema i de una sesion. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__sesion_8cc_source.html#l00060">Cjt_sesion.cc:60</a></div></div>
+<div class="ttc" id="class_cjt__sesion_html_aade2be6a90f0135b38342f877cc26ae6"><div class="ttname"><a href="class_cjt__sesion.html#aade2be6a90f0135b38342f877cc26ae6">Cjt_sesion::listar_primer_problema</a></div><div class="ttdeci">std::string listar_primer_problema(std::string sesion)</div><div class="ttdoc">Consultora del primer problema de la sesion &quot;sesion&quot;. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__sesion_8cc_source.html#l00051">Cjt_sesion.cc:51</a></div></div>
+<div class="ttc" id="class_cjt__sesion_html_ab16589173601c81f80305cd9a49b2f7b"><div class="ttname"><a href="class_cjt__sesion.html#ab16589173601c81f80305cd9a49b2f7b">Cjt_sesion::listar_sesiones</a></div><div class="ttdeci">void listar_sesiones()</div><div class="ttdoc">Operación de escritura. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__sesion_8cc_source.html#l00064">Cjt_sesion.cc:64</a></div></div>
+<div class="ttc" id="class_cjt__sesion_html_aa6e81cd2268224ee70b0bc22df14ed5e"><div class="ttname"><a href="class_cjt__sesion.html#aa6e81cd2268224ee70b0bc22df14ed5e">Cjt_sesion::~Cjt_sesion</a></div><div class="ttdeci">~Cjt_sesion()</div><div class="ttdoc">Destructora por defecto. Se ejecuta automáticamente en los objetos locales al salir. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__sesion_8cc_source.html#l00013">Cjt_sesion.cc:13</a></div></div>
+<div class="ttc" id="class_cjt__sesion_html_abac1c2ee3cccc598a8274c7da869aa9b"><div class="ttname"><a href="class_cjt__sesion.html#abac1c2ee3cccc598a8274c7da869aa9b">Cjt_sesion::sesiones</a></div><div class="ttdeci">map&lt; std::string, Sesion &gt; sesiones</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__sesion_8hh_source.html#l00022">Cjt_sesion.hh:22</a></div></div>
+<div class="ttc" id="class_cjt__sesion_html_aa885f9672e699d82dcd22aaa26d1ada8"><div class="ttname"><a href="class_cjt__sesion.html#aa885f9672e699d82dcd22aaa26d1ada8">Cjt_sesion::num_sesiones</a></div><div class="ttdeci">int num_sesiones()</div><div class="ttdoc">Consultora del numero de sesiones. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__sesion_8cc_source.html#l00036">Cjt_sesion.cc:36</a></div></div>
+<div class="ttc" id="class_cjt__sesion_html_a706661671b7bc84b6537f4b074938551"><div class="ttname"><a href="class_cjt__sesion.html#a706661671b7bc84b6537f4b074938551">Cjt_sesion::Cjt_sesion</a></div><div class="ttdeci">Cjt_sesion()</div><div class="ttdoc">Creadora por defecto. Se ejecuta automáticamente al declarar un conjunto de sesiones. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__sesion_8cc_source.html#l00012">Cjt_sesion.cc:12</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto PRO2. Gestión de la plataforma EVALUATOR.: Fichero Fuente Problema.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Proyecto PRO2. Gestión de la plataforma EVALUATOR.
+   &#160;<span id="projectnumber">v8.17 15-05-21</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Problema.cc</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_problema_8cc.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_problema_8hh.html">Problema.hh</a>&quot;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_problema.html#a9d81af5f3f42a1b4354ad8f3c022fca3">   10</a></span>&#160;<a class="code" href="class_problema.html#a9d81af5f3f42a1b4354ad8f3c022fca3">Problema::Problema</a>() {</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    envios = 0;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    envios_exitosos = 0;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    ratio = 1;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    identificador = <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_problema.html#a11dc802ebd9ccb5fbd801e2339c02ae2">   17</a></span>&#160;<a class="code" href="class_problema.html#a11dc802ebd9ccb5fbd801e2339c02ae2">Problema::~Problema</a>(){}</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_problema.html#a29c94c089b042f3a7cc1fda4739460bd">   19</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_problema.html#a29c94c089b042f3a7cc1fda4739460bd">Problema::consultar_envios</a>(){</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">return</span> envios;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_problema.html#ae114210c654baa6e728c412f7e64cb80">   23</a></span>&#160;<a class="code" href="class_problema.html#a9d81af5f3f42a1b4354ad8f3c022fca3">Problema::Problema</a>(<span class="keywordtype">string</span> identificador) {</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    envios = 0;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    envios_exitosos = 0;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    ratio = 1;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    this-&gt;identificador = identificador;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_problema.html#afbf19bc99df3c05b7baa3a138fb9e17d">   30</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_problema.html#afbf19bc99df3c05b7baa3a138fb9e17d">Problema::escribir_problema</a>() {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  cout &lt;&lt; identificador &lt;&lt; <span class="charliteral">&#39;(&#39;</span> &lt;&lt; envios &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; envios_exitosos &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; ratio &lt;&lt; <span class="charliteral">&#39;)&#39;</span> &lt;&lt; endl;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_problema.html#a418b7c394398c77cd81e5b8a1c218ba2">   34</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_problema.html#a418b7c394398c77cd81e5b8a1c218ba2">Problema::sumar_envio</a>(<span class="keywordtype">int</span> r) {</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  ++envios;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordflow">if</span>(r == 1) ++envios_exitosos;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  ratio = double(envios + 1.0)/(envios_exitosos + 1.0);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_problema.html#a06627ca42b5bf8598d10b04e6a9e255b">   40</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="class_problema.html#a06627ca42b5bf8598d10b04e6a9e255b">Problema::leer_ratio</a>(){</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordflow">return</span> ratio;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div><div class="ttc" id="_problema_8hh_html"><div class="ttname"><a href="_problema_8hh.html">Problema.hh</a></div><div class="ttdoc">Especificacion de problema. </div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="class_problema_html_a418b7c394398c77cd81e5b8a1c218ba2"><div class="ttname"><a href="class_problema.html#a418b7c394398c77cd81e5b8a1c218ba2">Problema::sumar_envio</a></div><div class="ttdeci">void sumar_envio(int r)</div><div class="ttdoc">Actualiza las estadisticas despues que un usuario haga un envio a este problema. </div><div class="ttdef"><b>Definition:</b> <a href="_problema_8cc_source.html#l00034">Problema.cc:34</a></div></div>
+<div class="ttc" id="class_problema_html_a9d81af5f3f42a1b4354ad8f3c022fca3"><div class="ttname"><a href="class_problema.html#a9d81af5f3f42a1b4354ad8f3c022fca3">Problema::Problema</a></div><div class="ttdeci">Problema()</div><div class="ttdoc">Creadora por defecto. Se ejecuta automáticamente al declarar un problema. </div><div class="ttdef"><b>Definition:</b> <a href="_problema_8cc_source.html#l00010">Problema.cc:10</a></div></div>
+<div class="ttc" id="class_problema_html_afbf19bc99df3c05b7baa3a138fb9e17d"><div class="ttname"><a href="class_problema.html#afbf19bc99df3c05b7baa3a138fb9e17d">Problema::escribir_problema</a></div><div class="ttdeci">void escribir_problema()</div><div class="ttdoc">Operación de escritura. </div><div class="ttdef"><b>Definition:</b> <a href="_problema_8cc_source.html#l00030">Problema.cc:30</a></div></div>
+<div class="ttc" id="class_problema_html_a11dc802ebd9ccb5fbd801e2339c02ae2"><div class="ttname"><a href="class_problema.html#a11dc802ebd9ccb5fbd801e2339c02ae2">Problema::~Problema</a></div><div class="ttdeci">~Problema()</div><div class="ttdoc">Destructora por defecto. Se ejecuta automáticamente en los objetos locales al salir. </div><div class="ttdef"><b>Definition:</b> <a href="_problema_8cc_source.html#l00017">Problema.cc:17</a></div></div>
+<div class="ttc" id="class_problema_html_a06627ca42b5bf8598d10b04e6a9e255b"><div class="ttname"><a href="class_problema.html#a06627ca42b5bf8598d10b04e6a9e255b">Problema::leer_ratio</a></div><div class="ttdeci">double leer_ratio()</div><div class="ttdoc">Consultora del numero de ratio. </div><div class="ttdef"><b>Definition:</b> <a href="_problema_8cc_source.html#l00040">Problema.cc:40</a></div></div>
+<div class="ttc" id="class_problema_html_a29c94c089b042f3a7cc1fda4739460bd"><div class="ttname"><a href="class_problema.html#a29c94c089b042f3a7cc1fda4739460bd">Problema::consultar_envios</a></div><div class="ttdeci">int consultar_envios()</div><div class="ttdoc">Consultora del numero de envios. </div><div class="ttdef"><b>Definition:</b> <a href="_problema_8cc_source.html#l00019">Problema.cc:19</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

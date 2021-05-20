@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto PRO2. Gestión de la plataforma EVALUATOR.: Fichero Fuente Sesion.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Proyecto PRO2. Gestión de la plataforma EVALUATOR.
+   &#160;<span id="projectnumber">v8.17 15-05-21</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Sesion.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_sesion_8hh.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef _SESION_HH</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define _SESION_HH</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;BinTree.hh&quot;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_sesion.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sesion.html">Sesion</a> {</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_sesion.html#a1b9a6519f3476c8c733792dee9b9c842">   26</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_sesion.html#a1b9a6519f3476c8c733792dee9b9c842">identificador</a>;</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_sesion.html#abdfe53bdef12bfa9ab510cad99b0de27">   27</a></span>&#160;    BinTree&lt;string&gt; <a class="code" href="class_sesion.html#abdfe53bdef12bfa9ab510cad99b0de27">prerequisitos</a>;</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_sesion.html#af3929f5b3478c9ab1334b4c62566d69e">   28</a></span>&#160;    std::vector&lt;string&gt; <a class="code" href="class_sesion.html#af3929f5b3478c9ab1334b4c62566d69e">problemas</a>;</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_sesion.html#a4f770d029f7be9368a3abec6af7e8de7">   29</a></span>&#160;    std::map &lt;string, std::pair&lt;string, string&gt; &gt; <a class="code" href="class_sesion.html#a4f770d029f7be9368a3abec6af7e8de7">problemas_ordenados</a>;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sesion.html#adea0f5f335e3eab364dfc59c28d790f3">leer_arbol</a>(BinTree&lt;string&gt;&amp; a);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sesion.html#a05641874607ce3a3b3c495437938bf02">escribir_arbol</a>(<span class="keyword">const</span> BinTree&lt;string&gt;&amp; a);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="class_sesion.html#adf5a84efa8e2629b30ad89df74cfc0a2">Sesion</a>();</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="class_sesion.html#adf5a84efa8e2629b30ad89df74cfc0a2">Sesion</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>);</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">//Destructora</span></div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="class_sesion.html#acc4bd3e753a45d6b7a01aa27fb8f171f">~Sesion</a>();</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">//Consultoras</span></div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    std::string <a class="code" href="class_sesion.html#a77b0408b1dba7df9a090e84ae9d56cba">leer_primer_problema</a>();</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    std::string <a class="code" href="class_sesion.html#aee7122e6303e811527e894a0f2d08fea">nuevo_problema</a>(std::string p, <span class="keywordtype">int</span> lado);</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    std::string <a class="code" href="class_sesion.html#a035f4d3118ed20daedf95307128a1fbb">consultar_problema</a>(<span class="keywordtype">int</span> i);</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_sesion.html#a7778f2d0cfff81138221fe661ab69e2c">num_problemas</a>();</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sesion.html#a3ba86990204dd799378a62b90cfbb58a">construir_arbol</a>();</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sesion.html#a0243a367d0e9787328c3a956bd8846ef">escribir_sesion</a>();</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    </div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    </div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    </div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;};</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_sesion_html_a05641874607ce3a3b3c495437938bf02"><div class="ttname"><a href="class_sesion.html#a05641874607ce3a3b3c495437938bf02">Sesion::escribir_arbol</a></div><div class="ttdeci">void escribir_arbol(const BinTree&lt; string &gt; &amp;a)</div><div class="ttdoc">Escritura de un arbol binario de enteros. </div><div class="ttdef"><b>Definition:</b> <a href="_sesion_8cc_source.html#l00043">Sesion.cc:43</a></div></div>
+<div class="ttc" id="class_sesion_html_a035f4d3118ed20daedf95307128a1fbb"><div class="ttname"><a href="class_sesion.html#a035f4d3118ed20daedf95307128a1fbb">Sesion::consultar_problema</a></div><div class="ttdeci">std::string consultar_problema(int i)</div><div class="ttdoc">Consultora del problema i de la sesion. </div><div class="ttdef"><b>Definition:</b> <a href="_sesion_8cc_source.html#l00072">Sesion.cc:72</a></div></div>
+<div class="ttc" id="class_sesion_html"><div class="ttname"><a href="class_sesion.html">Sesion</a></div><div class="ttdoc">Representa una sesion de la plataforma con un arbol binario indicando los pre requisitos para poder r...</div><div class="ttdef"><b>Definition:</b> <a href="_sesion_8hh_source.html#l00022">Sesion.hh:22</a></div></div>
+<div class="ttc" id="class_sesion_html_aee7122e6303e811527e894a0f2d08fea"><div class="ttname"><a href="class_sesion.html#aee7122e6303e811527e894a0f2d08fea">Sesion::nuevo_problema</a></div><div class="ttdeci">std::string nuevo_problema(std::string p, int lado)</div><div class="ttdoc">Consultora del problema hijo de un problema. </div><div class="ttdef"><b>Definition:</b> <a href="_sesion_8cc_source.html#l00059">Sesion.cc:59</a></div></div>
+<div class="ttc" id="class_sesion_html_abdfe53bdef12bfa9ab510cad99b0de27"><div class="ttname"><a href="class_sesion.html#abdfe53bdef12bfa9ab510cad99b0de27">Sesion::prerequisitos</a></div><div class="ttdeci">BinTree&lt; string &gt; prerequisitos</div><div class="ttdef"><b>Definition:</b> <a href="_sesion_8hh_source.html#l00027">Sesion.hh:27</a></div></div>
+<div class="ttc" id="class_sesion_html_a0243a367d0e9787328c3a956bd8846ef"><div class="ttname"><a href="class_sesion.html#a0243a367d0e9787328c3a956bd8846ef">Sesion::escribir_sesion</a></div><div class="ttdeci">void escribir_sesion()</div><div class="ttdoc">Operación de escritura. </div><div class="ttdef"><b>Definition:</b> <a href="_sesion_8cc_source.html#l00052">Sesion.cc:52</a></div></div>
+<div class="ttc" id="class_sesion_html_a4f770d029f7be9368a3abec6af7e8de7"><div class="ttname"><a href="class_sesion.html#a4f770d029f7be9368a3abec6af7e8de7">Sesion::problemas_ordenados</a></div><div class="ttdeci">std::map&lt; string, std::pair&lt; string, string &gt; &gt; problemas_ordenados</div><div class="ttdef"><b>Definition:</b> <a href="_sesion_8hh_source.html#l00029">Sesion.hh:29</a></div></div>
+<div class="ttc" id="class_sesion_html_af3929f5b3478c9ab1334b4c62566d69e"><div class="ttname"><a href="class_sesion.html#af3929f5b3478c9ab1334b4c62566d69e">Sesion::problemas</a></div><div class="ttdeci">std::vector&lt; string &gt; problemas</div><div class="ttdef"><b>Definition:</b> <a href="_sesion_8hh_source.html#l00028">Sesion.hh:28</a></div></div>
+<div class="ttc" id="class_sesion_html_adf5a84efa8e2629b30ad89df74cfc0a2"><div class="ttname"><a href="class_sesion.html#adf5a84efa8e2629b30ad89df74cfc0a2">Sesion::Sesion</a></div><div class="ttdeci">Sesion()</div><div class="ttdoc">Creadora por defecto. Se ejecuta automáticamente al declarar un problema. </div></div>
+<div class="ttc" id="class_sesion_html_adea0f5f335e3eab364dfc59c28d790f3"><div class="ttname"><a href="class_sesion.html#adea0f5f335e3eab364dfc59c28d790f3">Sesion::leer_arbol</a></div><div class="ttdeci">void leer_arbol(BinTree&lt; string &gt; &amp;a)</div><div class="ttdoc">Lectura de un arbol binario de enteros. Los elementos se introducen en preordren: primero la raiz...</div><div class="ttdef"><b>Definition:</b> <a href="_sesion_8cc_source.html#l00015">Sesion.cc:15</a></div></div>
+<div class="ttc" id="class_sesion_html_a7778f2d0cfff81138221fe661ab69e2c"><div class="ttname"><a href="class_sesion.html#a7778f2d0cfff81138221fe661ab69e2c">Sesion::num_problemas</a></div><div class="ttdeci">int num_problemas()</div><div class="ttdoc">Consultora del numero de problemas de la sesion. </div><div class="ttdef"><b>Definition:</b> <a href="_sesion_8cc_source.html#l00068">Sesion.cc:68</a></div></div>
+<div class="ttc" id="class_sesion_html_acc4bd3e753a45d6b7a01aa27fb8f171f"><div class="ttname"><a href="class_sesion.html#acc4bd3e753a45d6b7a01aa27fb8f171f">Sesion::~Sesion</a></div><div class="ttdeci">~Sesion()</div><div class="ttdoc">Destructora por defecto. </div><div class="ttdef"><b>Definition:</b> <a href="_sesion_8cc_source.html#l00013">Sesion.cc:13</a></div></div>
+<div class="ttc" id="class_sesion_html_a1b9a6519f3476c8c733792dee9b9c842"><div class="ttname"><a href="class_sesion.html#a1b9a6519f3476c8c733792dee9b9c842">Sesion::identificador</a></div><div class="ttdeci">string identificador</div><div class="ttdef"><b>Definition:</b> <a href="_sesion_8hh_source.html#l00026">Sesion.hh:26</a></div></div>
+<div class="ttc" id="class_sesion_html_a3ba86990204dd799378a62b90cfbb58a"><div class="ttname"><a href="class_sesion.html#a3ba86990204dd799378a62b90cfbb58a">Sesion::construir_arbol</a></div><div class="ttdeci">void construir_arbol()</div><div class="ttdoc">Lectura de un arbol binario de enteros. Los elementos se introducen en preordren: primero la raiz...</div><div class="ttdef"><b>Definition:</b> <a href="_sesion_8cc_source.html#l00035">Sesion.cc:35</a></div></div>
+<div class="ttc" id="class_sesion_html_a77b0408b1dba7df9a090e84ae9d56cba"><div class="ttname"><a href="class_sesion.html#a77b0408b1dba7df9a090e84ae9d56cba">Sesion::leer_primer_problema</a></div><div class="ttdeci">std::string leer_primer_problema()</div><div class="ttdoc">Consultora del primer problema de la sesion. </div><div class="ttdef"><b>Definition:</b> <a href="_sesion_8cc_source.html#l00039">Sesion.cc:39</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>
